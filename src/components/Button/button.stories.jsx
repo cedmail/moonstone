@@ -142,7 +142,5 @@ storiesOf('Button', module)
                 onClick={onClick()}
             />
         ),
-        {
-            notes: { markdown: doc }
-        }
+        { notes: { markdown: doc } }
     )

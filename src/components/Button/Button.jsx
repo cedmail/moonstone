@@ -15,10 +15,10 @@ const MdsButton = ({
     action,
     onClick
 }) => {
-    let classNames = classes ? classes : ''
+    let variantButton = variant ? `mdk-button_${variant}` : 'mdk-button'
     let colorButton = color ? `is-${color}` : ''
     let disabled = isDisabled ? 'is-disabled' : ''
-    let variantButton = variant ? `mdk-button_${variant}` : 'mdk-button'
+    let classNames = classes ? classes : ''
 
     return (
         <StylesProvider injectFirst>
@@ -27,8 +27,8 @@ const MdsButton = ({
                 type={type}
                 color={color}
                 size={size}
+                className={(variantButton, colorButton, disabled, classNames)}
                 onClick={onClick}
-                className={`${variantButton} ${colorButton} ${disabled} ${classNames}`}
             >
                 {label}
             </Button>
@@ -36,24 +36,21 @@ const MdsButton = ({
     )
 }
 
-Button.propTypes =
-    process.env.NODE_ENV !== 'production'
-        ? {
-              label: PropTypes.string,
-              onClick: PropTypes.func.isRequired,
-              variant: PropTypes.oneOf(['ghost', 'primary']),
-              size: PropTypes.oneOf(['small', 'medium', 'big']),
-              disabled: PropTypes.bool,
-              color: PropTypes.oneOf([
-                  'accent',
-                  'secondary',
-                  'success',
-                  'warning',
-                  'danger'
-              ]),
-              type: PropTypes.oneOf(['button', 'submit', 'reset'])
-          }
-        : {}
+Button.propTypes = {
+    label: PropTypes.string,
+    onClick: PropTypes.func.isRequired,
+    variant: PropTypes.oneOf(['ghost', 'primary']),
+    size: PropTypes.oneOf(['small', 'medium', 'big']),
+    disabled: PropTypes.bool,
+    color: PropTypes.oneOf([
+        'accent',
+        'secondary',
+        'success',
+        'warning',
+        'danger'
+    ]),
+    type: PropTypes.oneOf(['button', 'submit', 'reset'])
+}
 
 Button.defaultProps = {
     variant: null,

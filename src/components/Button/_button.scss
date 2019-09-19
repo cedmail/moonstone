@@ -1,23 +1,8 @@
 @import '../../styles/shared/all';
 
-// @import '@material/react-button/index.scss';
-
-// .mdc-button {
-//     @include mdc-button-filled-accessible(red);
-// }
-
-// .MuiButton-root {
-//     background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
-//     border-radius: 3px;
-//     border: 0;
-//     color: white;
-//     height: 48px;
-//     padding: 0 30px;
-//     box-shadow: 0 3px 5px 2px rgba(255, 105, 135, 0.3);
-// }
-
 %button {
     @extend %uppercase;
+
     font-weight: 500;
 
     height: space(huge);
@@ -29,6 +14,7 @@
 
     transition: all 0.4s ease-out;
 
+    // TODO: Sould depend of direction and alignment (row/column and right/left)
     & + & {
         margin-left: space(medium);
     }
@@ -43,37 +29,35 @@
 .mdk-button {
     @extend %button;
 
-    @each $state, $color in $color-states {
-        &.is-#{$state} {
-            color: $color;
-
-            border-color: $color;
-
-            &:hover {
-                color: $color-white;
-
-                background-color: $color;
-            }
-        }
-    }
-
     padding: space(small) space(large);
-
     border-color: $color-text-body;
 
     &:hover {
         color: $white;
-
         background-color: $color-text-body;
     }
 
     & + .mdk-button {
         margin-left: space(medium);
     }
+
+    @each $state, $color in $color-states {
+        &.is-#{$state} {
+            color: $color;
+            border-color: $color;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color;
+            }
+        }
+    }
 }
 
 .mdk-button_primary {
     @extend %button;
+
+    color: $color-white;
 
     @each $state, $color in $color-states {
         &.is-#{$state} {
@@ -84,8 +68,6 @@
             }
         }
     }
-
-    color: $color-white;
 }
 
 .mdk-button_ghost {
