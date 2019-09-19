@@ -1,4 +1,5 @@
-@import 'themes/darkstone.scss';
-@import 'tokens/spacings.scss';
-@import 'tokens/fonts/fonts.scss';
-@import 'fonts.scss';
+@import '00-configs/all';
+@import '01-tools/all';
+@import '02-definitions/all';
+@import '03-themes/all';
+@import '04-helpers/all';

@@ -1,0 +1,68 @@
+// Map of typography system
+$font-styles: (
+    giga: (
+        font-size: $base-font-size * 4.75,
+        font-weight: 300,
+        line-height: $base-font-line-height * 1.25
+    ),
+    mega: (
+        font-size: $base-font-size * 3.375,
+        font-weight: 300,
+        line-height: $base-font-line-height * 1.25
+    ),
+    alpha: (
+        font-size: $base-font-size * 2.25,
+        font-weight: 300,
+        line-height: $base-font-line-height * 1.25
+    ),
+    beta: (
+        font-size: $base-font-size * 1.75,
+        font-weight: 300,
+        line-height: $base-font-line-height * 1.25
+    ),
+    gamma: (
+        font-size: $base-font-size * 1.25,
+        font-weight: 300,
+        line-height: $base-font-line-height * 1.25
+    ),
+    delta: (
+        font-size: $base-font-size * 1.125,
+        font-weight: 600,
+        line-height: $base-font-line-height * 1.25
+    ),
+    epsilon: (
+        font-size: $base-font-size * 1,
+        font-weight: 600,
+        line-height: $base-font-line-height * 1.25
+    ),
+    zeta: (
+        font-size: $base-font-size * 0.875,
+        font-weight: 600,
+        line-height: $base-font-line-height * 1.25
+    ),
+    iota: (
+        font-size: $base-font-size * 0.875,
+        font-weight: 400,
+        line-height: $base-font-line-height * 1.25
+    ),
+    omega: (
+        font-size: $base-font-size * 0.75,
+        font-weight: 600,
+        line-height: $base-font-line-height * 1.25
+    ),
+    caption: (
+        font-size: $base-font-size * 0.75,
+        font-weight: 400,
+        line-height: $base-font-line-height * 1.5
+    ),
+    legal: (
+        font-size: $base-font-size * 0.6875,
+        font-weight: 400,
+        line-height: $base-font-line-height * 1.5
+    ),
+    p: (
+        font-size: $base-font-size * 1,
+        font-weight: 400,
+        line-height: $base-font-line-height * 1.5
+    )
+) !default;

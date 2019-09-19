@@ -1,0 +1,41 @@
+//---
+// COLORS
+//---
+
+// Basic colors
+$color-white: $white;
+$color-black: $black;
+$color-dark: #262b30;
+$color-light: #eff1f4;
+
+// Status colors
+$color-accent: $blue-700;
+$color-secondary: $deep-purple-700;
+$color-success: $green-400;
+$color-danger: $red-400;
+$color-warning: $orange-400;
+$color-info: $blue-400;
+$color-active: $color-accent;
+$color-disabled: #ccc;
+
+// Text colors
+$color-text-body: #474f57;
+$color-text-strong: $color-dark;
+$color-text-light: #828892;
+$color-text-title: $color-accent;
+
+// Color map : use map instead of just variables ?
+$color-states: (
+    accent: $blue-700,
+    secondary: $color-text-light,
+    success: $green-400,
+    warning: $orange-400,
+    danger: $red-400,
+    info: $blue-400
+);
+
+//---
+// Fields
+//---
+$field-border-width: 2px;
+$field-border-color: $color-accent;

@@ -1,0 +1,22 @@
+// apply a natural box layout model to all elements, but allowing components to change
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-weight: normal;
+
+    // TODO: use variable to define font-family
+    font-family: 'NunitoSans', sans-serif;
+    font-style: normal;
+}

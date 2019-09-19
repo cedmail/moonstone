@@ -1,0 +1,63 @@
+@mixin font-face(
+    $name,
+    $path,
+    $weight: 'regular',
+    $style: null,
+    $exts: ttf,
+    // $exts: eot woff2 woff ttf svg
+) {
+    @each $ext in $exts {
+        $extmod: if(
+            map-has-key($extmods, $ext),
+            $ext + map-get($extmods, $ext),
+            $ext
+        );
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append(
+            $src,
+            /* stylelint-disable-next-line */
+                url(quote($path + '-' + capitalize($weight) + '.' + $extmod))
+                format(quote($format)),
+            comma
+        );
+    }
+
+    @font-face {
+        font-weight: if(
+            map-has-key($font-weights, $weight),
+            map-get($font-weights, $weight),
+            $weight
+        );
+        font-family: quote($name);
+        font-style: $style;
+        src: $src;
+    }
+
+    $src: null;
+    $extmods: (
+        eot: '?',
+        svg: '#' + str-replace($name, ' ', '_')
+    );
+    $formats: (
+        otf: 'opentype',
+        ttf: 'truetype'
+    );
+    $font-weights: (
+        'light': 100,
+        'regular': 300,
+        'bold': 500
+    );
+}
+
+// @mixin build-class-list($font-family, $prefix, $styles) {
+//     @each $name, $props in $styles {
+//         %#{$prefix}#{$name},
+//         .#{$prefix}#{$name} {
+//             @each $key, $value in $props {
+//                 #{$key}: $value;
+//             }
+
+//             font-family: $font-family;
+//         }
+//     }
+// }

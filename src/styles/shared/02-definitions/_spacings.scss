@@ -1,0 +1,37 @@
+// Spacing
+
+/* prettier-ignore */
+$spacers: (
+    zero: 0,
+    nano: ($base-space-unit * 0.5),
+    small: $base-space-unit,
+    medium: ($base-space-unit * 2),
+    large: ($base-space-unit * 3),
+    big: ($base-space-unit * 4),
+    huge: ($base-space-unit * 5)
+) !default;
+
+@function space($key) {
+    @if map-has-key($spacers, $key) {
+        @return map-get($spacers, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $spacings. Use:`#{map-keys($spacers)}`";
+
+    @return null;
+}
+
+/*
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+*/
