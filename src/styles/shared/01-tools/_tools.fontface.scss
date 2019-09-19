@@ -1,11 +1,4 @@
-@mixin font-face(
-    $name,
-    $path,
-    $weight: 'regular',
-    $style: null,
-    $exts: ttf,
-    // $exts: eot woff2 woff ttf svg
-) {
+@mixin font-face($name, $path, $weight: 'regular', $style: null, $exts: ttf) {
     @each $ext in $exts {
         $extmod: if(
             map-has-key($extmods, $ext),
@@ -15,9 +8,8 @@
         $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
         $src: append(
             $src,
-            /* stylelint-disable-next-line */
-                url(quote($path + '-' + capitalize($weight) + '.' + $extmod))
-                format(quote($format)),
+            url('#{quote($path + '-' + capitalize($weight) + '.' + $extmod)}'),
+            format(quote($format)),
             comma
         );
     }
@@ -28,6 +20,7 @@
             map-get($font-weights, $weight),
             $weight
         );
+
         font-family: quote($name);
         font-style: $style;
         src: $src;

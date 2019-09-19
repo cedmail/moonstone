@@ -18,14 +18,14 @@
 
 %button {
     @extend %uppercase;
+    font-weight: 500;
 
     height: space(huge);
-
-    font-weight: 500;
     padding: space(small) space(large);
+
+    border: $field-border-width solid transparent;
     border-radius: $base-radius;
     cursor: pointer;
-    border: $field-border-width solid transparent;
 
     transition: all 0.4s ease-out;
 
@@ -36,7 +36,6 @@
     &.is-disabled {
         cursor: not-allowed;
         opacity: 0.4;
-
         pointer-events: none;
     }
 }
@@ -44,25 +43,28 @@
 .mdk-button {
     @extend %button;
 
+    @each $state, $color in $color-states {
+        &.is-#{$state} {
+            color: $color;
+
+            border-color: $color;
+
+            &:hover {
+                color: $color-white;
+
+                background-color: $color;
+            }
+        }
+    }
+
     padding: space(small) space(large);
 
     border-color: $color-text-body;
 
     &:hover {
-        background-color: $color-text-body;
         color: $white;
-    }
 
-    @each $state, $color in $color-states {
-        &.is-#{$state} {
-            border-color: $color;
-            color: $color;
-
-            &:hover {
-                background-color: $color;
-                color: $color-white;
-            }
-        }
+        background-color: $color-text-body;
     }
 
     & + .mdk-button {
@@ -73,8 +75,6 @@
 .mdk-button_primary {
     @extend %button;
 
-    color: $color-white;
-
     @each $state, $color in $color-states {
         &.is-#{$state} {
             background-color: $color;
@@ -84,6 +84,8 @@
             }
         }
     }
+
+    color: $color-white;
 }
 
 .mdk-button_ghost {

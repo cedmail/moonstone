@@ -24,7 +24,8 @@
 @mixin truncate($width: 100%, $display: inline-block) {
     display: $display;
     max-width: $width;
+
+    white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
 }
