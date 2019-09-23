@@ -1,8 +1,8 @@
-import React from 'react'
-import Button from '@material-ui/core/ButtonBase'
-import PropTypes from 'prop-types'
-import { StylesProvider } from '@material-ui/styles'
-import './_button.scss'
+import React from 'react';
+import Button from '@material-ui/core/ButtonBase';
+import PropTypes from 'prop-types';
+import {StylesProvider} from '@material-ui/styles';
+import './_button.scss';
 
 const MdsButton = ({
     label,
@@ -15,10 +15,10 @@ const MdsButton = ({
     action,
     onClick
 }) => {
-    let variantButton = variant ? `mdk-button_${variant}` : 'mdk-button'
-    let colorButton = color ? `is-${color}` : ''
-    let disabled = isDisabled ? 'is-disabled' : ''
-    let classNames = classes ? classes : ''
+    let variantButton = variant ? `mdk-button_${variant}` : 'mdk-button';
+    let colorButton = color ? `is-${color}` : '';
+    let disabled = isDisabled ? 'is-disabled' : '';
+    let classNames = classes ? classes : '';
 
     return (
         <StylesProvider injectFirst>
@@ -33,15 +33,15 @@ const MdsButton = ({
                 {label}
             </Button>
         </StylesProvider>
-    )
-}
+    );
+};
 
-Button.propTypes = {
+MdsButton.propTypes = {
     label: PropTypes.string,
     onClick: PropTypes.func.isRequired,
     variant: PropTypes.oneOf(['ghost', 'primary']),
     size: PropTypes.oneOf(['small', 'medium', 'big']),
-    disabled: PropTypes.bool,
+    isDisabled: PropTypes.bool,
     color: PropTypes.oneOf([
         'accent',
         'secondary',
@@ -49,18 +49,19 @@ Button.propTypes = {
         'warning',
         'danger'
     ]),
-    type: PropTypes.oneOf(['button', 'submit', 'reset'])
-}
+    type: PropTypes.oneOf(['button', 'submit', 'reset']),
+    classes: PropTypes.object.isRequired,
+    action: PropTypes.any.isRequired
+};
 
-Button.defaultProps = {
+MdsButton.defaultProps = {
     variant: null,
     size: 'medium',
-    disabled: false,
+    isDisabled: false,
     color: 'primary',
-    type: 'button',
-    onClick: () => {}
-}
+    type: 'button'
+};
 
-Button.displayName = 'mds-Button'
+Button.displayName = 'mds-Button';
 
-export default MdsButton
+export default MdsButton;

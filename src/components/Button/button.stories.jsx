@@ -1,15 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import { storiesOf } from '@storybook/react'
-import { withKnobs, boolean, select, text } from '@storybook/addon-knobs'
-import { action } from '@storybook/addon-actions'
+import {storiesOf} from '@storybook/react';
+import {withKnobs, boolean, select, text} from '@storybook/addon-knobs';
+import {action} from '@storybook/addon-actions';
 
-import Button from './Button'
-import doc from './button.md'
+import Button from './Button';
+import doc from './button.md';
 
 // Init storybook
-const stories = storiesOf('Storybook Knobs', module)
-stories.addDecorator(withKnobs)
+const stories = storiesOf('Storybook Knobs', module);
+stories.addDecorator(withKnobs);
 
 // Define Knobs
 const colors = {
@@ -18,9 +18,9 @@ const colors = {
     Danger: 'danger',
     Accent: 'accent',
     Secondary: 'secondary'
-}
-const onClick = () => action('onClick')
-const label = () => text('Label', 'Button')
+};
+const onClick = () => action('onClick');
+const label = () => text('Label', 'Button');
 const variant = () =>
     select(
         'Variant',
@@ -30,9 +30,9 @@ const variant = () =>
             Ghost: 'ghost'
         },
         null
-    )
-const color = () => select('Color', colors, 'success')
-const disabled = () => boolean('Disabled', false)
+    );
+const color = () => select('Color', colors, 'success');
+const disabled = () => boolean('Disabled', false);
 
 // Père Castor tell me a story
 storiesOf('Button', module)
@@ -43,93 +43,93 @@ storiesOf('Button', module)
             <>
                 <section>
                     <Button
-                        label='Accent'
-                        color='accent'
-                        variant='primary'
+                        label="Accent"
+                        color="accent"
+                        variant="primary"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                     <Button
-                        label='Success'
-                        color='success'
-                        variant='primary'
+                        label="Success"
+                        color="success"
+                        variant="primary"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                     <Button
-                        label='Warning'
-                        color='warning'
-                        variant='primary'
+                        label="Warning"
+                        color="warning"
+                        variant="primary"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                     <Button
-                        label='Danger'
-                        color='danger'
-                        variant='primary'
-                        isDisabled={false}
-                        onClick={onClick()}
-                    />
-                </section>
-                <section>
-                    <Button
-                        label='Accent'
-                        color='accent'
-                        isDisabled={false}
-                        onClick={onClick()}
-                    />
-                    <Button
-                        label='Success'
-                        color='success'
-                        isDisabled={false}
-                        onClick={onClick()}
-                    />
-                    <Button
-                        label='Warning'
-                        color='warning'
-                        isDisabled={false}
-                        onClick={onClick()}
-                    />
-                    <Button
-                        label='Danger'
-                        color='danger'
+                        label="Danger"
+                        color="danger"
+                        variant="primary"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                 </section>
                 <section>
                     <Button
-                        label='Accent'
-                        color='accent'
-                        variant='ghost'
+                        label="Accent"
+                        color="accent"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                     <Button
-                        label='Success'
-                        color='success'
-                        variant='ghost'
+                        label="Success"
+                        color="success"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                     <Button
-                        label='Warning'
-                        color='warning'
-                        variant='ghost'
+                        label="Warning"
+                        color="warning"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                     <Button
-                        label='Danger'
-                        color='danger'
-                        variant='ghost'
+                        label="Danger"
+                        color="danger"
+                        isDisabled={false}
+                        onClick={onClick()}
+                    />
+                </section>
+                <section>
+                    <Button
+                        label="Accent"
+                        color="accent"
+                        variant="ghost"
+                        isDisabled={false}
+                        onClick={onClick()}
+                    />
+                    <Button
+                        label="Success"
+                        color="success"
+                        variant="ghost"
+                        isDisabled={false}
+                        onClick={onClick()}
+                    />
+                    <Button
+                        label="Warning"
+                        color="warning"
+                        variant="ghost"
+                        isDisabled={false}
+                        onClick={onClick()}
+                    />
+                    <Button
+                        label="Danger"
+                        color="danger"
+                        variant="ghost"
                         isDisabled={false}
                         onClick={onClick()}
                     />
                 </section>
             </>
         ),
-        { notes: { markdown: doc } }
+        {notes: {markdown: doc}}
     )
     .add(
         'Colors',
@@ -142,5 +142,5 @@ storiesOf('Button', module)
                 onClick={onClick()}
             />
         ),
-        { notes: { markdown: doc } }
-    )
+        {notes: {markdown: doc}}
+    );

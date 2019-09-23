@@ -1,18 +1,17 @@
-import React from 'react'
-import './_text.scss'
-// import PropTypes from 'prop-types'
+import React from 'react';
+import './_text.scss';
+import PropTypes from 'prop-types';
 
-const Text = ({ label, classes }) => {
-    let classNames = classes ? classes : ''
-    return <div className={classNames}>{label}</div>
-}
+const Text = ({label, classes}) => {
+    let classNames = classes ? classes : '';
+    return <div className={classNames}>{label}</div>;
+};
 
-Text.defaultProps = {
-    color: 'default',
-    variant: 'ghost',
-    size: 'normal'
-}
+Text.propTypes = {
+    label: PropTypes.string.isRequired,
+    classes: PropTypes.object.isRequired
+};
 
-Text.displayName = 'mds-Text'
+Text.displayName = 'mds-Text';
 
-export default Text
+export default Text;

@@ -1,0 +1,20 @@
+.jahiaButton {
+    color: red;
+
+    &_label {
+        color: red;
+        width: 50%;
+    }
+
+    &.text {
+        color: black;
+    }
+
+    &.textPrimary {
+        color: red;
+    }
+
+    &.textSecondary {
+        color: green;
+    }
+}

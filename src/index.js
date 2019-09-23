@@ -1,4 +1,4 @@
-// import React from 'react'
+// Import React from 'react'
 // import ReactDOM from 'react-dom'
 // import './index.css'
 // import App from './App'
@@ -11,4 +11,4 @@
 // // Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister()
 
-export * from './components'
+export * from './components';
