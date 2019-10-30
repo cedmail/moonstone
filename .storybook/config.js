@@ -1,5 +1,5 @@
 import React from 'react';
-import {addDecorator, addParameters, configure} from '@storybook/react';
+import {addDecorator, configure} from '@storybook/react';
 import {GlobalStyle} from '../src';
 
 addDecorator(story => (
@@ -9,4 +9,4 @@ addDecorator(story => (
     </>
 ));
 
-configure(require.context('../src', true, /\.stories\.(jsx)$/), module);
+configure(require.context('../src', true, /\.stories.(jsx|mdx)$/), module);

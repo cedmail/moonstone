@@ -5,11 +5,13 @@ export const ButtonSizes = ['small', 'medium', 'big'];
 export const ButtonVariants = ['default', 'primary', 'ghost'];
 export const ButtonColors = ['accent', 'inherit', 'success', 'warning', 'danger', 'reverse'];
 
-// TODO implement the component !
+// XTODO implement the component !
 // eslint-disable-next-line
 export const Button = ({label, onClick, size, isDisabled, icon, variant, color}) => {
     return (
-        <button type="button"/>
+        <button type="button" onClick={onClick}>
+            {label}
+        </button>
     );
 };
 

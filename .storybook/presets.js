@@ -1,5 +1,10 @@
 module.exports = [
-    '@storybook/addon-docs/react/preset',
+    {
+        name: '@storybook/addon-docs/react/preset',
+        options: {
+            configureJSX: true,
+        }
+    },
     {
         name: '@storybook/preset-scss',
         options: {

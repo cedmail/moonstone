@@ -1,8 +1,24 @@
-import {Meta} from '@storybook/addon-docs/blocks';
+import { Meta, Story, Props, Preview} from '@storybook/addon-docs/blocks';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
-<Meta title="Design System|Button MDX"/>;
+import {Button} from './index'
+
+<Meta title="MDX|Button"/>
 
 # Test title
 
 ## Displays an image that represents a user or organization
 Use an avatar for attributing actions or content to specific users. The user's name should
+<Preview>
+    <Story name="MDX Button">
+        <Button label="test MDX"/>
+    </Story>
+</Preview>
+
+<Props of={Button} />
+
+<Preview>
+    <Story name="knobs" parameters={{ decorators: [withKnobs] }}>
+        <Button label={text('Label', 'type something')}/>
+    </Story>
+</Preview>
