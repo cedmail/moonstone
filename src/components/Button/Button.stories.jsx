@@ -10,7 +10,7 @@ import {Button} from './index';
 storiesOf('Components|Button', module)
     .addParameters({
         component: Button,
-        componentSubtitle: 'Button',
+        componentSubtitle: 'Displays an image that represents a user or organization',
         notes: {markdown: markdownNotes}
     })
     .addDecorator(withKnobs)
