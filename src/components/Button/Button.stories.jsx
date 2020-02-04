@@ -8,7 +8,7 @@ import Power from '~/icons/asset/Power.svg';
 import markdownNotes from './Button.md';
 import {Button} from './index';
 
-storiesOf('Components|Button', module)
+storiesOf('Components|Button XXX', module)
     .addParameters({
         component: Button,
         componentSubtitle: 'Button',
