@@ -43,7 +43,7 @@ function displayColors(palette) {
     return colors;
 }
 
-storiesOf('Tokens|Colors', module)
+storiesOf('Tokens|Colors YY', module)
     .add('Accent', () => (
         <section className={classnames(storyStyles.storyWrapper)}>
             {displayColors(paletteAccent)}
