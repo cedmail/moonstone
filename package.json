@@ -20,7 +20,7 @@
     "lint:js:fix": "yarn lint:js --fix .",
     "lint:scss:fix": "yarn lint:scss --fix",
     "lint:fix": "yarn lint:js:fix && yarn lint:scss:fix",
-    "prettier": "prettier",
+    "prettier:fix": "prettier --write '{src,scripts}/**/*.{js,jsx,scss}'",
     "prettier:check": "prettier --check 'src/**/*.jsx'",
     "compilejs": "node ./scripts/compile.js",
     "tsc": "tsc --build tsconfig.json",
