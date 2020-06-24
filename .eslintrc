@@ -3,22 +3,27 @@
     "plugins": ["json"],
     "parser": "babel-eslint",
     "rules": {
-        "react/boolean-prop-naming": ["error", { "rule": "^((is|has)[A-Z]([A-Za-z0-9]?)+|disabled|readOnly|autoFocus)"} ],
+        "react/boolean-prop-naming": [
+            "error",
+            {
+                "rule": "^((is|has)[A-Z]([A-Za-z0-9]?)+|disabled|readOnly|autoFocus)"
+            }
+        ],
         "react/jsx-tag-spacing": [
-			"error",
-			{
-				"closingSlash": "never",
-				"beforeSelfClosing": "always",
-				"afterOpening": "never",
-				"beforeClosing": "never"
-			}
+            "error",
+            {
+                "closingSlash": "never",
+                "beforeSelfClosing": "always",
+                "afterOpening": "never",
+                "beforeClosing": "never"
+            }
         ],
         "react/jsx-curly-newline": [
-			"off",
-			{
-				"multiline": "consistent",
-				"singleline": "forbid"
-			}
-		]
+            "off",
+            {
+                "multiline": "consistent",
+                "singleline": "forbid"
+            }
+        ]
     }
 }
