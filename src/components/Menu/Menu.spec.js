@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'component-test-utils-react';
-import {Menu} from './index';
+import { shallow } from 'component-test-utils-react';
+import { Menu } from './index';
 
 describe('Menu', () => {
     it('should not display the menu if isDisplayed is false', () => {

@@ -17,7 +17,8 @@
     &:hover,
     &:focus,
     &:active {
-        box-shadow: 0 var(--spacing-nano) var(--spacing-small) var(--color-dark20);
+        box-shadow: 0 var(--spacing-nano) var(--spacing-small)
+            var(--color-dark20);
     }
 
     &.size_big {

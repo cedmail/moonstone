@@ -1,11 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
-import {storiesOf} from '@storybook/react';
-import {boolean, select, text, withKnobs} from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 
 import markdownNotes from './Chip.md';
-import {Chip, colors} from './index';
-import {capitalize} from '~/__storybook__/utils';
+import { Chip, colors } from './index';
+import { capitalize } from '~/__storybook__/utils';
 import CloudIcon from '~/icons/Cloud';
 import DefaultIcon from '~/icons/Apps';
 import DeleteIcon from '~/icons/Delete';
@@ -21,10 +21,10 @@ const colorValues = () => select('Color', colors, 'default');
 storiesOf('Components|Chip', module)
     .addParameters({
         component: Chip,
-        notes: {markdown: markdownNotes}
+        notes: { markdown: markdownNotes },
     })
     .addDecorator(withKnobs)
-    .addDecorator(storyFn => (
+    .addDecorator((storyFn) => (
         <section className={classnames(storyStyles.storyWrapper)}>
             <section className={classnames(storyStyles.storyColumn)}>
                 {storyFn()}
@@ -32,45 +32,69 @@ storiesOf('Components|Chip', module)
         </section>
     ))
     .add('icon + text', () => (
-        <section style={{display: 'flex', flexDirection: 'flow'}}>
+        <section style={{ display: 'flex', flexDirection: 'flow' }}>
             <section className={classnames(storyStyles.storyColumn)}>
-                {colors.map(color => (
-                    <Chip key={color} label={capitalize(color)} icon={<DefaultIcon/>} color={color}/>
+                {colors.map((color) => (
+                    <Chip
+                        key={color}
+                        label={capitalize(color)}
+                        icon={<DefaultIcon />}
+                        color={color}
+                    />
                 ))}
             </section>
             <section className={classnames(storyStyles.storyColumn)}>
-                {colors.map(color => (
-                    <Chip key={color} isDisabled label={capitalize(color)} icon={<DefaultIcon/>} color={color}/>
+                {colors.map((color) => (
+                    <Chip
+                        key={color}
+                        isDisabled
+                        label={capitalize(color)}
+                        icon={<DefaultIcon />}
+                        color={color}
+                    />
                 ))}
             </section>
         </section>
     ))
-    .add('text only', () => (
-        colors.map(color => (
-            <Chip key={color} label={capitalize(color)} color={color}/>
+    .add('text only', () =>
+        colors.map((color) => (
+            <Chip key={color} label={capitalize(color)} color={color} />
         ))
-    ))
-    .add('icon only', () => (
-        colors.map(color => (
-            <Chip key={color} icon={<DefaultIcon/>} color={color}/>
+    )
+    .add('icon only', () =>
+        colors.map((color) => (
+            <Chip key={color} icon={<DefaultIcon />} color={color} />
         ))
-    ))
+    )
     .add('status', () => (
         <>
-            <Chip icon={<FileContentIcon/>} label="New" color="success"/>
-            <Chip icon={<FileContentIcon/>} label="Modified" color="default"/>
-            <Chip icon={<DeleteIcon/>} label="Marked for deletion" color="danger"/>
-            <Chip icon={<FileContentIcon/>} label="Work in progress" color="default"/>
-            <Chip icon={<LockIcon/>} label="Locked" color="warning"/>
-            <Chip icon={<CloudIcon/>} label="Live" color="accent"/>
-            <Chip icon={<NoCloudIcon/>} label="Not published" color="warning"/>
-            <Chip icon={<WarningIcon/>} label="Warning" color="warning"/>
+            <Chip icon={<FileContentIcon />} label="New" color="success" />
+            <Chip icon={<FileContentIcon />} label="Modified" color="default" />
+            <Chip
+                icon={<DeleteIcon />}
+                label="Marked for deletion"
+                color="danger"
+            />
+            <Chip
+                icon={<FileContentIcon />}
+                label="Work in progress"
+                color="default"
+            />
+            <Chip icon={<LockIcon />} label="Locked" color="warning" />
+            <Chip icon={<CloudIcon />} label="Live" color="accent" />
+            <Chip
+                icon={<NoCloudIcon />}
+                label="Not published"
+                color="warning"
+            />
+            <Chip icon={<WarningIcon />} label="Warning" color="warning" />
         </>
     ))
     .add('playground', () => (
-        <Chip label={labelValue('Playground')}
-              icon={<DefaultIcon/>}
-              color={colorValues()}
-              isDisabled={boolean('Is disabled', false)}
+        <Chip
+            label={labelValue('Playground')}
+            icon={<DefaultIcon />}
+            color={colorValues()}
+            isDisabled={boolean('Is disabled', false)}
         />
     ));

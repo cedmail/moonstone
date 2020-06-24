@@ -1,7 +1,7 @@
 module.exports = function (
-    {template},
+    { template },
     opts,
-    {imports, componentName, jsx, exports}
+    { imports, componentName, jsx, exports }
 ) {
     return template.ast`
         ${imports}

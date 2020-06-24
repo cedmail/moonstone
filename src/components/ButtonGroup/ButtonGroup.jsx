@@ -2,40 +2,47 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ButtonGroup.scss';
 import classnames from 'clsx';
-import {buttonSizes, buttonVariants, buttonColors} from '~/components/Button';
+import { buttonSizes, buttonVariants, buttonColors } from '~/components/Button';
 
-export const ButtonGroup = ({size, isReversed, variant, color, className, children, ...props}) => {
+export const ButtonGroup = ({
+    size,
+    isReversed,
+    variant,
+    color,
+    className,
+    children,
+    ...props
+}) => {
     return (
-        <div role="group"
-             className={classnames(
+        <div
+            role="group"
+            className={classnames(
                 styles.buttonGroup,
                 className,
                 'flexRow',
                 'alignCenter'
             )}
-             {...props}
+            {...props}
         >
-            {
-                React.Children.map(children, button => {
-                    if (!React.isValidElement(button)) {
-                        return null;
-                    }
+            {React.Children.map(children, (button) => {
+                if (!React.isValidElement(button)) {
+                    return null;
+                }
 
-                    return (
-                        <button.type
-                            {...button.props}
-                            size={size}
-                            variant={variant}
-                            isReversed={isReversed}
-                            color={color}
-                            className={classnames(
-                                styles[`variant_${variant}`],
-                                styles[`color_${color}`]
-                            )}
-                        />
-                    );
-                })
-            }
+                return (
+                    <button.type
+                        {...button.props}
+                        size={size}
+                        variant={variant}
+                        isReversed={isReversed}
+                        color={color}
+                        className={classnames(
+                            styles[`variant_${variant}`],
+                            styles[`color_${color}`]
+                        )}
+                    />
+                );
+            })}
         </div>
     );
 };
@@ -45,7 +52,7 @@ ButtonGroup.defaultProps = {
     variant: 'default',
     color: 'default',
     isReversed: false,
-    className: null
+    className: null,
 };
 
 ButtonGroup.propTypes = {
@@ -77,7 +84,7 @@ ButtonGroup.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 ButtonGroup.displayName = 'ButtonGroup';

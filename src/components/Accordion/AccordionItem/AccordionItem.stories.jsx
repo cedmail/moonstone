@@ -1,16 +1,16 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
-import {withKnobs, text} from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, text } from '@storybook/addon-knobs';
 import markdownNotes from './AccordionItem.md';
 
-import {Accordion} from '~/components/Accordion';
-import {AccordionItem} from './index';
+import { Accordion } from '~/components/Accordion';
+import { AccordionItem } from './index';
 import Love from '~/icons/Love';
 
 storiesOf('Components|Accordion/AccordionItem', module)
     .addParameters({
         component: AccordionItem,
-        notes: {markdown: markdownNotes}
+        notes: { markdown: markdownNotes },
     })
     .addDecorator(withKnobs)
     .add('with icon', () => (
@@ -18,7 +18,7 @@ storiesOf('Components|Accordion/AccordionItem', module)
             <AccordionItem
                 id="id"
                 label={text('Label', 'AccordionItem Label')}
-                icon={<Love size="big"/>}
+                icon={<Love size="big" />}
             >
                 {text('Content', 'My content here')}
             </AccordionItem>
@@ -26,10 +26,7 @@ storiesOf('Components|Accordion/AccordionItem', module)
     ))
     .add('without icon', () => (
         <Accordion>
-            <AccordionItem
-                id="id"
-                label={text('Label', 'AccordionItem Label')}
-            >
+            <AccordionItem id="id" label={text('Label', 'AccordionItem Label')}>
                 {text('Content', 'My content here')}
             </AccordionItem>
         </Accordion>

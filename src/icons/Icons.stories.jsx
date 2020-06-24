@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
-import {storiesOf} from '@storybook/react';
-import {withKnobs, select, color} from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, select, color } from '@storybook/addon-knobs';
 import storyStyles from '~/__storybook__/storybook.scss';
 
 import markdownNotes from './Icons.md';
@@ -10,13 +10,21 @@ import * as Icons from './assets';
 
 // Storybook knobs
 const iconsName = Object.keys(Icons);
-const iconsSize = () => select('Set icon size', {Big: 'big', Default: 'default', Small: 'small'}, 'big');
+const iconsSize = () =>
+    select(
+        'Set icon size',
+        { Big: 'big', Default: 'default', Small: 'small' },
+        'big'
+    );
 
 // Create a component to display in storybook
-export const IconWrapper = ({iconName, size, color}) => {
+export const IconWrapper = ({ iconName, size, color }) => {
     return (
-        <div className={classnames(storyStyles.storyGridItem)} style={{color: color}}>
-            {React.createElement(Icons[iconName], {size: size})}
+        <div
+            className={classnames(storyStyles.storyGridItem)}
+            style={{ color: color }}
+        >
+            {React.createElement(Icons[iconName], { size: size })}
             <span>{iconName}</span>
         </div>
     );
@@ -28,7 +36,7 @@ function displayIcons() {
 
     for (const name of iconsName) {
         allIcons.push(
-            <IconWrapper key={`key-${name}`} iconName={name} size="big"/>
+            <IconWrapper key={`key-${name}`} iconName={name} size="big" />
         );
     }
 
@@ -39,7 +47,7 @@ storiesOf('Tokens|Icons', module)
     .addParameters({
         component: Icons,
         componentSubtitle: 'Icons',
-        notes: {markdown: markdownNotes}
+        notes: { markdown: markdownNotes },
     })
     .addDecorator(withKnobs)
     .add('Default', () => (
@@ -51,11 +59,12 @@ storiesOf('Tokens|Icons', module)
         <IconWrapper
             iconName={select('Choose your icon', iconsName, 'Edit')}
             size={iconsSize()}
-            color={color('Change color', '#000')}/>
+            color={color('Change color', '#000')}
+        />
     ));
 
 IconWrapper.propTypes = {
     iconName: PropTypes.string.isRequired,
     size: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
 };

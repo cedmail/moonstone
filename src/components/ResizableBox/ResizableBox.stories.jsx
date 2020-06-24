@@ -1,16 +1,16 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
-import {withKnobs, number} from '@storybook/addon-knobs';
-import {action} from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, number } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 import markdownNotes from './ResizableBox.md';
 
-import {ResizableBox} from './index';
+import { ResizableBox } from './index';
 
 storiesOf('Components|ResizableBox', module)
     .addParameters({
         component: ResizableBox,
         componentSubtitle: 'ResizableBox',
-        notes: {markdown: markdownNotes}
+        notes: { markdown: markdownNotes },
     })
     .addDecorator(withKnobs)
     .add('default', () => (
@@ -20,10 +20,10 @@ storiesOf('Components|ResizableBox', module)
             maxWidth={number('Maximum width', 600)}
             defaultSize={{
                 width: '100%',
-                height: 'auto'
+                height: 'auto',
             }}
         >
-            <div style={{height: '400px', background: 'yellow'}}>
+            <div style={{ height: '400px', background: 'yellow' }}>
                 content resizable
             </div>
         </ResizableBox>
@@ -35,13 +35,13 @@ storiesOf('Components|ResizableBox', module)
             maxWidth={number('Maximum width', 600)}
             defaultSize={{
                 width: '100%',
-                height: 'auto'
+                height: 'auto',
             }}
             onResizeStart={action('onResizeStart')}
             onResizing={action('onResizing')}
             onResizeStop={action('onResizeStop')}
         >
-            <div style={{height: '400px', background: 'yellow'}}>
+            <div style={{ height: '400px', background: 'yellow' }}>
                 content resizable
             </div>
         </ResizableBox>

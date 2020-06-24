@@ -1,31 +1,30 @@
-import React, {Fragment, useState} from 'react';
+import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './Dropdown.scss';
 import spacings from '~/tokens/spacings/_spacings.scss';
 
-import {Menu, MenuItem} from '~/components/Menu';
-import {Typography} from '~/components/Typography';
-import {Separator} from '~/components/Separator';
-import {ChevronDown} from '~/icons';
+import { Menu, MenuItem } from '~/components/Menu';
+import { Typography } from '~/components/Typography';
+import { Separator } from '~/components/Separator';
+import { ChevronDown } from '~/icons';
 
 export const DropdownVariants = ['default', 'ghost'];
 export const DropdownSizes = ['small', 'medium'];
 
-export const Dropdown = (
-    {
-        data,
-        label,
-        value,
-        isDisabled,
-        maxWidth,
-        variant,
-        size,
-        icon,
-        onChange,
-        className,
-        ...props
-    }) => {
+export const Dropdown = ({
+    data,
+    label,
+    value,
+    isDisabled,
+    maxWidth,
+    variant,
+    size,
+    icon,
+    onChange,
+    className,
+    ...props
+}) => {
     const [isOpened, setIsOpened] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
     const [minWidth, setMinWith] = useState(null);
@@ -33,13 +32,13 @@ export const Dropdown = (
 
     const anchorPosition = {
         top: spacings.spacingnano,
-        left: 0
+        left: 0,
     };
 
     // ---
     // Functions to handle events
     // ---
-    const handleOpenMenu = e => {
+    const handleOpenMenu = (e) => {
         setMinWith(`${e.currentTarget.offsetWidth}px`);
         setAnchorEl(e.currentTarget);
         setIsOpened(true);
@@ -73,12 +72,10 @@ export const Dropdown = (
     // ---
     // CSS classes
     // ---
-    const cssDropdown = classnames(styles.dropdown,
-        {
-            [styles.disabled]: isDisabled,
-            [styles.opened]: isOpened
-        }
-    );
+    const cssDropdown = classnames(styles.dropdown, {
+        [styles.disabled]: isDisabled,
+        [styles.opened]: isOpened,
+    });
 
     const cssDropdownLabel = classnames(
         'flexRow',
@@ -100,8 +97,8 @@ export const Dropdown = (
             iconEnd={item.iconEnd}
             isDisabled={item.isDisabled}
             isSelected={value === item.value}
-            onClick={e => handleSelect(e, item)}
-            onKeyPress={e => handleKeyPress(e, item)}
+            onClick={(e) => handleSelect(e, item)}
+            onKeyPress={(e) => handleKeyPress(e, item)}
             {...item.attributes}
         />
     );
@@ -109,13 +106,11 @@ export const Dropdown = (
     const dropdownGrouped = (children, groupLabel, index) => {
         return (
             <Fragment key={`${groupLabel}-${index}`}>
-                {index > 0 && (
-                    <Separator/>
-                )}
+                {index > 0 && <Separator />}
 
-                <MenuItem variant="title" label={groupLabel}/>
+                <MenuItem variant="title" label={groupLabel} />
 
-                {children.map(item => {
+                {children.map((item) => {
                     return dropdownOption(item, handleSelect);
                 })}
             </Fragment>
@@ -123,28 +118,33 @@ export const Dropdown = (
     };
 
     return (
-        <div className={classnames(cssDropdown, className)}
-             style={{maxWidth: maxWidth}}
-             {...props}
-             onKeyPress={e => {
+        <div
+            className={classnames(cssDropdown, className)}
+            style={{ maxWidth: maxWidth }}
+            {...props}
+            onKeyPress={(e) => {
                 if (e.key === 'Enter') {
                     handleOpenMenu(e);
                 }
             }}
         >
-            <div className={classnames(cssDropdownLabel)}
-                 tabIndex="0"
-                 onClick={e => handleOpenMenu(e)}
-                 onKeyPress={(e, item) => {
-                     if (e.key === 'Enter') {
-                         handleSelect(e, item);
-                     }
-                 }}
+            <div
+                className={classnames(cssDropdownLabel)}
+                tabIndex="0"
+                onClick={(e) => handleOpenMenu(e)}
+                onKeyPress={(e, item) => {
+                    if (e.key === 'Enter') {
+                        handleSelect(e, item);
+                    }
+                }}
             >
-                {
-                    icon &&
-                    <icon.type {...icon.props} size="small" className={classnames(styles.dropdown_icon)}/>
-                }
+                {icon && (
+                    <icon.type
+                        {...icon.props}
+                        size="small"
+                        className={classnames(styles.dropdown_icon)}
+                    />
+                )}
 
                 <Typography
                     isNowrap
@@ -153,7 +153,7 @@ export const Dropdown = (
                 >
                     {label}
                 </Typography>
-                <ChevronDown/>
+                <ChevronDown />
             </div>
 
             <Menu
@@ -165,18 +165,20 @@ export const Dropdown = (
                 anchorEl={anchorEl}
                 onClose={handleCloseMenu}
             >
-                {
-                    data.map((item, index) => {
-                        if (isGrouped) {
-                            item.options.map(o => {
-                                return dropdownOption(o, handleSelect);
-                            });
-                            return dropdownGrouped(item.options, item.groupLabel, index);
-                        }
+                {data.map((item, index) => {
+                    if (isGrouped) {
+                        item.options.map((o) => {
+                            return dropdownOption(o, handleSelect);
+                        });
+                        return dropdownGrouped(
+                            item.options,
+                            item.groupLabel,
+                            index
+                        );
+                    }
 
-                        return dropdownOption(item, handleSelect);
-                    })
-                }
+                    return dropdownOption(item, handleSelect);
+                })}
             </Menu>
         </div>
     );
@@ -187,7 +189,7 @@ Dropdown.defaultProps = {
     variant: 'default',
     size: 'medium',
     maxWidth: '300px',
-    isDisabled: false
+    isDisabled: false,
 };
 
 const PropTypesOptions = {
@@ -196,7 +198,7 @@ const PropTypesOptions = {
     isDisabled: PropTypes.bool,
     iconStart: PropTypes.node,
     iconEnd: PropTypes.node,
-    attributes: PropTypes.object
+    attributes: PropTypes.object,
 };
 
 Dropdown.propTypes = {
@@ -209,9 +211,9 @@ Dropdown.propTypes = {
             groupLabel: PropTypes.string,
             options: PropTypes.arrayOf(
                 PropTypes.shape({
-                    ...PropTypesOptions
+                    ...PropTypesOptions,
                 })
-            )
+            ),
         })
     ).isRequired,
 
@@ -260,7 +262,7 @@ Dropdown.propTypes = {
      * @param {object} event - Mouse event
      * @param {object} item - The current item selected
      */
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
 };
 
 Dropdown.displayName = 'Dropdown';

@@ -1,26 +1,34 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {AccordionItem} from './AccordionItem';
-import {ControlledAccordion} from './ControlledAccordion';
+import { AccordionItem } from './AccordionItem';
+import { ControlledAccordion } from './ControlledAccordion';
 
-export const UncontrolledAccordion = ({defaultOpenedItem, children, ...props}) => {
+export const UncontrolledAccordion = ({
+    defaultOpenedItem,
+    children,
+    ...props
+}) => {
     const [openedItem, setOpenedItem] = useState(defaultOpenedItem);
 
-    const onSetOpenedItem = id => {
-        setOpenedItem(prevState => {
+    const onSetOpenedItem = (id) => {
+        setOpenedItem((prevState) => {
             return prevState === id ? null : id;
         });
     };
 
     return (
-        <ControlledAccordion openedItem={openedItem} onSetOpenedItem={onSetOpenedItem} {...props}>
+        <ControlledAccordion
+            openedItem={openedItem}
+            onSetOpenedItem={onSetOpenedItem}
+            {...props}
+        >
             {children}
         </ControlledAccordion>
     );
 };
 
 UncontrolledAccordion.defaultProps = {
-    isReversed: false
+    isReversed: false,
 };
 
 UncontrolledAccordion.propTypes = {
@@ -34,13 +42,13 @@ UncontrolledAccordion.propTypes = {
      */
     children: PropTypes.oneOfType([
         PropTypes.shape({
-            type: PropTypes.oneOf([AccordionItem])
+            type: PropTypes.oneOf([AccordionItem]),
         }),
         PropTypes.arrayOf(
             PropTypes.shape({
-                type: PropTypes.oneOf([AccordionItem])
+                type: PropTypes.oneOf([AccordionItem]),
             })
-        )
+        ),
     ]).isRequired,
 
     /**
@@ -51,5 +59,5 @@ UncontrolledAccordion.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string
+    className: PropTypes.string,
 };

@@ -1,12 +1,10 @@
 import React from 'react';
-import {shallow} from 'component-test-utils-react';
-import {ResizableBox} from './index';
+import { shallow } from 'component-test-utils-react';
+import { ResizableBox } from './index';
 
 describe('ResizableBox', () => {
     it('should display content', () => {
-        const wrapper = shallow(
-            <ResizableBox>My content here</ResizableBox>
-        );
+        const wrapper = shallow(<ResizableBox>My content here</ResizableBox>);
 
         expect(wrapper.html()).toContain('My content here');
     });

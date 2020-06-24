@@ -1,40 +1,51 @@
 import React from 'react';
-import {usePositioning} from '~/hooks/usePositioning';
-import {useEnterExitCallbacks} from '~/hooks/useEnterExitCallbacks';
+import { usePositioning } from '~/hooks/usePositioning';
+import { useEnterExitCallbacks } from '~/hooks/useEnterExitCallbacks';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './Menu.scss';
 
-export const Menu = (
-    {
-        children,
+export const Menu = ({
+    children,
+    isDisplayed,
+    minWidth,
+    maxWidth,
+    maxHeight,
+    className,
+    style,
+    onMouseEnter,
+    onMouseLeave,
+    anchorEl,
+    anchorElOrigin,
+    transformElOrigin,
+    anchorPosition,
+    onClose,
+    onEntering,
+    onEntered,
+    onExiting,
+    onExited,
+    hasOverlay,
+    ...props
+}) => {
+    const [stylePosition, itemRef] = usePositioning(
         isDisplayed,
-        minWidth,
-        maxWidth,
-        maxHeight,
-        className,
-        style,
-        onMouseEnter,
-        onMouseLeave,
+        anchorPosition,
         anchorEl,
         anchorElOrigin,
-        transformElOrigin,
-        anchorPosition,
-        onClose,
-        onEntering,
-        onEntered,
+        transformElOrigin
+    );
+    useEnterExitCallbacks(
+        isDisplayed,
         onExiting,
         onExited,
-        hasOverlay,
-        ...props
-    }) => {
-    const [stylePosition, itemRef] = usePositioning(isDisplayed, anchorPosition, anchorEl, anchorElOrigin, transformElOrigin);
-    useEnterExitCallbacks(isDisplayed, onExiting, onExited, onEntering, onEntered);
+        onEntering,
+        onEntered
+    );
 
     // ---
     // Styling
     // ---
-    const styleMenu = {...stylePosition, ...style};
+    const styleMenu = { ...stylePosition, ...style };
     if (minWidth) {
         styleMenu.minWidth = minWidth;
     }
@@ -55,27 +66,22 @@ export const Menu = (
             <menu
                 ref={itemRef}
                 style={styleMenu}
-                className={classnames(
-                    styles.menu,
-                    className,
-                    {
-                        [styles.hidden]: !isDisplayed || !stylePosition
-                    }
-                )}
+                className={classnames(styles.menu, className, {
+                    [styles.hidden]: !isDisplayed || !stylePosition,
+                })}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
                 {...props}
             >
                 {children}
             </menu>
-            {
-                hasOverlay && isDisplayed &&
+            {hasOverlay && isDisplayed && (
                 <div
                     aria-hidden="true"
                     className={classnames(styles.menu_overlay)}
                     onClick={onClose}
                 />
-            }
+            )}
         </>
     );
 };
@@ -85,16 +91,16 @@ Menu.defaultProps = {
     anchorEl: null,
     anchorPosition: {
         top: 0,
-        left: 0
+        left: 0,
     },
     anchorElOrigin: {
         vertical: 'bottom',
-        horizontal: 'left'
+        horizontal: 'left',
     },
     transformElOrigin: {
         vertical: 'top',
-        horizontal: 'left'
-    }
+        horizontal: 'left',
+    },
 };
 
 Menu.propTypes = {
@@ -133,7 +139,7 @@ Menu.propTypes = {
      */
     anchorPosition: PropTypes.shape({
         top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        left: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
 
     /**
@@ -141,7 +147,7 @@ Menu.propTypes = {
      */
     anchorElOrigin: PropTypes.shape({
         horizontal: PropTypes.oneOf(['left', 'center', 'right']).isRequired,
-        vertical: PropTypes.oneOf(['top', 'center', 'bottom']).isRequired
+        vertical: PropTypes.oneOf(['top', 'center', 'bottom']).isRequired,
     }),
 
     /**
@@ -149,7 +155,7 @@ Menu.propTypes = {
      */
     transformElOrigin: PropTypes.shape({
         horizontal: PropTypes.oneOf(['left', 'right']).isRequired,
-        vertical: PropTypes.oneOf(['top', 'bottom']).isRequired
+        vertical: PropTypes.oneOf(['top', 'bottom']).isRequired,
     }),
 
     /**
@@ -200,7 +206,7 @@ Menu.propTypes = {
     /**
      * The menu has overlay or not
      */
-    hasOverlay: PropTypes.bool
+    hasOverlay: PropTypes.bool,
 };
 
 Menu.displayName = 'Menu';

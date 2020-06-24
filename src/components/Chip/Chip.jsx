@@ -1,21 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Chip.scss';
-import {Typography} from '~/components/Typography';
+import { Typography } from '~/components/Typography';
 import classnames from 'clsx';
 
-export const colors = ['default', 'accent', 'success', 'warning', 'danger', 'reassuring'];
+export const colors = [
+    'default',
+    'accent',
+    'success',
+    'warning',
+    'danger',
+    'reassuring',
+];
 
-export const Chip = ({label, color, icon, className, isDisabled, ...props}) => (
-    <div className={classnames(
-        styles.chip,
-        styles[`color_${color}`],
-        {[styles.disabled]: isDisabled},
-        className)}
-         {...props}
+export const Chip = ({
+    label,
+    color,
+    icon,
+    className,
+    isDisabled,
+    ...props
+}) => (
+    <div
+        className={classnames(
+            styles.chip,
+            styles[`color_${color}`],
+            { [styles.disabled]: isDisabled },
+            className
+        )}
+        {...props}
     >
-        {icon && <icon.type size="small"/>}
-        {label && <Typography isNowrap component="span" variant="caption" weight="semiBold">{label}</Typography>}
+        {icon && <icon.type size="small" />}
+        {label && (
+            <Typography
+                isNowrap
+                component="span"
+                variant="caption"
+                weight="semiBold"
+            >
+                {label}
+            </Typography>
+        )}
     </div>
 );
 
@@ -23,7 +48,7 @@ Chip.defaultProps = {
     label: '',
     color: 'default',
     icon: null,
-    isDisabled: false
+    isDisabled: false,
 };
 
 Chip.propTypes = {
@@ -50,7 +75,7 @@ Chip.propTypes = {
     /**
      * Is this component disabled
      */
-    isDisabled: PropTypes.bool
+    isDisabled: PropTypes.bool,
 };
 
 Chip.displayName = 'Chip';

@@ -1,51 +1,61 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './SecondaryNav.scss';
-import {ResizableBox} from '~/components/ResizableBox';
+import { ResizableBox } from '~/components/ResizableBox';
 import ChevronDoubleRight from '~/icons/ChevronDoubleRight';
 import ChevronDoubleLeft from '~/icons/ChevronDoubleLeft';
 
-export const SecondaryNav = ({header, children, isDefaultVisible, onToggled, className, ...props}) => {
+export const SecondaryNav = ({
+    header,
+    children,
+    isDefaultVisible,
+    onToggled,
+    className,
+    ...props
+}) => {
     const [isVisible, setIsVisible] = useState(isDefaultVisible);
 
-    const handleToggle = e => {
-        setIsVisible(prevState => !prevState);
+    const handleToggle = (e) => {
+        setIsVisible((prevState) => !prevState);
         onToggled(e);
     };
 
     return (
         <ResizableBox
-            className={
-                classnames(
-                    className,
-                    'flexFluid',
-                    'flexCol_nowrap',
-                    styles.secondaryNav,
-                    isVisible ? null : styles.secondaryNav_hidden
-                )
-            }
+            className={classnames(
+                className,
+                'flexFluid',
+                'flexCol_nowrap',
+                styles.secondaryNav,
+                isVisible ? null : styles.secondaryNav_hidden
+            )}
             enable={['right']}
-            size={isVisible ? null : {height: '0%', width: 0}}
+            size={isVisible ? null : { height: '0%', width: 0 }}
             minWidth={isVisible ? 245 : 0}
             maxWidth="900"
             defaultSize={{
                 height: '0%',
-                width: '245px'
+                width: '245px',
             }}
             {...props}
         >
-            <button type="button"
-                    className={classnames(styles.secondaryNav_buttonToggle)}
-                    onClick={handleToggle}
+            <button
+                type="button"
+                className={classnames(styles.secondaryNav_buttonToggle)}
+                onClick={handleToggle}
             >
-                {isVisible &&
-                    <ChevronDoubleLeft/>}
-                {!isVisible &&
-                    <ChevronDoubleRight/>}
+                {isVisible && <ChevronDoubleLeft />}
+                {!isVisible && <ChevronDoubleRight />}
             </button>
 
-            <div className={classnames(styles.secondaryNav_wrapper, 'flexFluid', 'flexCol_nowrap')}>
+            <div
+                className={classnames(
+                    styles.secondaryNav_wrapper,
+                    'flexFluid',
+                    'flexCol_nowrap'
+                )}
+            >
                 {header}
                 <div className={classnames('flexFluid', 'flexCol_nowrap')}>
                     {children}
@@ -57,7 +67,7 @@ export const SecondaryNav = ({header, children, isDefaultVisible, onToggled, cla
 
 SecondaryNav.defaultProps = {
     isDefaultVisible: true,
-    onToggled: () => {}
+    onToggled: () => {},
 };
 
 SecondaryNav.propTypes = {
@@ -84,7 +94,7 @@ SecondaryNav.propTypes = {
     /**
      * Triggered when the visibility is toggled
      */
-    onToggled: PropTypes.func
+    onToggled: PropTypes.func,
 };
 
 SecondaryNav.displayName = 'SecondaryNav';

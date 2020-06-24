@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 
 export const ImgWrapperSize = ['small', 'default', 'big'];
 
-export const ImgWrapper = initialProps => {
-    let {size, ...props} = initialProps;
-    props.className = initialProps.className + ' moonstone-icon moonstone-icon_' + size;
-    return (
-        <img {...props}/>
-    );
+export const ImgWrapper = (initialProps) => {
+    let { size, ...props } = initialProps;
+    props.className =
+        initialProps.className + ' moonstone-icon moonstone-icon_' + size;
+    return <img {...props} />;
 };
 
 ImgWrapper.defaultProps = {
     size: 'default',
-    className: ''
+    className: '',
 };
 
 ImgWrapper.propTypes = {
@@ -30,5 +29,5 @@ ImgWrapper.propTypes = {
     /**
      * Extra CSS class
      */
-    className: PropTypes.string
+    className: PropTypes.string,
 };

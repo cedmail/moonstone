@@ -1,6 +1,6 @@
 import React from 'react';
-import {Typography, variants, weights} from './index';
-import {shallow} from 'component-test-utils-react';
+import { Typography, variants, weights } from './index';
+import { shallow } from 'component-test-utils-react';
 
 describe('Typography', () => {
     it('should display a text children', () => {
@@ -14,8 +14,10 @@ describe('Typography', () => {
     });
 
     it('should display the specified variant', () => {
-        variants.forEach(variant => {
-            const wrapper = shallow(<Typography variant={variant}>Content children</Typography>);
+        variants.forEach((variant) => {
+            const wrapper = shallow(
+                <Typography variant={variant}>Content children</Typography>
+            );
             expect(wrapper.props.className).toContain(`variant_${variant}`);
         });
     });
@@ -26,8 +28,10 @@ describe('Typography', () => {
     });
 
     it('should use the specified weight', () => {
-        weights.forEach(weight => {
-            const wrapper = shallow(<Typography weight={weight}>Test</Typography>);
+        weights.forEach((weight) => {
+            const wrapper = shallow(
+                <Typography weight={weight}>Test</Typography>
+            );
             expect(wrapper.props.className).toContain(`weight_${weight}`);
         });
     });
@@ -68,7 +72,9 @@ describe('Typography', () => {
     });
 
     it('should display a tag html h1', () => {
-        const wrapper = shallow(<Typography component="h1">Content children</Typography>);
+        const wrapper = shallow(
+            <Typography component="h1">Content children</Typography>
+        );
         expect(wrapper.html()).toContain('h1');
     });
 
@@ -88,7 +94,9 @@ describe('Typography', () => {
 
     it('should not bind isHtml prop to the html component', () => {
         const wrapper = shallow(
-            <Typography isHtml><div>string</div></Typography>
+            <Typography isHtml>
+                <div>string</div>
+            </Typography>
         );
         expect(wrapper.html()).not.toContain('isHtml');
     });
@@ -100,15 +108,15 @@ describe('Typography', () => {
 
         // It should display an error message when sending something else than a string when html props is not send
         shallow(
-            <Typography><div/></Typography>
+            <Typography>
+                <div />
+            </Typography>
         );
 
         expect(console.error).toHaveBeenCalledTimes(1);
 
         // It should display an error message when sending a unrenderable children when html props is true
-        shallow(
-            <Typography isHtml>{true}</Typography>
-        );
+        shallow(<Typography isHtml>{true}</Typography>);
 
         expect(global.console.error).toHaveBeenCalledTimes(2);
 
@@ -124,9 +132,7 @@ describe('Typography', () => {
         process.env.NODE_ENV = 'production';
         const Typography = require('./Typography');
 
-        shallow(
-            <Typography.Typography isHtml>{true}</Typography.Typography>
-        );
+        shallow(<Typography.Typography isHtml>{true}</Typography.Typography>);
 
         expect(global.console.error).not.toHaveBeenCalled();
 

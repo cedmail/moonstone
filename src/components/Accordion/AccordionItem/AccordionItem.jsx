@@ -1,11 +1,19 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './AccordionItem.scss';
-import {Typography} from '~/components/Typography';
-import {AccordionContext} from '~/components/Accordion/Accordion.context';
+import { Typography } from '~/components/Typography';
+import { AccordionContext } from '~/components/Accordion/Accordion.context';
 
-export const AccordionItem = ({id, label, icon, onClick, children, className, ...props}) => {
+export const AccordionItem = ({
+    id,
+    label,
+    icon,
+    onClick,
+    children,
+    className,
+    ...props
+}) => {
     const context = useContext(AccordionContext);
     const open = context.currentItem === id;
 
@@ -19,7 +27,7 @@ export const AccordionItem = ({id, label, icon, onClick, children, className, ..
             {...props}
             className={classnames(
                 styles.accordionItem,
-                {[styles.reversed]: context.isReversed},
+                { [styles.reversed]: context.isReversed },
                 'flexCol',
                 open ? 'flexFluid' : null,
                 className
@@ -30,7 +38,7 @@ export const AccordionItem = ({id, label, icon, onClick, children, className, ..
                     styles.accordionItem_header,
                     {
                         [styles.selected]: open,
-                        [styles.reversed]: context.isReversed
+                        [styles.reversed]: context.isReversed,
                     },
                     'flexRow',
                     'alignCenter'
@@ -38,17 +46,19 @@ export const AccordionItem = ({id, label, icon, onClick, children, className, ..
                 role="accordion-item"
                 aria-controls={id}
                 aria-expanded={open}
-                onClick={e => handleClick(e, open)}
+                onClick={(e) => handleClick(e, open)}
             >
-                {icon &&
-                    <div className={classnames(
-                        styles.accordionItem_iconContainer,
-                        'flexRow_center',
-                        'alignCenter'
-                    )}
+                {icon && (
+                    <div
+                        className={classnames(
+                            styles.accordionItem_iconContainer,
+                            'flexRow_center',
+                            'alignCenter'
+                        )}
                     >
-                        {icon && <icon.type {...icon.props} size="big"/>}
-                    </div>}
+                        {icon && <icon.type {...icon.props} size="big" />}
+                    </div>
+                )}
                 <Typography
                     isNowrap
                     variant="subheading"
@@ -60,22 +70,24 @@ export const AccordionItem = ({id, label, icon, onClick, children, className, ..
             </header>
 
             {/* Accordion content */}
-            {open &&
-                <div className={classnames(
+            {open && (
+                <div
+                    className={classnames(
                         styles.accordionItem_content,
                         'flexFluid'
                     )}
-                     role="region"
+                    role="region"
                 >
                     {children}
-                </div>}
+                </div>
+            )}
         </section>
     );
 };
 
 AccordionItem.defaultProps = {
     icon: null,
-    onClick: () => {}
+    onClick: () => {},
 };
 
 AccordionItem.propTypes = {
@@ -107,7 +119,7 @@ AccordionItem.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 AccordionItem.displayName = 'AccordionItem';

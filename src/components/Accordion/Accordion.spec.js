@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
-import {shallow} from 'component-test-utils-react';
-import {Accordion} from './index';
-import {ControlledAccordion} from './ControlledAccordion';
-import {UncontrolledAccordion} from './UncontrolledAccordion';
-import {AccordionItem} from './AccordionItem/';
-import {AccordionContext} from './Accordion.context';
+import React, { useContext } from 'react';
+import { shallow } from 'component-test-utils-react';
+import { Accordion } from './index';
+import { ControlledAccordion } from './ControlledAccordion';
+import { UncontrolledAccordion } from './UncontrolledAccordion';
+import { AccordionItem } from './AccordionItem/';
+import { AccordionContext } from './Accordion.context';
 
 describe('Accordion', () => {
     it('should display children content', () => {
@@ -54,12 +54,18 @@ describe('Accordion', () => {
 
     describe('withAccordionItem Mock', () => {
         // eslint-disable-next-line react/prop-types
-        const AccordionItemMock = ({id}) => {
+        const AccordionItemMock = ({ id }) => {
             const context = useContext(AccordionContext);
             const open = context.currentItem === id;
 
             return (
-                <button type="button" id={id} onClick={() => context.onSetOpenedItem(id)}>{id} - {open ? 'open' : 'close'}</button>
+                <button
+                    type="button"
+                    id={id}
+                    onClick={() => context.onSetOpenedItem(id)}
+                >
+                    {id} - {open ? 'open' : 'close'}
+                </button>
             );
         };
 
@@ -77,15 +83,16 @@ describe('Accordion', () => {
         it('should select another item when calling onSetOpenedItem', () => {
             const wrapper = shallow(
                 <UncontrolledAccordion>
-                    <AccordionItemMock id="1"/>
-                    <AccordionItemMock id="2"/>
-                </UncontrolledAccordion>
-                , {
+                    <AccordionItemMock id="1" />
+                    <AccordionItemMock id="2" />
+                </UncontrolledAccordion>,
+                {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true
-                    }
-                });
+                        ControlledAccordion: true,
+                    },
+                }
+            );
 
             wrapper.querySelector('button').dispatchEvent('click');
 
@@ -96,15 +103,16 @@ describe('Accordion', () => {
         it('should open just one item', () => {
             const wrapper = shallow(
                 <UncontrolledAccordion>
-                    <AccordionItemMock id="1"/>
-                    <AccordionItemMock id="2"/>
-                </UncontrolledAccordion>
-                , {
+                    <AccordionItemMock id="1" />
+                    <AccordionItemMock id="2" />
+                </UncontrolledAccordion>,
+                {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true
-                    }
-                });
+                        ControlledAccordion: true,
+                    },
+                }
+            );
 
             wrapper.querySelector('#1 button').dispatchEvent('click');
             wrapper.querySelector('#2 button').dispatchEvent('click');
@@ -116,15 +124,16 @@ describe('Accordion', () => {
         it('should unselect item when calling onSetOpenedItem another time', () => {
             const wrapper = shallow(
                 <UncontrolledAccordion>
-                    <AccordionItemMock id="1"/>
-                    <AccordionItemMock id="2"/>
-                </UncontrolledAccordion>
-                , {
+                    <AccordionItemMock id="1" />
+                    <AccordionItemMock id="2" />
+                </UncontrolledAccordion>,
+                {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true
-                    }
-                });
+                        ControlledAccordion: true,
+                    },
+                }
+            );
 
             wrapper.querySelector('button').dispatchEvent('click');
             wrapper.querySelector('button').dispatchEvent('click');
@@ -136,15 +145,16 @@ describe('Accordion', () => {
         it('should open item by default when give the props', () => {
             const wrapper = shallow(
                 <UncontrolledAccordion defaultOpenedItem="2">
-                    <AccordionItemMock id="1"/>
-                    <AccordionItemMock id="2"/>
-                </UncontrolledAccordion>
-                , {
+                    <AccordionItemMock id="1" />
+                    <AccordionItemMock id="2" />
+                </UncontrolledAccordion>,
+                {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true
-                    }
-                });
+                        ControlledAccordion: true,
+                    },
+                }
+            );
 
             expect(wrapper.html()).toContain('1 - close');
             expect(wrapper.html()).toContain('2 - open');

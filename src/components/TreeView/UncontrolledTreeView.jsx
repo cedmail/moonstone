@@ -1,38 +1,49 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {ControlledTreeView} from './ControlledTreeView';
+import { ControlledTreeView } from './ControlledTreeView';
 
-export const UncontrolledTreeView = ({defaultOpenedItems, ...others}) => {
+export const UncontrolledTreeView = ({ defaultOpenedItems, ...others }) => {
     const [openedItems, setOpenedItems] = useState(defaultOpenedItems);
 
-    const onOpenItem = node => {
-        setOpenedItems(openedItems => [...openedItems, node.id]);
+    const onOpenItem = (node) => {
+        setOpenedItems((openedItems) => [...openedItems, node.id]);
     };
 
-    const onCloseItem = node => {
-        setOpenedItems(openedItems => openedItems.filter(item => item !== node.id));
+    const onCloseItem = (node) => {
+        setOpenedItems((openedItems) =>
+            openedItems.filter((item) => item !== node.id)
+        );
     };
 
-    return <ControlledTreeView openedItems={openedItems} onOpenItem={onOpenItem} onCloseItem={onCloseItem} {...others}/>;
+    return (
+        <ControlledTreeView
+            openedItems={openedItems}
+            onOpenItem={onOpenItem}
+            onCloseItem={onCloseItem}
+            {...others}
+        />
+    );
 };
 
 UncontrolledTreeView.propTypes = {
     /**
      * Data to generate the tree
      */
-    data: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        iconStart: PropTypes.nodes,
-        iconEnd: PropTypes.nodes,
-        hasChildren: PropTypes.bool,
-        isClosable: PropTypes.bool,
-        children: PropTypes.arrayOf(PropTypes.object),
-        isLoading: PropTypes.bool,
-        className: PropTypes.string,
-        typographyOptions: PropTypes.object,
-        treeItemProps: PropTypes.object
-    })).isRequired,
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            iconStart: PropTypes.nodes,
+            iconEnd: PropTypes.nodes,
+            hasChildren: PropTypes.bool,
+            isClosable: PropTypes.bool,
+            children: PropTypes.arrayOf(PropTypes.object),
+            isLoading: PropTypes.bool,
+            className: PropTypes.string,
+            typographyOptions: PropTypes.object,
+            treeItemProps: PropTypes.object,
+        })
+    ).isRequired,
 
     /**
      * Opened items' ids
@@ -62,7 +73,7 @@ UncontrolledTreeView.propTypes = {
     /**
      * Reverse color usefull for context with dark background
      */
-    isReversed: PropTypes.bool
+    isReversed: PropTypes.bool,
 };
 
 UncontrolledTreeView.defaultProps = {
@@ -71,6 +82,5 @@ UncontrolledTreeView.defaultProps = {
     onContextMenuItem: () => {},
     defaultOpenedItems: [],
     selectedItems: [],
-    isReversed: false
+    isReversed: false,
 };
-

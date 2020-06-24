@@ -1,6 +1,6 @@
 @mixin colorValue($value) {
     &::after {
-        content: "#{$value}";
+        content: '#{$value}';
 
         position: absolute;
         bottom: var(--spacing-small);
@@ -67,11 +67,7 @@ $colorsSupport: (
     'danger40',
     'danger_dark'
 );
-$colorsPalette: (
-    'purple',
-    'purple60',
-    'purple40'
-);
+$colorsPalette: ('purple', 'purple60', 'purple40');
 
 @each $name in $colorsAccent {
     .color-#{$name} {

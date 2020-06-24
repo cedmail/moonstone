@@ -1,6 +1,12 @@
-import {useEffect, useRef} from 'react';
+import { useEffect, useRef } from 'react';
 
-export const useEnterExitCallbacks = (isDisplayed, onExiting, onExited, onEntering, onEntered) => {
+export const useEnterExitCallbacks = (
+    isDisplayed,
+    onExiting,
+    onExited,
+    onEntering,
+    onEntered
+) => {
     const previousIsDisplayed = useRef();
     useEffect(() => {
         if (typeof previousIsDisplayed.current !== 'undefined') {
@@ -26,5 +32,12 @@ export const useEnterExitCallbacks = (isDisplayed, onExiting, onExited, onEnteri
         }
 
         previousIsDisplayed.current = isDisplayed;
-    }, [isDisplayed, onEntered, onEntering, onExited, onExiting, previousIsDisplayed]);
+    }, [
+        isDisplayed,
+        onEntered,
+        onEntering,
+        onExited,
+        onExiting,
+        previousIsDisplayed,
+    ]);
 };

@@ -1,28 +1,41 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
-import {withKnobs, select} from '@storybook/addon-knobs';
-import {optionsFromArray} from '~/__storybook__/utils';
+import { storiesOf } from '@storybook/react';
+import { withKnobs, select } from '@storybook/addon-knobs';
+import { optionsFromArray } from '~/__storybook__/utils';
 import classnames from 'classnames';
 import storyStyles from '~/__storybook__/storybook.scss';
 
-import {Separator, SeparatorSizes, SeparatorSpacings, SeparatorInvisible, Typography} from '~/components';
+import {
+    Separator,
+    SeparatorSizes,
+    SeparatorSpacings,
+    SeparatorInvisible,
+    Typography,
+} from '~/components';
 import markdownNotes from './Separator.md';
 
-const separatorInvisibleValue = () => select('invisible', optionsFromArray(SeparatorInvisible), 'firstChild');
+const separatorInvisibleValue = () =>
+    select('invisible', optionsFromArray(SeparatorInvisible), 'firstChild');
 
 storiesOf('Components|Separator', module)
     .addParameters({
         component: Separator,
-        notes: {markdown: markdownNotes}
+        notes: { markdown: markdownNotes },
     })
     .addDecorator(withKnobs)
     .add('Horizontal', () => (
         <>
-            <Typography variant="heading">Content before a separator</Typography>
+            <Typography variant="heading">
+                Content before a separator
+            </Typography>
             <Separator
                 variant="horizontal"
                 size={select('Size', optionsFromArray(SeparatorSizes), 'full')}
-                spacing={select('Spacing', optionsFromArray(SeparatorSpacings), 'medium')}
+                spacing={select(
+                    'Spacing',
+                    optionsFromArray(SeparatorSpacings),
+                    'medium'
+                )}
             />
             <Typography variant="heading">Content after a separator</Typography>
         </>
@@ -34,7 +47,11 @@ storiesOf('Components|Separator', module)
             <Separator
                 variant="vertical"
                 size={select('Size', optionsFromArray(SeparatorSizes), 'full')}
-                spacing={select('Spacing', optionsFromArray(SeparatorSpacings), 'medium')}
+                spacing={select(
+                    'Spacing',
+                    optionsFromArray(SeparatorSpacings),
+                    'medium'
+                )}
             />
             <Typography variant="heading">After</Typography>
         </div>
@@ -51,7 +68,7 @@ storiesOf('Components|Separator', module)
                 />
                 <Typography variant="heading">After</Typography>
             </div>
-            <Separator variant="horizontal"/>
+            <Separator variant="horizontal" />
             <div className={classnames(storyStyles.storyItem)}>
                 <Typography variant="heading">Before</Typography>
                 <Separator
@@ -61,7 +78,7 @@ storiesOf('Components|Separator', module)
                     invisible={separatorInvisibleValue()}
                 />
             </div>
-            <Separator variant="horizontal"/>
+            <Separator variant="horizontal" />
             <div className={classnames(storyStyles.storyItem)}>
                 <Separator
                     variant="vertical"
@@ -71,7 +88,7 @@ storiesOf('Components|Separator', module)
                 />
                 <Typography variant="heading">After</Typography>
             </div>
-            <Separator variant="horizontal"/>
+            <Separator variant="horizontal" />
             <div className={classnames(storyStyles.storyItem)}>
                 <Separator
                     variant="vertical"

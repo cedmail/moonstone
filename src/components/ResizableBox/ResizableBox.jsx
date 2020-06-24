@@ -1,5 +1,5 @@
 import React from 'react';
-import {Resizable} from 're-resizable';
+import { Resizable } from 're-resizable';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './ResizableBox.scss';
@@ -9,7 +9,19 @@ import HandleResize from '~/icons/HandleResize';
 // const zones = ['top', 'right', 'bottom', 'left', 'topRight', 'bottomRight', 'bottomLeft', 'topLeft'];
 const zones = ['right'];
 
-export const ResizableBox = ({enable, minWidth, maxWidth, defaultSize, className, size, children, onResizeStart, onResizing, onResizeStop, ...props}) => {
+export const ResizableBox = ({
+    enable,
+    minWidth,
+    maxWidth,
+    defaultSize,
+    className,
+    size,
+    children,
+    onResizeStart,
+    onResizing,
+    onResizeStop,
+    ...props
+}) => {
     const enableZones = {};
 
     zones.forEach(function (zone) {
@@ -24,18 +36,24 @@ export const ResizableBox = ({enable, minWidth, maxWidth, defaultSize, className
             maxWidth={maxWidth}
             size={size}
             defaultSize={defaultSize}
-            handleClasses={
-                {
-                    right: classnames(styles.resizable_handle),
-                    left: classnames(styles.resizable_handle)
-                }
-            }
-            handleComponent={
-                {
-                    right: <HandleResize className={classnames(styles.resizable_handle_icon)} size="big"/>,
-                    left: <HandleResize className={classnames(styles.resizable_handle_icon)} size="big"/>
-                }
-            }
+            handleClasses={{
+                right: classnames(styles.resizable_handle),
+                left: classnames(styles.resizable_handle),
+            }}
+            handleComponent={{
+                right: (
+                    <HandleResize
+                        className={classnames(styles.resizable_handle_icon)}
+                        size="big"
+                    />
+                ),
+                left: (
+                    <HandleResize
+                        className={classnames(styles.resizable_handle_icon)}
+                        size="big"
+                    />
+                ),
+            }}
             className={classnames(className)}
             onResize={onResizing}
             onResizeStart={onResizeStart}
@@ -54,10 +72,10 @@ ResizableBox.defaultProps = {
     size: {},
     defaultSize: {
         width: '100%',
-        height: 'auto'
+        height: 'auto',
     },
     children: null,
-    className: ''
+    className: '',
 };
 
 ResizableBox.propTypes = {
@@ -86,7 +104,7 @@ ResizableBox.propTypes = {
      */
     defaultSize: PropTypes.shape({
         width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
 
     /**
@@ -94,7 +112,7 @@ ResizableBox.propTypes = {
      */
     size: PropTypes.shape({
         width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     }),
 
     /**
@@ -123,7 +141,7 @@ ResizableBox.propTypes = {
      * @param {node} ref - HTML element resized
      * @param {object} delta - delta between after resize
      */
-    onResizeStop: PropTypes.func
+    onResizeStop: PropTypes.func,
 };
 
 ResizableBox.displayName = 'ResizableBox';

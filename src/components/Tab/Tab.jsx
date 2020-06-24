@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Tab.scss';
 import classnames from 'clsx';
 
-export const Tab = ({children, className, ...props}) => {
+export const Tab = ({ children, className, ...props }) => {
     return (
         <div
             {...props}
@@ -20,7 +20,7 @@ export const Tab = ({children, className, ...props}) => {
 };
 
 Tab.defaultProps = {
-    className: ''
+    className: '',
 };
 
 Tab.propTypes = {
@@ -32,7 +32,7 @@ Tab.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 Tab.displayName = 'Tab';

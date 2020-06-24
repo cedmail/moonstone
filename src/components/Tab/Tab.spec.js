@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'component-test-utils-react';
-import {Tab} from './index';
+import { shallow } from 'component-test-utils-react';
+import { Tab } from './index';
 
 describe('Tab', () => {
     it('should render the children', () => {

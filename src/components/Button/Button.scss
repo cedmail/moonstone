@@ -1,6 +1,6 @@
-@import "variants/default";
-@import "variants/ghost";
-@import "variants/outlined";
+@import 'variants/default';
+@import 'variants/ghost';
+@import 'variants/outlined';
 
 $button-size_small: 16px;
 $button-size_medium: 24px;
@@ -23,7 +23,8 @@ $button-size_big: 32px;
     &:hover,
     &:focus,
     &:active {
-        box-shadow: 0 var(--spacing-nano) var(--spacing-small) var(--color-dark20);
+        box-shadow: 0 var(--spacing-nano) var(--spacing-small)
+            var(--color-dark20);
     }
 
     &.size_big {

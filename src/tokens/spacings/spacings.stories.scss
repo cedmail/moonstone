@@ -1,10 +1,10 @@
 $spacings: (
-    "nano": var(--spacing-nano),
-    "small": var(--spacing-small),
-    "medium": var(--spacing-medium),
-    "large": var(--spacing-large),
-    "big": var(--spacing-big),
-    "huge": var(--spacing-huge)
+    'nano': var(--spacing-nano),
+    'small': var(--spacing-small),
+    'medium': var(--spacing-medium),
+    'large': var(--spacing-large),
+    'big': var(--spacing-big),
+    'huge': var(--spacing-huge),
 );
 
 @function spacing($spacingName) {
@@ -19,7 +19,7 @@ $spacings: (
 
 @mixin itemValue($value) {
     &::after {
-        content: "#{$value}";
+        content: '#{$value}';
 
         position: absolute;
         bottom: var(--spacing-small);

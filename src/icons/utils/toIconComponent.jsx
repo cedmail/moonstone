@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Icons from '~/icons/assets';
-import {SvgWrapper} from '~/components/SvgWrapper';
-import {ImgWrapper} from '~/components/ImgWrapper';
+import { SvgWrapper } from '~/components/SvgWrapper';
+import { ImgWrapper } from '~/components/ImgWrapper';
 
 const toIconComponent = (icon, props) => {
     if (Icons[icon]) {
@@ -9,10 +9,10 @@ const toIconComponent = (icon, props) => {
     }
 
     if (icon.startsWith('')) {
-        return <SvgWrapper svg={icon} {...props}/>;
+        return <SvgWrapper svg={icon} {...props} />;
     }
 
-    return <ImgWrapper src={icon} {...props}/>;
+    return <ImgWrapper src={icon} {...props} />;
 };
 
-export {toIconComponent};
+export { toIconComponent };

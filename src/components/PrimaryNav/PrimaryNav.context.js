@@ -1,5 +1,5 @@
-import {createContext} from 'react';
+import { createContext } from 'react';
 
 const PrimaryNavContext = createContext({});
 
-export {PrimaryNavContext};
+export { PrimaryNavContext };

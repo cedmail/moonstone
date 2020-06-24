@@ -2,13 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TabItem.scss';
 import classnames from 'clsx';
-import {Typography} from '../Typography';
+import { Typography } from '../Typography';
 
 export const tabItemSizes = ['default'];
 export const tabItemVariants = ['ghost'];
 export const tabItemColors = ['default'];
 
-export const TabItem = ({component, label, size, isReversed, isDisabled, icon, variant, color, className, isSelected, ...props}) =>
+export const TabItem = ({
+    component,
+    label,
+    size,
+    isReversed,
+    isDisabled,
+    icon,
+    variant,
+    color,
+    className,
+    isSelected,
+    ...props
+}) =>
     React.createElement(
         component,
         {
@@ -17,27 +29,34 @@ export const TabItem = ({component, label, size, isReversed, isDisabled, icon, v
                 styles[`size_${size}`],
                 styles[`variant_${variant}`],
                 styles[`color_${color}`],
-                {[styles.icon]: (icon && label)},
-                {[styles['icon-tab-item']]: !label},
-                {[styles.selected]: isSelected},
-                {[styles.reverse]: isReversed},
+                { [styles.icon]: icon && label },
+                { [styles['icon-tab-item']]: !label },
+                { [styles.selected]: isSelected },
+                { [styles.reverse]: isReversed },
                 className
             ),
             disabled: isDisabled,
-            ...props
+            ...props,
         },
         <>
-            {icon && <icon.type {...icon.props} size={(size === 'big') ? 'default' : size}/>}
+            {icon && (
+                <icon.type
+                    {...icon.props}
+                    size={size === 'big' ? 'default' : size}
+                />
+            )}
 
-            {label &&
-            <Typography isNowrap
-                        component="span"
-                        variant="button"
-                        isUpperCase={size === 'big'}
-                        weight="default"
-            >
-                {label}
-            </Typography>}
+            {label && (
+                <Typography
+                    isNowrap
+                    component="span"
+                    variant="button"
+                    isUpperCase={size === 'big'}
+                    weight="default"
+                >
+                    {label}
+                </Typography>
+            )}
         </>
     );
 
@@ -51,7 +70,7 @@ TabItem.defaultProps = {
     isSelected: false,
     color: 'default',
     isReversed: false,
-    className: null
+    className: null,
 };
 
 TabItem.propTypes = {
@@ -108,7 +127,7 @@ TabItem.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 TabItem.displayName = 'TabItem';

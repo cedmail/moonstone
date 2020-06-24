@@ -2,9 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './ListItem.scss';
-import {Typography} from '../Typography/Typography';
+import { Typography } from '../Typography/Typography';
 
-export const ListItem = ({label, isHtml, iconStart, iconEnd, className, ...props}) => {
+export const ListItem = ({
+    label,
+    isHtml,
+    iconStart,
+    iconEnd,
+    className,
+    ...props
+}) => {
     const cssListItem = classnames(
         className,
         styles.listItem,
@@ -13,20 +20,31 @@ export const ListItem = ({label, isHtml, iconStart, iconEnd, className, ...props
     );
 
     return (
-        <li className={classnames(cssListItem)}
-            {...props}
-        >
-            {
-            iconStart &&
-                <iconStart.type {...iconStart.props} size="small" className={classnames(styles.listItem_iconStart)}/>
-            }
+        <li className={classnames(cssListItem)} {...props}>
+            {iconStart && (
+                <iconStart.type
+                    {...iconStart.props}
+                    size="small"
+                    className={classnames(styles.listItem_iconStart)}
+                />
+            )}
 
-            <Typography isNowrap isHtml={isHtml} className={classnames('flexFluid')} component="span">{label}</Typography>
+            <Typography
+                isNowrap
+                isHtml={isHtml}
+                className={classnames('flexFluid')}
+                component="span"
+            >
+                {label}
+            </Typography>
 
-            {
-            iconEnd &&
-                <iconEnd.type {...iconEnd.props} size="small" className={classnames(styles.listItem_iconEnd)}/>
-            }
+            {iconEnd && (
+                <iconEnd.type
+                    {...iconEnd.props}
+                    size="small"
+                    className={classnames(styles.listItem_iconEnd)}
+                />
+            )}
         </li>
     );
 };
@@ -35,7 +53,7 @@ ListItem.defaultProps = {
     iconStart: null,
     iconEnd: null,
     className: '',
-    isHtml: false
+    isHtml: false,
 };
 
 ListItem.propTypes = {
@@ -62,7 +80,7 @@ ListItem.propTypes = {
     /**
      * Icon display at the end of ListItem
      */
-    iconEnd: PropTypes.node
+    iconEnd: PropTypes.node,
 };
 
 ListItem.displayName = 'ListItem';

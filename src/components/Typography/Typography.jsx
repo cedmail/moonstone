@@ -3,11 +3,18 @@ import PropTypes from 'prop-types';
 import styles from './Typography.scss';
 import classnames from 'clsx';
 
-export const variants = ['title', 'heading', 'subheading', 'body', 'caption', 'button'];
+export const variants = [
+    'title',
+    'heading',
+    'subheading',
+    'body',
+    'caption',
+    'button',
+];
 export const weights = ['default', 'bold', 'semiBold', 'light'];
 
 const filterOutProps = function (props, out) {
-    const newProps = {...props};
+    const newProps = { ...props };
     out.forEach(function (o) {
         delete newProps[o];
     });
@@ -35,10 +42,11 @@ export const Typography = ({
                 styles[`variant_${variant}`],
                 styles[`weight_${weight}`],
                 className,
-                {[styles.nowrap]: isNowrap},
-                {[styles.italic]: isItalic},
-                {[styles.upperCase]: isUpperCase},
-                {[styles.lineThrough]: hasLineThrough})
+                { [styles.nowrap]: isNowrap },
+                { [styles.italic]: isItalic },
+                { [styles.upperCase]: isUpperCase },
+                { [styles.lineThrough]: hasLineThrough }
+            ),
         },
         children
     );
@@ -53,20 +61,24 @@ Typography.defaultProps = {
     isUpperCase: false,
     hasLineThrough: false,
     isHtml: false,
-    isNowrap: false
+    isNowrap: false,
 };
 
 let childrenPropType = () => {};
 if (process.env.NODE_ENV !== 'production') {
-    const {isElement} = require('react-is');
+    const { isElement } = require('react-is');
 
     childrenPropType = (props, propName, componentName) => {
         if (props.isHtml && !isElement(props[propName])) {
-            return new Error(`Invalid prop ${propName} supplied to ${componentName}. ${propName} should be rederable.`);
+            return new Error(
+                `Invalid prop ${propName} supplied to ${componentName}. ${propName} should be rederable.`
+            );
         }
 
         if (!props.isHtml && typeof props[propName] !== 'string') {
-            return new Error(`Invalid prop ${propName} supplied to ${componentName}. ${propName} should be a string.`);
+            return new Error(
+                `Invalid prop ${propName} supplied to ${componentName}. ${propName} should be a string.`
+            );
         }
     };
 }
@@ -120,7 +132,7 @@ Typography.propTypes = {
     /**
      * No wrapping for text
      */
-    isNowrap: PropTypes.bool
+    isNowrap: PropTypes.bool,
 };
 
 Typography.displayName = 'Typography';

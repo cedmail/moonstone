@@ -2,19 +2,15 @@ import React from 'react';
 import classnames from 'clsx';
 import PropTypes from 'prop-types';
 
-export const LayoutModule = ({navigation, content, component}) => {
+export const LayoutModule = ({ navigation, content, component }) => {
     return (
         <>
-            <div className={classnames('flexCol')}>
-                {navigation}
-            </div>
-            {
-                React.createElement(
-                    component,
-                    {className: classnames('flexFluid', 'flexCol')},
-                    content
-                )
-            }
+            <div className={classnames('flexCol')}>{navigation}</div>
+            {React.createElement(
+                component,
+                { className: classnames('flexFluid', 'flexCol') },
+                content
+            )}
         </>
     );
 };
@@ -22,7 +18,7 @@ export const LayoutModule = ({navigation, content, component}) => {
 LayoutModule.defaultProps = {
     navigation: null,
     component: 'main',
-    content: null
+    content: null,
 };
 
 LayoutModule.propTypes = {
@@ -39,7 +35,7 @@ LayoutModule.propTypes = {
     /**
      * The HTML markup used for the content node
      */
-    component: PropTypes.string
+    component: PropTypes.string,
 };
 
 LayoutModule.displayName = 'LayoutModule';

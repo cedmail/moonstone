@@ -1,19 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {UncontrolledAccordion} from './UncontrolledAccordion';
-import {ControlledAccordion} from './ControlledAccordion';
-import {AccordionItem} from './AccordionItem';
+import { UncontrolledAccordion } from './UncontrolledAccordion';
+import { ControlledAccordion } from './ControlledAccordion';
+import { AccordionItem } from './AccordionItem';
 
-export const Accordion = ({children, defaultOpenedItem, openedItem, onSetOpenedItem, ...props}) => {
+export const Accordion = ({
+    children,
+    defaultOpenedItem,
+    openedItem,
+    onSetOpenedItem,
+    ...props
+}) => {
     if (typeof openedItem === 'undefined') {
-        return <UncontrolledAccordion defaultOpenedItem={defaultOpenedItem} {...props}>{children}</UncontrolledAccordion>;
+        return (
+            <UncontrolledAccordion
+                defaultOpenedItem={defaultOpenedItem}
+                {...props}
+            >
+                {children}
+            </UncontrolledAccordion>
+        );
     }
 
-    return <ControlledAccordion openedItem={openedItem} onSetOpenedItem={onSetOpenedItem} {...props}>{children}</ControlledAccordion>;
+    return (
+        <ControlledAccordion
+            openedItem={openedItem}
+            onSetOpenedItem={onSetOpenedItem}
+            {...props}
+        >
+            {children}
+        </ControlledAccordion>
+    );
 };
 
 Accordion.defaultProps = {
-    isReversed: false
+    isReversed: false,
 };
 
 Accordion.propTypes = {
@@ -27,13 +48,13 @@ Accordion.propTypes = {
      */
     children: PropTypes.oneOfType([
         PropTypes.shape({
-            type: PropTypes.oneOf([AccordionItem])
+            type: PropTypes.oneOf([AccordionItem]),
         }),
         PropTypes.arrayOf(
             PropTypes.shape({
-                type: PropTypes.oneOf([AccordionItem])
+                type: PropTypes.oneOf([AccordionItem]),
             })
-        )
+        ),
     ]).isRequired,
 
     /**
@@ -54,7 +75,7 @@ Accordion.propTypes = {
     /**
      * Function to set accoridonItem opened
      */
-    onSetOpenedItem: PropTypes.func
+    onSetOpenedItem: PropTypes.func,
 };
 
 Accordion.displayName = 'Accordion';

@@ -1,15 +1,12 @@
 import React from 'react';
-import {shallow} from 'component-test-utils-react';
-import {AccordionContext} from '~/components/Accordion';
-import {AccordionItem} from './index';
+import { shallow } from 'component-test-utils-react';
+import { AccordionContext } from '~/components/Accordion';
+import { AccordionItem } from './index';
 
 describe('AccordionItem', () => {
     it('should display label', () => {
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-            >
+            <AccordionItem id="007" label="my label label">
                 content here
             </AccordionItem>
         );
@@ -18,13 +15,9 @@ describe('AccordionItem', () => {
     });
 
     it('should display icon', () => {
-        const Icon = () => <svg/>;
+        const Icon = () => <svg />;
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                icon={<Icon/>}
-            >
+            <AccordionItem id="007" label="my label label" icon={<Icon />}>
                 content here
             </AccordionItem>
         );
@@ -34,11 +27,7 @@ describe('AccordionItem', () => {
 
     it('should display additional className', () => {
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                className="extra"
-            >
+            <AccordionItem id="007" label="my label label" className="extra">
                 content here
             </AccordionItem>
         );
@@ -47,25 +36,24 @@ describe('AccordionItem', () => {
     });
 
     it('should accept reversed accordion', () => {
-        const Icon = () => <svg/>;
+        const Icon = () => <svg />;
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                icon={<Icon/>}
-            >
+            <AccordionItem id="007" label="my label label" icon={<Icon />}>
                 content here
-            </AccordionItem>, {
+            </AccordionItem>,
+            {
                 externals: {
-                    contexts: [{
-                        id: AccordionContext,
-                        value: {
-                            setOpenedItemId: jest.fn(),
-                            currentItem: 'not correspond',
-                            isReversed: true
-                        }
-                    }]
-                }
+                    contexts: [
+                        {
+                            id: AccordionContext,
+                            value: {
+                                setOpenedItemId: jest.fn(),
+                                currentItem: 'not correspond',
+                                isReversed: true,
+                            },
+                        },
+                    ],
+                },
             }
         );
 
@@ -81,17 +69,19 @@ describe('AccordionItem', () => {
                 onClick={handleOnclick}
             >
                 content here
-            </AccordionItem>
-            , {
+            </AccordionItem>,
+            {
                 externals: {
-                    contexts: [{
-                        id: AccordionContext,
-                        value: {
-                            onSetOpenedItemId: jest.fn(),
-                            currentItem: 'not correspond'
-                        }
-                    }]
-                }
+                    contexts: [
+                        {
+                            id: AccordionContext,
+                            value: {
+                                onSetOpenedItemId: jest.fn(),
+                                currentItem: 'not correspond',
+                            },
+                        },
+                    ],
+                },
             }
         );
         expect(wrapper.html()).not.toContain('content here');
@@ -106,17 +96,19 @@ describe('AccordionItem', () => {
                 onClick={handleOnClick}
             >
                 content here
-            </AccordionItem>
-            , {
+            </AccordionItem>,
+            {
                 externals: {
-                    contexts: [{
-                        id: AccordionContext,
-                        value: {
-                            setOpenedItemId: jest.fn(),
-                            currentItem: '007'
-                        }
-                    }]
-                }
+                    contexts: [
+                        {
+                            id: AccordionContext,
+                            value: {
+                                setOpenedItemId: jest.fn(),
+                                currentItem: '007',
+                            },
+                        },
+                    ],
+                },
             }
         );
         expect(wrapper.html()).toContain('content here');
@@ -131,17 +123,19 @@ describe('AccordionItem', () => {
                 onClick={handleOnClick}
             >
                 content here
-            </AccordionItem>
-            , {
+            </AccordionItem>,
+            {
                 externals: {
-                    contexts: [{
-                        id: AccordionContext,
-                        value: {
-                            onSetOpenedItem: jest.fn(),
-                            currentItem: 'not correspond'
-                        }
-                    }]
-                }
+                    contexts: [
+                        {
+                            id: AccordionContext,
+                            value: {
+                                onSetOpenedItem: jest.fn(),
+                                currentItem: 'not correspond',
+                            },
+                        },
+                    ],
+                },
             }
         );
 
@@ -163,17 +157,19 @@ describe('AccordionItem', () => {
                 onClick={handleOnClick}
             >
                 content here
-            </AccordionItem>
-            , {
+            </AccordionItem>,
+            {
                 externals: {
-                    contexts: [{
-                        id: AccordionContext,
-                        value: {
-                            onSetOpenedItem: jest.fn(),
-                            currentItem: 'not correspond'
-                        }
-                    }]
-                }
+                    contexts: [
+                        {
+                            id: AccordionContext,
+                            value: {
+                                onSetOpenedItem: jest.fn(),
+                                currentItem: 'not correspond',
+                            },
+                        },
+                    ],
+                },
             }
         );
 
@@ -195,17 +191,19 @@ describe('AccordionItem', () => {
                 onClick={handleOnClick}
             >
                 content here
-            </AccordionItem>
-            , {
+            </AccordionItem>,
+            {
                 externals: {
-                    contexts: [{
-                        id: AccordionContext,
-                        value: {
-                            onSetOpenedItem: jest.fn(),
-                            currentItem: '007'
-                        }
-                    }]
-                }
+                    contexts: [
+                        {
+                            id: AccordionContext,
+                            value: {
+                                onSetOpenedItem: jest.fn(),
+                                currentItem: '007',
+                            },
+                        },
+                    ],
+                },
             }
         );
 
@@ -216,22 +214,21 @@ describe('AccordionItem', () => {
 
     it('should not throw error when there is no onClick defined', () => {
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-            >
+            <AccordionItem id="007" label="my label label">
                 content here
-            </AccordionItem>
-            , {
+            </AccordionItem>,
+            {
                 externals: {
-                    contexts: [{
-                        id: AccordionContext,
-                        value: {
-                            onSetOpenedItem: jest.fn(),
-                            currentItem: '007'
-                        }
-                    }]
-                }
+                    contexts: [
+                        {
+                            id: AccordionContext,
+                            value: {
+                                onSetOpenedItem: jest.fn(),
+                                currentItem: '007',
+                            },
+                        },
+                    ],
+                },
             }
         );
 

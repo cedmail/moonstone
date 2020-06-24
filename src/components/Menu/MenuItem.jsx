@@ -1,10 +1,17 @@
 import React from 'react';
-import {ListItem} from '~/components/ListItem';
+import { ListItem } from '~/components/ListItem';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './MenuItem.scss';
 
-export const MenuItem = ({isHover, isSelected, isDisabled, variant, className, ...props}) => (
+export const MenuItem = ({
+    isHover,
+    isSelected,
+    isDisabled,
+    variant,
+    className,
+    ...props
+}) => (
     <ListItem
         tabIndex={isDisabled || variant === 'title' || isSelected ? null : '0'}
         aria-disabled={isDisabled}
@@ -12,11 +19,11 @@ export const MenuItem = ({isHover, isSelected, isDisabled, variant, className, .
             [styles.hover]: isHover,
             [styles.selected]: isSelected,
             [styles.disabled]: isDisabled,
-            [styles.title]: variant === 'title'
+            [styles.title]: variant === 'title',
         })}
         variant={variant}
         {...props}
-       />
+    />
 );
 
 MenuItem.defaultProps = {
@@ -27,7 +34,7 @@ MenuItem.defaultProps = {
     isHtml: false,
     onClick: () => {},
     onMouseEnter: () => {},
-    onMouseLeave: () => {}
+    onMouseLeave: () => {},
 };
 
 MenuItem.propTypes = {
@@ -89,7 +96,7 @@ MenuItem.propTypes = {
     /**
      * Function triggered when the mouse pointer move off the item
      */
-    onMouseLeave: PropTypes.func
+    onMouseLeave: PropTypes.func,
 };
 
 MenuItem.displayName = 'MenuItem';

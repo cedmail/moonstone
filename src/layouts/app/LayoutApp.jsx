@@ -4,12 +4,16 @@ import PropTypes from 'prop-types';
 
 import style from './LayoutApp.scss';
 
-export const LayoutApp = ({navigation, content}) => {
+export const LayoutApp = ({ navigation, content }) => {
     return (
-        <div className={classnames(style.layoutApp, 'flexRow_center', 'flexRow_nowrap')}>
-            <div className={classnames(style.slotNavigation)}>
-                {navigation}
-            </div>
+        <div
+            className={classnames(
+                style.layoutApp,
+                'flexRow_center',
+                'flexRow_nowrap'
+            )}
+        >
+            <div className={classnames(style.slotNavigation)}>{navigation}</div>
             <div className={classnames('flexFluid', 'flexRow_nowrap')}>
                 {content}
             </div>
@@ -19,7 +23,7 @@ export const LayoutApp = ({navigation, content}) => {
 
 LayoutApp.defaultProps = {
     navigation: null,
-    content: null
+    content: null,
 };
 
 LayoutApp.propTypes = {
@@ -31,7 +35,7 @@ LayoutApp.propTypes = {
     /**
      * Slot for the application's content
      */
-    content: PropTypes.node
+    content: PropTypes.node,
 };
 
 LayoutApp.displayName = 'LayoutApp';

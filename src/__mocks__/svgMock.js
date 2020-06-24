@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Svg = initialProps => {
+const Svg = (initialProps) => {
     const props = {
         ...initialProps,
-        className: initialProps.className + ' moonstone-icon_' + props.size
+        className: initialProps.className + ' moonstone-icon_' + props.size,
     };
-    return <svg {...props}/>;
+    return <svg {...props} />;
 };
 
 Svg.defaultProps = {
     size: 'default',
-    className: ''
+    className: '',
 };
 
 Svg.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 export default Svg;

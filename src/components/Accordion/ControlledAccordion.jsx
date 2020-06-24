@@ -1,28 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'clsx';
-import {AccordionContext} from './Accordion.context';
-import {AccordionItem} from './AccordionItem';
+import { AccordionContext } from './Accordion.context';
+import { AccordionItem } from './AccordionItem';
 import styles from './Accordion.scss';
 
-export const ControlledAccordion = ({children, openedItem, isReversed, className, onSetOpenedItem, ...props}) => {
+export const ControlledAccordion = ({
+    children,
+    openedItem,
+    isReversed,
+    className,
+    onSetOpenedItem,
+    ...props
+}) => {
     const provider = {
         currentItem: openedItem,
         onSetOpenedItem,
-        isReversed: isReversed
+        isReversed: isReversed,
     };
 
     return (
         <AccordionContext.Provider value={provider}>
-            <div className={
-                    classnames(
-                        className,
-                        'flexFluid',
-                        styles.accordion,
-                        {[styles.reversed]: isReversed}
-                    )
-                }
-                 {...props}
+            <div
+                className={classnames(
+                    className,
+                    'flexFluid',
+                    styles.accordion,
+                    { [styles.reversed]: isReversed }
+                )}
+                {...props}
             >
                 {children}
             </div>
@@ -31,7 +37,7 @@ export const ControlledAccordion = ({children, openedItem, isReversed, className
 };
 
 ControlledAccordion.defaultProps = {
-    isReversed: false
+    isReversed: false,
 };
 
 ControlledAccordion.propTypes = {
@@ -45,13 +51,13 @@ ControlledAccordion.propTypes = {
      */
     children: PropTypes.oneOfType([
         PropTypes.shape({
-            type: PropTypes.oneOf([AccordionItem])
+            type: PropTypes.oneOf([AccordionItem]),
         }),
         PropTypes.arrayOf(
             PropTypes.shape({
-                type: PropTypes.oneOf([AccordionItem])
+                type: PropTypes.oneOf([AccordionItem]),
             })
-        )
+        ),
     ]).isRequired,
 
     /**
@@ -67,5 +73,5 @@ ControlledAccordion.propTypes = {
     /**
      * Function to set accoridonItem opened
      */
-    onSetOpenedItem: PropTypes.func
+    onSetOpenedItem: PropTypes.func,
 };

@@ -1,14 +1,26 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Button.scss';
 import classnames from 'clsx';
-import {Typography} from '../Typography';
+import { Typography } from '../Typography';
 
 export const buttonSizes = ['small', 'default', 'big'];
 export const buttonVariants = ['default', 'ghost', 'outlined'];
 export const buttonColors = ['default', 'accent', 'danger'];
 
-export const Button = ({label, onClick, size, isReversed, isDisabled, icon, variant, color, className, isHtml, ...props}) => {
+export const Button = ({
+    label,
+    onClick,
+    size,
+    isReversed,
+    isDisabled,
+    icon,
+    variant,
+    color,
+    className,
+    isHtml,
+    ...props
+}) => {
     let typoWeight = 'default';
     const ButtonEl = useRef(null);
 
@@ -20,7 +32,7 @@ export const Button = ({label, onClick, size, isReversed, isDisabled, icon, vari
         typoWeight = 'semiBold';
     }
 
-    const handleOnClick = e => {
+    const handleOnClick = (e) => {
         onClick(e);
         ButtonEl.current.blur();
     };
@@ -28,35 +40,40 @@ export const Button = ({label, onClick, size, isReversed, isDisabled, icon, vari
     return (
         <button
             ref={ButtonEl}
-            className={
-                classnames(
-                    styles.button,
-                    styles[`size_${size}`],
-                    styles[`variant_${variant}`],
-                    styles[`color_${color}`],
-                    {[styles.icon]: (icon && label)},
-                    {[styles['icon-button']]: !label},
-                    {[styles.reverse]: isReversed},
-                    className
-                )
-            }
+            className={classnames(
+                styles.button,
+                styles[`size_${size}`],
+                styles[`variant_${variant}`],
+                styles[`color_${color}`],
+                { [styles.icon]: icon && label },
+                { [styles['icon-button']]: !label },
+                { [styles.reverse]: isReversed },
+                className
+            )}
             type="button"
             disabled={isDisabled}
-            onClick={e => handleOnClick(e)}
+            onClick={(e) => handleOnClick(e)}
             {...props}
         >
-            {icon && <icon.type {...icon.props} size={(size === 'big') ? 'default' : size}/>}
-            {label &&
-                <Typography isNowrap
-                            component="span"
-                            variant="button"
-                            isUpperCase={size === 'big'}
-                            weight={typoWeight}
-                            className={classnames('flexFluid')}
-                            isHtml={isHtml}
+            {icon && (
+                <icon.type
+                    {...icon.props}
+                    size={size === 'big' ? 'default' : size}
+                />
+            )}
+            {label && (
+                <Typography
+                    isNowrap
+                    component="span"
+                    variant="button"
+                    isUpperCase={size === 'big'}
+                    weight={typoWeight}
+                    className={classnames('flexFluid')}
+                    isHtml={isHtml}
                 >
                     {label}
-                </Typography>}
+                </Typography>
+            )}
         </button>
     );
 };
@@ -70,7 +87,7 @@ Button.defaultProps = {
     color: 'default',
     isReversed: false,
     className: null,
-    isHtml: false
+    isHtml: false,
 };
 
 Button.propTypes = {
@@ -122,7 +139,7 @@ Button.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 Button.displayName = 'Button';
