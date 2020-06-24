@@ -14,7 +14,7 @@ describe('Typography', () => {
     });
 
     it('should display the specified variant', () => {
-        variants.forEach((variant) => {
+        variants.forEach(variant => {
             const wrapper = shallow(
                 <Typography variant={variant}>Content children</Typography>
             );
@@ -28,7 +28,7 @@ describe('Typography', () => {
     });
 
     it('should use the specified weight', () => {
-        weights.forEach((weight) => {
+        weights.forEach(weight => {
             const wrapper = shallow(
                 <Typography weight={weight}>Test</Typography>
             );

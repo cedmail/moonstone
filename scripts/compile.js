@@ -16,14 +16,14 @@ const files = [
 
 files
     .filter(
-        (file) =>
+        file =>
             file.indexOf('.spec.') === -1 &&
             file.indexOf('.stories.') === -1 &&
             file.indexOf('/tokens/') === -1 &&
             file.indexOf('/__mocks__/') === -1 &&
             file.indexOf('/__storybook__/') === -1
     )
-    .forEach((file) => {
+    .forEach(file => {
         let result = babel.transformFileSync(path.resolve('src', file));
 
         let target = path.resolve('dist', file);
@@ -35,9 +35,7 @@ files
 
         result.code +=
             '\n' +
-            result.map.sources.map(
-                (m) => '//# sourceMappingURL=' + m + '.map\n'
-            );
+            result.map.sources.map(m => '//# sourceMappingURL=' + m + '.map\n');
 
         fs.writeFileSync(target, result.code);
         fs.writeFileSync(target + '.map', JSON.stringify(result.map));
@@ -55,10 +53,10 @@ function copyFile(srcFolder, destFolder, file) {
     }
 }
 
-glob.sync('**/*.scss', { cwd: 'src' }).forEach((file) => {
+glob.sync('**/*.scss', { cwd: 'src' }).forEach(file => {
     copyFile('src', 'dist', file, file.slice(0, -3) + '.d.ts');
 });
 
-glob.sync('**/*.ttf', { cwd: 'src' }).forEach((file) => {
+glob.sync('**/*.ttf', { cwd: 'src' }).forEach(file => {
     copyFile('src', 'dist', file, file.slice(0, -3) + '.d.ts');
 });

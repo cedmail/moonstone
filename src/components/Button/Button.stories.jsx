@@ -36,7 +36,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -49,7 +49,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>default</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -70,7 +70,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>outlined</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -91,7 +91,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>ghost</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -122,7 +122,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -135,7 +135,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>default</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -155,7 +155,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>outlined</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -175,7 +175,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>ghost</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -205,7 +205,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -218,7 +218,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>default</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -238,7 +238,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>outlined</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}
@@ -258,7 +258,7 @@ storiesOf('Components|Button', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>ghost</h3>
                 </div>
-                {buttonColors.map((color) => (
+                {buttonColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}

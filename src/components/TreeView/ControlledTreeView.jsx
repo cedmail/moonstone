@@ -20,11 +20,11 @@ export const ControlledTreeView = ({
     ...props
 }) => {
     const isFlatData =
-        data.filter((item) => item.children && item.children.length > 0)
+        data.filter(item => item.children && item.children.length > 0)
             .length === 0;
 
     function generateLevelJSX(data, deep, parentHasIconStart, isFlatData) {
-        return data.map((node) => {
+        return data.map(node => {
             const hasChild = Boolean(
                 node.hasChildren ||
                     (node.children && node.children.length !== 0)
@@ -39,7 +39,7 @@ export const ControlledTreeView = ({
             // ---
             // Manage clicks events
             // ---
-            const toggleNode = (e) => {
+            const toggleNode = e => {
                 if (isOpen) {
                     onCloseItem(node, e);
                 } else {
@@ -47,7 +47,7 @@ export const ControlledTreeView = ({
                 }
             };
 
-            const handleNodeClick = (e) => {
+            const handleNodeClick = e => {
                 if (onClickItem.length === 0) {
                     toggleNode(e);
                 }
@@ -55,11 +55,11 @@ export const ControlledTreeView = ({
                 onClickItem(node, e, toggleNode);
             };
 
-            const handleNodeDoubleClick = (e) => {
+            const handleNodeDoubleClick = e => {
                 onDoubleClickItem(node, e);
             };
 
-            const handleNodeContextMenu = (e) => {
+            const handleNodeContextMenu = e => {
                 onContextMenuItem(node, e);
             };
 
@@ -96,7 +96,7 @@ export const ControlledTreeView = ({
             };
 
             // Manage if we display icon or loading
-            const displayIconOrLoading = (icon) => {
+            const displayIconOrLoading = icon => {
                 const i = isLoading ? (
                     <Loading size="big" className="moonstone-icon_isLoading" />
                 ) : (

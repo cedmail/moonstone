@@ -37,7 +37,7 @@ storiesOf('Components|TabItem', module)
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
-                {tabItemColors.map((color) => (
+                {tabItemColors.map(color => (
                     <div
                         key={color}
                         className={classnames(storyStyles.storyGridItem)}

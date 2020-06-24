@@ -89,7 +89,7 @@ storiesOf('Components|Breadcrumb', module)
         </section>
     ))
     .add('Playground', () => {
-        const items = (numberItems) => {
+        const items = numberItems => {
             let n = 0;
             let all = [];
             while (n < numberItems()) {

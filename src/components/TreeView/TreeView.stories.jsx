@@ -19,7 +19,7 @@ storiesOf('Components|TreeView', module)
         notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
-    .addDecorator((storyFn) => <div style={css}>{storyFn()}</div>)
+    .addDecorator(storyFn => <div style={css}>{storyFn()}</div>)
     .add('default', () => <TreeView data={treeData} />)
     .add('opened by default', () => (
         <TreeView defaultOpenedItems={['A']} data={treeData} />
@@ -51,10 +51,10 @@ storiesOf('Components|TreeView', module)
     ))
     .add('selection', () => {
         const [selectedItems, setSelectedItems] = useState([]);
-        const handleClick = (node) => {
+        const handleClick = node => {
             if (selectedItems.includes(node.id)) {
                 setSelectedItems(
-                    selectedItems.filter((item) => item !== node.id)
+                    selectedItems.filter(item => item !== node.id)
                 );
             } else {
                 setSelectedItems([node.id]);
@@ -86,23 +86,23 @@ storiesOf('Components|TreeView', module)
     ))
     .add('controlled', () => {
         const [openedItems, setOpenedItems] = useState([]);
-        const handleOpen = (node) => {
+        const handleOpen = node => {
             setOpenedItems([node.id, ...openedItems]);
         };
 
-        const handleClose = (node) => {
-            setOpenedItems(openedItems.filter((item) => item !== node.id));
+        const handleClose = node => {
+            setOpenedItems(openedItems.filter(item => item !== node.id));
         };
 
         return (
             <div>
                 <span>
                     Opened items ={' '}
-                    {openedItems.map((n) => (
+                    {openedItems.map(n => (
                         <button
                             key={n}
                             type="button"
-                            onClick={(e) => handleClose({ id: n }, e)}
+                            onClick={e => handleClose({ id: n }, e)}
                         >
                             {n}
                         </button>
@@ -124,9 +124,9 @@ storiesOf('Components|TreeView', module)
             { id: 'A2', label: 'A-2', hasChildren: true },
             { id: 'A3', label: 'A-3', hasChildren: true }
         ]);
-        const loadChidren = (node) => {
-            setData((data) =>
-                data.map((n) => {
+        const loadChidren = node => {
+            setData(data =>
+                data.map(n => {
                     if (n.id === node.id) {
                         return {
                             ...n,
@@ -143,10 +143,10 @@ storiesOf('Components|TreeView', module)
             );
         };
 
-        const handleOpen = (node) => {
+        const handleOpen = node => {
             setOpenedItems([node.id, ...openedItems]);
-            setData((data) =>
-                data.map((n) => {
+            setData(data =>
+                data.map(n => {
                     if (n.id === node.id && !n.isLoading && !n.children) {
                         setTimeout(() => loadChidren(node), 1000);
                         return { ...n, isLoading: true };
@@ -157,19 +157,19 @@ storiesOf('Components|TreeView', module)
             );
         };
 
-        const handleClose = (node) => {
-            setOpenedItems(openedItems.filter((item) => item !== node.id));
+        const handleClose = node => {
+            setOpenedItems(openedItems.filter(item => item !== node.id));
         };
 
         return (
             <div>
                 <span>
                     Opened items ={' '}
-                    {openedItems.map((n) => (
+                    {openedItems.map(n => (
                         <button
                             key={n}
                             type="button"
-                            onClick={(e) => handleClose({ id: n }, e)}
+                            onClick={e => handleClose({ id: n }, e)}
                         >
                             {n}
                         </button>

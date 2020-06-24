@@ -16,8 +16,8 @@ export const SecondaryNav = ({
 }) => {
     const [isVisible, setIsVisible] = useState(isDefaultVisible);
 
-    const handleToggle = (e) => {
-        setIsVisible((prevState) => !prevState);
+    const handleToggle = e => {
+        setIsVisible(prevState => !prevState);
         onToggled(e);
     };
 

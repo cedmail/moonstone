@@ -14,7 +14,7 @@ storiesOf('Components|Typography', module)
         notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
-    .addDecorator((storyFn) => (
+    .addDecorator(storyFn => (
         <section className={classnames(storyStyles.storyWrapper)}>
             {storyFn()}
         </section>

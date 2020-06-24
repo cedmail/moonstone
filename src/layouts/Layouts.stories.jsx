@@ -23,20 +23,20 @@ storiesOf('Layouts|Demos', module)
         const [selectedItems1, setSelectedItems1] = useState([]);
         const [selectedItems2, setSelectedItems2] = useState([]);
 
-        const handleSelectItem1 = (node) => {
+        const handleSelectItem1 = node => {
             if (selectedItems1.includes(node.id)) {
                 setSelectedItems1(
-                    selectedItems1.filter((item) => item !== node.id)
+                    selectedItems1.filter(item => item !== node.id)
                 );
             } else {
                 setSelectedItems1([node.id]);
             }
         };
 
-        const handleSelectItem2 = (node) => {
+        const handleSelectItem2 = node => {
             if (selectedItems2.includes(node.id)) {
                 setSelectedItems2(
-                    selectedItems2.filter((item) => item !== node.id)
+                    selectedItems2.filter(item => item !== node.id)
                 );
             } else {
                 setSelectedItems2([node.id]);

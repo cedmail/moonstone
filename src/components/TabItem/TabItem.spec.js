@@ -42,7 +42,7 @@ describe('TabItem', () => {
     });
 
     it('should use the specified variant', () => {
-        tabItemVariants.forEach((variant) => {
+        tabItemVariants.forEach(variant => {
             const tabItem = shallow(
                 <TabItem variant={variant} onClick={() => {}} />
             );
@@ -85,7 +85,7 @@ describe('TabItem', () => {
     });
 
     it('should use the specified color', () => {
-        tabItemColors.forEach((color) => {
+        tabItemColors.forEach(color => {
             const tabItem = shallow(
                 <TabItem color={color} onClick={() => {}} />
             );
@@ -104,7 +104,7 @@ describe('TabItem', () => {
     });
 
     it('should use the specified size', () => {
-        tabItemSizes.forEach((size) => {
+        tabItemSizes.forEach(size => {
             const tabItem = shallow(<TabItem size={size} onClick={() => {}} />);
             expect(
                 tabItem.querySelector(`.size_${size}`).exists()

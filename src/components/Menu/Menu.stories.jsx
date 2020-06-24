@@ -40,7 +40,7 @@ storiesOf('Components|Menu', module)
         const [isDisplayed, setIsDisplayed] = useState(false);
         const [menuPosition, setMenuPosition] = useState();
 
-        const handleOnClick = (e) => {
+        const handleOnClick = e => {
             if (isDisplayed) {
                 handleClose();
             } else {

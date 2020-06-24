@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const SvgWrapperSize = ['small', 'default', 'big'];
 
-const camelCased = (s) =>
+const camelCased = s =>
     s.replace(/-([a-z])/g, function (g) {
         return g[1].toUpperCase();
     });
@@ -11,7 +11,7 @@ const camelCased = (s) =>
 const toComp = (node, idx) => {
     if (node.nodeType === 1) {
         let props = { key: idx };
-        Array.prototype.slice.call(node.attributes).forEach((attr) => {
+        Array.prototype.slice.call(node.attributes).forEach(attr => {
             props[camelCased(attr.name)] = attr.value;
         });
         let children = Array.prototype.slice
@@ -21,7 +21,7 @@ const toComp = (node, idx) => {
     }
 };
 
-export const SvgWrapper = (initialProps) => {
+export const SvgWrapper = initialProps => {
     let { svg, size, ...props } = initialProps;
     const parser = new DOMParser();
 

@@ -46,7 +46,7 @@ describe('Button', () => {
     });
 
     it('should use the specified variant', () => {
-        buttonVariants.forEach((variant) => {
+        buttonVariants.forEach(variant => {
             const button = shallow(
                 <Button variant={variant} onClick={() => {}} />
             );
@@ -83,7 +83,7 @@ describe('Button', () => {
     });
 
     it('should use the specified color', () => {
-        buttonColors.forEach((color) => {
+        buttonColors.forEach(color => {
             const button = shallow(<Button color={color} onClick={() => {}} />);
             expect(
                 button.querySelector(`.color_${color}`).exists()
@@ -104,7 +104,7 @@ describe('Button', () => {
     });
 
     it('should use the specified size', () => {
-        buttonSizes.forEach((size) => {
+        buttonSizes.forEach(size => {
             const button = shallow(<Button size={size} onClick={() => {}} />);
             expect(button.querySelector(`.size_${size}`).exists()).toBeTruthy();
         });

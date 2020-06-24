@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Svg = (initialProps) => {
+const Svg = initialProps => {
     const props = {
         ...initialProps,
         className: initialProps.className + ' moonstone-icon_' + props.size

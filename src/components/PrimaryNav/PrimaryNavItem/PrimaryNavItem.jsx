@@ -122,7 +122,7 @@ export const PrimaryNavItem = ({
                 className
             )}
             title={label}
-            onClick={(e) => {
+            onClick={e => {
                 primaryNavContext.collapse();
                 onClick(e);
             }}

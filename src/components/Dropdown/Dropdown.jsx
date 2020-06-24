@@ -38,7 +38,7 @@ export const Dropdown = ({
     // ---
     // Functions to handle events
     // ---
-    const handleOpenMenu = (e) => {
+    const handleOpenMenu = e => {
         setMinWith(`${e.currentTarget.offsetWidth}px`);
         setAnchorEl(e.currentTarget);
         setIsOpened(true);
@@ -97,8 +97,8 @@ export const Dropdown = ({
             iconEnd={item.iconEnd}
             isDisabled={item.isDisabled}
             isSelected={value === item.value}
-            onClick={(e) => handleSelect(e, item)}
-            onKeyPress={(e) => handleKeyPress(e, item)}
+            onClick={e => handleSelect(e, item)}
+            onKeyPress={e => handleKeyPress(e, item)}
             {...item.attributes}
         />
     );
@@ -110,7 +110,7 @@ export const Dropdown = ({
 
                 <MenuItem variant="title" label={groupLabel} />
 
-                {children.map((item) => {
+                {children.map(item => {
                     return dropdownOption(item, handleSelect);
                 })}
             </Fragment>
@@ -122,7 +122,7 @@ export const Dropdown = ({
             className={classnames(cssDropdown, className)}
             style={{ maxWidth: maxWidth }}
             {...props}
-            onKeyPress={(e) => {
+            onKeyPress={e => {
                 if (e.key === 'Enter') {
                     handleOpenMenu(e);
                 }
@@ -131,7 +131,7 @@ export const Dropdown = ({
             <div
                 className={classnames(cssDropdownLabel)}
                 tabIndex="0"
-                onClick={(e) => handleOpenMenu(e)}
+                onClick={e => handleOpenMenu(e)}
                 onKeyPress={(e, item) => {
                     if (e.key === 'Enter') {
                         handleSelect(e, item);
@@ -167,7 +167,7 @@ export const Dropdown = ({
             >
                 {data.map((item, index) => {
                     if (isGrouped) {
-                        item.options.map((o) => {
+                        item.options.map(o => {
                             return dropdownOption(o, handleSelect);
                         });
                         return dropdownGrouped(

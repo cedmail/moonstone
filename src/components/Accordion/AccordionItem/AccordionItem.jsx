@@ -46,7 +46,7 @@ export const AccordionItem = ({
                 role="accordion-item"
                 aria-controls={id}
                 aria-expanded={open}
-                onClick={(e) => handleClick(e, open)}
+                onClick={e => handleClick(e, open)}
             >
                 {icon && (
                     <div

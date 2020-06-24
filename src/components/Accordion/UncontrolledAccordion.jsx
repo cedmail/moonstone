@@ -10,8 +10,8 @@ export const UncontrolledAccordion = ({
 }) => {
     const [openedItem, setOpenedItem] = useState(defaultOpenedItem);
 
-    const onSetOpenedItem = (id) => {
-        setOpenedItem((prevState) => {
+    const onSetOpenedItem = id => {
+        setOpenedItem(prevState => {
             return prevState === id ? null : id;
         });
     };

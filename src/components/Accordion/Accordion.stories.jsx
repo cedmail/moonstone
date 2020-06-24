@@ -190,8 +190,8 @@ storiesOf('Components|Accordion', module)
             accordionIds[1]
         );
 
-        const onSetOpenedItem = (id) => {
-            setStateOpenedItem((prevState) => {
+        const onSetOpenedItem = id => {
+            setStateOpenedItem(prevState => {
                 return prevState === id ? null : id;
             });
         };

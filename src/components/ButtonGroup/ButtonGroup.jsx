@@ -24,7 +24,7 @@ export const ButtonGroup = ({
             )}
             {...props}
         >
-            {React.Children.map(children, (button) => {
+            {React.Children.map(children, button => {
                 if (!React.isValidElement(button)) {
                     return null;
                 }

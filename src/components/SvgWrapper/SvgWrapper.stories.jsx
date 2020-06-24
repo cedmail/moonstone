@@ -16,7 +16,7 @@ storiesOf('SvgWrapper', module)
         notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
-    .addDecorator((storyFn) => (
+    .addDecorator(storyFn => (
         <section className={storyStyles.storyWrapper}>
             <section className={storyStyles.storyColumn}>{storyFn()}</section>
         </section>

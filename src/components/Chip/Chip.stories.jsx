@@ -24,7 +24,7 @@ storiesOf('Components|Chip', module)
         notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
-    .addDecorator((storyFn) => (
+    .addDecorator(storyFn => (
         <section className={classnames(storyStyles.storyWrapper)}>
             <section className={classnames(storyStyles.storyColumn)}>
                 {storyFn()}
@@ -34,7 +34,7 @@ storiesOf('Components|Chip', module)
     .add('icon + text', () => (
         <section style={{ display: 'flex', flexDirection: 'flow' }}>
             <section className={classnames(storyStyles.storyColumn)}>
-                {colors.map((color) => (
+                {colors.map(color => (
                     <Chip
                         key={color}
                         label={capitalize(color)}
@@ -44,7 +44,7 @@ storiesOf('Components|Chip', module)
                 ))}
             </section>
             <section className={classnames(storyStyles.storyColumn)}>
-                {colors.map((color) => (
+                {colors.map(color => (
                     <Chip
                         key={color}
                         isDisabled
@@ -57,12 +57,12 @@ storiesOf('Components|Chip', module)
         </section>
     ))
     .add('text only', () =>
-        colors.map((color) => (
+        colors.map(color => (
             <Chip key={color} label={capitalize(color)} color={color} />
         ))
     )
     .add('icon only', () =>
-        colors.map((color) => (
+        colors.map(color => (
             <Chip key={color} icon={<DefaultIcon />} color={color} />
         ))
     )

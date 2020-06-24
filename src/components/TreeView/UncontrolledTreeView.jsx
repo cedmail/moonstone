@@ -5,13 +5,13 @@ import { ControlledTreeView } from './ControlledTreeView';
 export const UncontrolledTreeView = ({ defaultOpenedItems, ...others }) => {
     const [openedItems, setOpenedItems] = useState(defaultOpenedItems);
 
-    const onOpenItem = (node) => {
-        setOpenedItems((openedItems) => [...openedItems, node.id]);
+    const onOpenItem = node => {
+        setOpenedItems(openedItems => [...openedItems, node.id]);
     };
 
-    const onCloseItem = (node) => {
-        setOpenedItems((openedItems) =>
-            openedItems.filter((item) => item !== node.id)
+    const onCloseItem = node => {
+        setOpenedItems(openedItems =>
+            openedItems.filter(item => item !== node.id)
         );
     };
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-const SvgViewQuilt = (initialProps) => {
+const SvgViewQuilt = initialProps => {
     const props = Object.assign({}, initialProps);
     props.className =
         initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;

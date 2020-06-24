@@ -32,7 +32,7 @@ export const Button = ({
         typoWeight = 'semiBold';
     }
 
-    const handleOnClick = (e) => {
+    const handleOnClick = e => {
         onClick(e);
         ButtonEl.current.blur();
     };
@@ -52,7 +52,7 @@ export const Button = ({
             )}
             type="button"
             disabled={isDisabled}
-            onClick={(e) => handleOnClick(e)}
+            onClick={e => handleOnClick(e)}
             {...props}
         >
             {icon && (
