@@ -8,7 +8,7 @@ import {
     PrimaryNavItemsGroup,
     PrimaryNavItem,
     Button,
-    Badge,
+    Badge
 } from '~/components';
 import {
     Apps,
@@ -18,14 +18,14 @@ import {
     Person,
     Power,
     Star,
-    Workflow,
+    Workflow
 } from '~/icons';
 
 storiesOf('Components|PrimaryNav', module)
     .addParameters({
         component: PrimaryNav,
         componentSubtitle: 'PrimaryNav',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('default', () => (

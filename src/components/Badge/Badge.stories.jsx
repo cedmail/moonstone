@@ -12,7 +12,7 @@ import { Badge, badgeColors, badgeTypes } from './index';
 storiesOf('Components|Badge', module)
     .addParameters({
         component: Badge,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Round', () => (

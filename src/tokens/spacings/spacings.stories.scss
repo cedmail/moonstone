@@ -4,7 +4,7 @@ $spacings: (
     'medium': var(--spacing-medium),
     'large': var(--spacing-large),
     'big': var(--spacing-big),
-    'huge': var(--spacing-huge),
+    'huge': var(--spacing-huge)
 );
 
 @function spacing($spacingName) {

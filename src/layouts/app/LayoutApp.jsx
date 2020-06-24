@@ -23,7 +23,7 @@ export const LayoutApp = ({ navigation, content }) => {
 
 LayoutApp.defaultProps = {
     navigation: null,
-    content: null,
+    content: null
 };
 
 LayoutApp.propTypes = {
@@ -35,7 +35,7 @@ LayoutApp.propTypes = {
     /**
      * Slot for the application's content
      */
-    content: PropTypes.node,
+    content: PropTypes.node
 };
 
 LayoutApp.displayName = 'LayoutApp';

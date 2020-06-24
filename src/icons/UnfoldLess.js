@@ -17,10 +17,10 @@ const SvgUnfoldLess = (initialProps) => {
 
 SvgUnfoldLess.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgUnfoldLess.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgUnfoldLess;

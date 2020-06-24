@@ -17,10 +17,10 @@ const SvgReply = (initialProps) => {
 
 SvgReply.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgReply.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgReply;

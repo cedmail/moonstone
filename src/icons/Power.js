@@ -17,10 +17,10 @@ const SvgPower = (initialProps) => {
 
 SvgPower.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgPower.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgPower;

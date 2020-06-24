@@ -17,10 +17,10 @@ const SvgPhotoLibrary = (initialProps) => {
 
 SvgPhotoLibrary.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgPhotoLibrary.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgPhotoLibrary;

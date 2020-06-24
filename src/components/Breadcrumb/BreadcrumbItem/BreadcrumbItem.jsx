@@ -34,7 +34,7 @@ BreadcrumbItem.propTypes = {
     /**
      * Function trigger on click
      */
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired
 };
 
 BreadcrumbItem.displayName = 'BreadcrumbItem';

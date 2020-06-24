@@ -17,10 +17,10 @@ const SvgText = (initialProps) => {
 
 SvgText.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgText.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgText;

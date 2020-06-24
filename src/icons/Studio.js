@@ -17,10 +17,10 @@ const SvgStudio = (initialProps) => {
 
 SvgStudio.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgStudio.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgStudio;

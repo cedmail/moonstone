@@ -17,10 +17,10 @@ const SvgUnlink = (initialProps) => {
 
 SvgUnlink.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgUnlink.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgUnlink;

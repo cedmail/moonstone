@@ -41,7 +41,7 @@ UncontrolledTreeView.propTypes = {
             isLoading: PropTypes.bool,
             className: PropTypes.string,
             typographyOptions: PropTypes.object,
-            treeItemProps: PropTypes.object,
+            treeItemProps: PropTypes.object
         })
     ).isRequired,
 
@@ -73,7 +73,7 @@ UncontrolledTreeView.propTypes = {
     /**
      * Reverse color usefull for context with dark background
      */
-    isReversed: PropTypes.bool,
+    isReversed: PropTypes.bool
 };
 
 UncontrolledTreeView.defaultProps = {
@@ -82,5 +82,5 @@ UncontrolledTreeView.defaultProps = {
     onContextMenuItem: () => {},
     defaultOpenedItems: [],
     selectedItems: [],
-    isReversed: false,
+    isReversed: false
 };

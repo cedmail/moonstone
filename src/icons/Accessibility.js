@@ -17,10 +17,10 @@ const SvgAccessibility = (initialProps) => {
 
 SvgAccessibility.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgAccessibility.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgAccessibility;

@@ -20,10 +20,10 @@ const SvgCollectionsBookmark = (initialProps) => {
 
 SvgCollectionsBookmark.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgCollectionsBookmark.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgCollectionsBookmark;

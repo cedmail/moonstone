@@ -32,7 +32,7 @@ export const Dropdown = ({
 
     const anchorPosition = {
         top: spacings.spacingnano,
-        left: 0,
+        left: 0
     };
 
     // ---
@@ -74,7 +74,7 @@ export const Dropdown = ({
     // ---
     const cssDropdown = classnames(styles.dropdown, {
         [styles.disabled]: isDisabled,
-        [styles.opened]: isOpened,
+        [styles.opened]: isOpened
     });
 
     const cssDropdownLabel = classnames(
@@ -189,7 +189,7 @@ Dropdown.defaultProps = {
     variant: 'default',
     size: 'medium',
     maxWidth: '300px',
-    isDisabled: false,
+    isDisabled: false
 };
 
 const PropTypesOptions = {
@@ -198,7 +198,7 @@ const PropTypesOptions = {
     isDisabled: PropTypes.bool,
     iconStart: PropTypes.node,
     iconEnd: PropTypes.node,
-    attributes: PropTypes.object,
+    attributes: PropTypes.object
 };
 
 Dropdown.propTypes = {
@@ -211,9 +211,9 @@ Dropdown.propTypes = {
             groupLabel: PropTypes.string,
             options: PropTypes.arrayOf(
                 PropTypes.shape({
-                    ...PropTypesOptions,
+                    ...PropTypesOptions
                 })
-            ),
+            )
         })
     ).isRequired,
 
@@ -262,7 +262,7 @@ Dropdown.propTypes = {
      * @param {object} event - Mouse event
      * @param {object} item - The current item selected
      */
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired
 };
 
 Dropdown.displayName = 'Dropdown';

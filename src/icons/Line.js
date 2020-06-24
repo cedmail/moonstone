@@ -17,10 +17,10 @@ const SvgLine = (initialProps) => {
 
 SvgLine.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgLine.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgLine;

@@ -10,50 +10,50 @@ import { Love } from '~/icons';
 const data = [
     {
         label: 'option 1',
-        value: '1',
+        value: '1'
     },
     {
         label: 'option 2',
-        value: '2',
+        value: '2'
     },
     {
         label:
             'option 3 with very long long label label label label label label label label',
-        value: '3',
+        value: '3'
     },
     {
         label: 'option 4',
         value: '4',
-        isDisabled: true,
+        isDisabled: true
     },
     {
         label: 'option 5',
-        value: '5',
+        value: '5'
     },
     {
         label: 'option 6',
-        value: '6',
+        value: '6'
     },
     {
         label: 'option 7',
-        value: '7',
+        value: '7'
     },
     {
         label: 'option 8',
-        value: '8',
+        value: '8'
     },
     {
         label: 'option 9',
-        value: '9',
+        value: '9'
     },
     {
         label: 'option 10',
-        value: '10',
+        value: '10'
     },
     {
         label: 'option 11',
-        value: '11',
-    },
+        value: '11'
+    }
 ];
 
 const dataLanguages = [
@@ -62,24 +62,24 @@ const dataLanguages = [
         value: 'fr',
         iconStart: <Love />,
         attributes: {
-            id: 'option-fr',
-        },
+            id: 'option-fr'
+        }
     },
     {
         label: 'EN-US',
         value: 'en',
         iconStart: <Love />,
         attributes: {
-            id: 'option-en',
-        },
+            id: 'option-en'
+        }
     },
     {
         label: 'DE',
         value: '3',
         iconStart: <Love />,
         attributes: {
-            id: 'option-de',
-        },
+            id: 'option-de'
+        }
     },
     {
         label: 'ES',
@@ -87,9 +87,9 @@ const dataLanguages = [
         isDisabled: true,
         iconEnd: <Love />,
         attributes: {
-            id: 'option-es',
-        },
-    },
+            id: 'option-es'
+        }
+    }
 ];
 
 const dataGrouped = [
@@ -98,13 +98,13 @@ const dataGrouped = [
         options: [
             {
                 label: 'option 1',
-                value: '1',
+                value: '1'
             },
             {
                 label: 'option 2',
-                value: '2',
-            },
-        ],
+                value: '2'
+            }
+        ]
     },
     {
         groupLabel: 'test 2',
@@ -112,27 +112,27 @@ const dataGrouped = [
             {
                 label:
                     'option 3 with very long long label label label label label label label label',
-                value: '3',
+                value: '3'
             },
             {
                 label: 'option 4',
                 value: '4',
-                isDisabled: true,
-            },
-        ],
-    },
+                isDisabled: true
+            }
+        ]
+    }
 ];
 
 storiesOf('Components|Dropdown', module)
     .addParameters({
         component: Dropdown,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('default', () => {
         const [currentOption, setCurrentOption] = useState({
             label: 'Select something',
-            value: null,
+            value: null
         });
 
         const handleOnChange = (e, item) => {
@@ -146,7 +146,7 @@ storiesOf('Components|Dropdown', module)
                 style={{
                     transform: 'scale(1)',
                     height: '100vh',
-                    padding: '90px',
+                    padding: '90px'
                 }}
             >
                 <Dropdown
@@ -165,7 +165,7 @@ storiesOf('Components|Dropdown', module)
     .add('with default value', () => {
         const [currentOption, setCurrentOption] = useState({
             label: dataLanguages[1].label,
-            value: dataLanguages[1].value,
+            value: dataLanguages[1].value
         });
 
         const handleOnChange = (e, item) => {
@@ -190,7 +190,7 @@ storiesOf('Components|Dropdown', module)
     .add('Grouped', () => {
         const [currentOption, setCurrentOption] = useState({
             label: 'Select something',
-            value: null,
+            value: null
         });
 
         const handleOnChange = (e, item) => {

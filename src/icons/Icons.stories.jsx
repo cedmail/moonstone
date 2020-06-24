@@ -47,7 +47,7 @@ storiesOf('Tokens|Icons', module)
     .addParameters({
         component: Icons,
         componentSubtitle: 'Icons',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Default', () => (
@@ -66,5 +66,5 @@ storiesOf('Tokens|Icons', module)
 IconWrapper.propTypes = {
     iconName: PropTypes.string.isRequired,
     size: PropTypes.string,
-    color: PropTypes.string,
+    color: PropTypes.string
 };

@@ -17,10 +17,10 @@ const SvgChevronBigRight = (initialProps) => {
 
 SvgChevronBigRight.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgChevronBigRight.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgChevronBigRight;

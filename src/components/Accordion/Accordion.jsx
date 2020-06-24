@@ -34,7 +34,7 @@ export const Accordion = ({
 };
 
 Accordion.defaultProps = {
-    isReversed: false,
+    isReversed: false
 };
 
 Accordion.propTypes = {
@@ -48,13 +48,13 @@ Accordion.propTypes = {
      */
     children: PropTypes.oneOfType([
         PropTypes.shape({
-            type: PropTypes.oneOf([AccordionItem]),
+            type: PropTypes.oneOf([AccordionItem])
         }),
         PropTypes.arrayOf(
             PropTypes.shape({
-                type: PropTypes.oneOf([AccordionItem]),
+                type: PropTypes.oneOf([AccordionItem])
             })
-        ),
+        )
     ]).isRequired,
 
     /**
@@ -75,7 +75,7 @@ Accordion.propTypes = {
     /**
      * Function to set accoridonItem opened
      */
-    onSetOpenedItem: PropTypes.func,
+    onSetOpenedItem: PropTypes.func
 };
 
 Accordion.displayName = 'Accordion';

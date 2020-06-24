@@ -17,10 +17,10 @@ const SvgViewGrid = (initialProps) => {
 
 SvgViewGrid.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgViewGrid.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgViewGrid;

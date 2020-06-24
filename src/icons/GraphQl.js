@@ -19,10 +19,10 @@ const SvgGraphQl = (initialProps) => {
 
 SvgGraphQl.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgGraphQl.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgGraphQl;

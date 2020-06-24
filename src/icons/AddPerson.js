@@ -17,10 +17,10 @@ const SvgAddPerson = (initialProps) => {
 
 SvgAddPerson.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgAddPerson.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgAddPerson;

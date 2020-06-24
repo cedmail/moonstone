@@ -36,7 +36,7 @@ export const Badge = ({ label, color, type, className, ...props }) => {
 Badge.defaultProps = {
     label: null,
     color: badgeColors[0],
-    type: badgeTypes[0],
+    type: badgeTypes[0]
 };
 
 Badge.propTypes = {
@@ -58,7 +58,7 @@ Badge.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 
 Badge.displayName = 'Badge';

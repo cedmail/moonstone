@@ -14,10 +14,10 @@ const SvgArrowDropDown = (initialProps) => {
 
 SvgArrowDropDown.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgArrowDropDown.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgArrowDropDown;

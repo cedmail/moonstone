@@ -17,10 +17,10 @@ const SvgDns = (initialProps) => {
 
 SvgDns.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgDns.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgDns;

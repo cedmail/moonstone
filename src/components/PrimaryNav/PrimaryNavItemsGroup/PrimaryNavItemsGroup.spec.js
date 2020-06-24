@@ -16,11 +16,11 @@ describe('PrimaryNavItemsGroup', () => {
                         {
                             id: PrimaryNavContext,
                             value: {
-                                isExpanded: false,
-                            },
-                        },
-                    ],
-                },
+                                isExpanded: false
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -39,11 +39,11 @@ describe('PrimaryNavItemsGroup', () => {
                         {
                             id: PrimaryNavContext,
                             value: {
-                                isExpanded: true,
-                            },
-                        },
-                    ],
-                },
+                                isExpanded: true
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -62,11 +62,11 @@ describe('PrimaryNavItemsGroup', () => {
                         {
                             id: PrimaryNavContext,
                             value: {
-                                isExpanded: true,
-                            },
-                        },
-                    ],
-                },
+                                isExpanded: true
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -85,11 +85,11 @@ describe('PrimaryNavItemsGroup', () => {
                         {
                             id: PrimaryNavContext,
                             value: {
-                                isExpanded: true,
-                            },
-                        },
-                    ],
-                },
+                                isExpanded: true
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -108,11 +108,11 @@ describe('PrimaryNavItemsGroup', () => {
                         {
                             id: PrimaryNavContext,
                             value: {
-                                isExpanded: true,
-                            },
-                        },
-                    ],
-                },
+                                isExpanded: true
+                            }
+                        }
+                    ]
+                }
             }
         );
 

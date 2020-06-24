@@ -17,10 +17,10 @@ const SvgCloudCheck = (initialProps) => {
 
 SvgCloudCheck.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgCloudCheck.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgCloudCheck;

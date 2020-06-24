@@ -11,7 +11,7 @@ import {
     SecondaryNavHeader,
     Accordion,
     AccordionItem,
-    TreeView,
+    TreeView
 } from '~/components';
 import { Bug, Love } from '~/icons';
 

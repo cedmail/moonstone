@@ -17,10 +17,10 @@ const SvgSubdirectory = (initialProps) => {
 
 SvgSubdirectory.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSubdirectory.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSubdirectory;

@@ -10,7 +10,7 @@ storiesOf('Components|ResizableBox', module)
     .addParameters({
         component: ResizableBox,
         componentSubtitle: 'ResizableBox',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('default', () => (
@@ -20,7 +20,7 @@ storiesOf('Components|ResizableBox', module)
             maxWidth={number('Maximum width', 600)}
             defaultSize={{
                 width: '100%',
-                height: 'auto',
+                height: 'auto'
             }}
         >
             <div style={{ height: '400px', background: 'yellow' }}>
@@ -35,7 +35,7 @@ storiesOf('Components|ResizableBox', module)
             maxWidth={number('Maximum width', 600)}
             defaultSize={{
                 width: '100%',
-                height: 'auto',
+                height: 'auto'
             }}
             onResizeStart={action('onResizeStart')}
             onResizing={action('onResizing')}

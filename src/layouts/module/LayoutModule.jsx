@@ -18,7 +18,7 @@ export const LayoutModule = ({ navigation, content, component }) => {
 LayoutModule.defaultProps = {
     navigation: null,
     component: 'main',
-    content: null,
+    content: null
 };
 
 LayoutModule.propTypes = {
@@ -35,7 +35,7 @@ LayoutModule.propTypes = {
     /**
      * The HTML markup used for the content node
      */
-    component: PropTypes.string,
+    component: PropTypes.string
 };
 
 LayoutModule.displayName = 'LayoutModule';

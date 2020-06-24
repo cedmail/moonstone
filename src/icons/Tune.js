@@ -19,10 +19,10 @@ const SvgTune = (initialProps) => {
 
 SvgTune.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgTune.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgTune;

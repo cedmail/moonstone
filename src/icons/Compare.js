@@ -17,10 +17,10 @@ const SvgCompare = (initialProps) => {
 
 SvgCompare.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgCompare.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgCompare;

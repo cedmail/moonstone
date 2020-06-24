@@ -53,7 +53,7 @@ ListItem.defaultProps = {
     iconStart: null,
     iconEnd: null,
     className: '',
-    isHtml: false,
+    isHtml: false
 };
 
 ListItem.propTypes = {
@@ -80,7 +80,7 @@ ListItem.propTypes = {
     /**
      * Icon display at the end of ListItem
      */
-    iconEnd: PropTypes.node,
+    iconEnd: PropTypes.node
 };
 
 ListItem.displayName = 'ListItem';

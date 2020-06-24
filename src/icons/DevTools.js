@@ -17,10 +17,10 @@ const SvgDevTools = (initialProps) => {
 
 SvgDevTools.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgDevTools.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgDevTools;

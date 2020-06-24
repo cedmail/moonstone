@@ -15,7 +15,7 @@ const accordionIds = ['01', '02', '03'];
 storiesOf('Components|Accordion', module)
     .addParameters({
         component: Accordion,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('default', () => (

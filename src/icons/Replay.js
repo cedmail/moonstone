@@ -17,10 +17,10 @@ const SvgReplay = (initialProps) => {
 
 SvgReplay.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgReplay.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgReplay;

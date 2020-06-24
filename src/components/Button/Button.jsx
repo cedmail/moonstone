@@ -87,7 +87,7 @@ Button.defaultProps = {
     color: 'default',
     isReversed: false,
     className: null,
-    isHtml: false,
+    isHtml: false
 };
 
 Button.propTypes = {
@@ -139,7 +139,7 @@ Button.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 
 Button.displayName = 'Button';

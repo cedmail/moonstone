@@ -17,10 +17,10 @@ const SvgSearch = (initialProps) => {
 
 SvgSearch.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSearch.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSearch;

@@ -17,7 +17,7 @@ storiesOf('Components|Tab', module)
     .addParameters({
         component: Tab,
         componentSubtitle: 'Tab',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Tab', () => (

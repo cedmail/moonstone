@@ -17,10 +17,10 @@ const SvgMinimize = (initialProps) => {
 
 SvgMinimize.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgMinimize.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgMinimize;

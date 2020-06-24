@@ -23,10 +23,10 @@ const SvgClock = (initialProps) => {
 
 SvgClock.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgClock.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgClock;

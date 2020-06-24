@@ -11,7 +11,7 @@ const directionOptions = ['row', 'column'];
 
 const cssWrap = {
     border: '2px solid red',
-    height: '300px',
+    height: '300px'
 };
 
 // Define an item container to provide flex context and play with positioning
@@ -38,7 +38,7 @@ const ItemContainer = ({ title, direction, justify, align }) => {
                         marginLeft: '8px',
                         background: '#eee',
                         borderRadius: '4px',
-                        color: '#444',
+                        color: '#444'
                     }}
                 >
                     {css}
@@ -70,7 +70,7 @@ const Item = () => {
                 width: '80px',
                 height: '80px',
                 backgroundColor: '#ccc',
-                border: '1px solid #000',
+                border: '1px solid #000'
             }}
         />
     );
@@ -80,7 +80,7 @@ ItemContainer.propTypes = {
     title: PropTypes.string,
     justify: PropTypes.oneOf(justifyOptions),
     align: PropTypes.oneOf(alignOptions),
-    direction: PropTypes.oneOf(['row', 'col']),
+    direction: PropTypes.oneOf(['row', 'col'])
 };
 
 function displayItems(direction, type) {
@@ -111,7 +111,7 @@ storiesOf('Global CSS|Layout', module)
     .addDecorator(withKnobs)
     .addParameters({
         componentSubtitle: 'Layout',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .add('Direction', () => (
         <>

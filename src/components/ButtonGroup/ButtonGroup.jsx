@@ -52,7 +52,7 @@ ButtonGroup.defaultProps = {
     variant: 'default',
     color: 'default',
     isReversed: false,
-    className: null,
+    className: null
 };
 
 ButtonGroup.propTypes = {
@@ -84,7 +84,7 @@ ButtonGroup.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 
 ButtonGroup.displayName = 'ButtonGroup';

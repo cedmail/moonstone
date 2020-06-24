@@ -21,7 +21,7 @@ storiesOf('Components|Button', module)
     .addParameters({
         component: Button,
         componentSubtitle: 'Button',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Button with icon and label', () => (

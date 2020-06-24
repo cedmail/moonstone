@@ -17,10 +17,10 @@ const SvgLoading = (initialProps) => {
 
 SvgLoading.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgLoading.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgLoading;

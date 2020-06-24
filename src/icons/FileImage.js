@@ -19,10 +19,10 @@ const SvgFileImage = (initialProps) => {
 
 SvgFileImage.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgFileImage.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgFileImage;

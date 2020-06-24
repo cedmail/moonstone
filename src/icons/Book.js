@@ -17,10 +17,10 @@ const SvgBook = (initialProps) => {
 
 SvgBook.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgBook.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgBook;

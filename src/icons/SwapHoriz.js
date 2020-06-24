@@ -17,10 +17,10 @@ const SvgSwapHoriz = (initialProps) => {
 
 SvgSwapHoriz.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSwapHoriz.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSwapHoriz;

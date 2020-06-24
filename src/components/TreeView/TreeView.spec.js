@@ -16,8 +16,8 @@ const tree = [
             'https://image.flaticon.com/icons/svg/1973/1973617'
         ),
         iconEnd: <Cloud />,
-        children: [{ id: 'A1', label: 'A-1 level2', icon: <Love /> }],
-    },
+        children: [{ id: 'A1', label: 'A-1 level2', icon: <Love /> }]
+    }
 ];
 
 describe('TreeView', () => {
@@ -59,7 +59,7 @@ describe('TreeView', () => {
 
     it('should open a node by clicking on arrow icon', () => {
         const wrapper = shallow(<UncontrolledTreeView data={tree} />, {
-            mocks: { ControlledTreeView: true },
+            mocks: { ControlledTreeView: true }
         });
 
         wrapper.querySelector('.treeView_itemToggle').dispatchEvent('click');
@@ -68,7 +68,7 @@ describe('TreeView', () => {
 
     it('should open a node by clicking on an item when no onClickItem is provided', () => {
         const wrapper = shallow(<UncontrolledTreeView data={tree} />, {
-            mocks: { ControlledTreeView: true },
+            mocks: { ControlledTreeView: true }
         });
 
         wrapper.querySelector('.treeView_itemLabel').dispatchEvent('click');

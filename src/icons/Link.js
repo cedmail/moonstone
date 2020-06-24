@@ -17,10 +17,10 @@ const SvgLink = (initialProps) => {
 
 SvgLink.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgLink.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgLink;

@@ -10,7 +10,7 @@ import Love from '~/icons/Love';
 storiesOf('Components|Accordion/AccordionItem', module)
     .addParameters({
         component: AccordionItem,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('with icon', () => (

@@ -17,10 +17,10 @@ const SvgRadioUnchecked = (initialProps) => {
 
 SvgRadioUnchecked.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgRadioUnchecked.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgRadioUnchecked;

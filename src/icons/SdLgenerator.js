@@ -23,10 +23,10 @@ const SvgSdLgenerator = (initialProps) => {
 
 SvgSdLgenerator.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSdLgenerator.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSdLgenerator;

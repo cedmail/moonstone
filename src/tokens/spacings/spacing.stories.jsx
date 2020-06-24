@@ -29,5 +29,5 @@ storiesOf('Tokens|Spacings', module).add('Default', () => (
 ));
 
 Spacing.propTypes = {
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
 };

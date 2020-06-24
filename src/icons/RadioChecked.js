@@ -17,10 +17,10 @@ const SvgRadioChecked = (initialProps) => {
 
 SvgRadioChecked.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgRadioChecked.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgRadioChecked;

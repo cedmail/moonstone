@@ -43,7 +43,7 @@ Breadcrumb.propTypes = {
     /**
      * Content of the component
      */
-    children: PropTypes.node,
+    children: PropTypes.node
 };
 
 Breadcrumb.displayName = 'Breadcrumb';

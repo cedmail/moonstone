@@ -17,10 +17,10 @@ const SvgStar = (initialProps) => {
 
 SvgStar.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgStar.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgStar;

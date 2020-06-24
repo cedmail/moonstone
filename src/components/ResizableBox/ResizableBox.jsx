@@ -38,7 +38,7 @@ export const ResizableBox = ({
             defaultSize={defaultSize}
             handleClasses={{
                 right: classnames(styles.resizable_handle),
-                left: classnames(styles.resizable_handle),
+                left: classnames(styles.resizable_handle)
             }}
             handleComponent={{
                 right: (
@@ -52,7 +52,7 @@ export const ResizableBox = ({
                         className={classnames(styles.resizable_handle_icon)}
                         size="big"
                     />
-                ),
+                )
             }}
             className={classnames(className)}
             onResize={onResizing}
@@ -72,10 +72,10 @@ ResizableBox.defaultProps = {
     size: {},
     defaultSize: {
         width: '100%',
-        height: 'auto',
+        height: 'auto'
     },
     children: null,
-    className: '',
+    className: ''
 };
 
 ResizableBox.propTypes = {
@@ -104,7 +104,7 @@ ResizableBox.propTypes = {
      */
     defaultSize: PropTypes.shape({
         width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     }),
 
     /**
@@ -112,7 +112,7 @@ ResizableBox.propTypes = {
      */
     size: PropTypes.shape({
         width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     }),
 
     /**
@@ -141,7 +141,7 @@ ResizableBox.propTypes = {
      * @param {node} ref - HTML element resized
      * @param {object} delta - delta between after resize
      */
-    onResizeStop: PropTypes.func,
+    onResizeStop: PropTypes.func
 };
 
 ResizableBox.displayName = 'ResizableBox';

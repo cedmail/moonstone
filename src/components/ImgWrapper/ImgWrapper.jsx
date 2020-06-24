@@ -12,7 +12,7 @@ export const ImgWrapper = (initialProps) => {
 
 ImgWrapper.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 
 ImgWrapper.propTypes = {
@@ -29,5 +29,5 @@ ImgWrapper.propTypes = {
     /**
      * Extra CSS class
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };

@@ -10,7 +10,7 @@ import { iconsName } from '~/__storybook__/utils';
 storiesOf('Components|ListItem', module)
     .addParameters({
         component: ListItem,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('default', () => (

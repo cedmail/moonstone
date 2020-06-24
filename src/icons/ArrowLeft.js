@@ -17,10 +17,10 @@ const SvgArrowLeft = (initialProps) => {
 
 SvgArrowLeft.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgArrowLeft.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgArrowLeft;

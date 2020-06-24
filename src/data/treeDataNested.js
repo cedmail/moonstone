@@ -457,110 +457,110 @@ export const treeDataNested = [
                                                                                                                                                                                                                                                                                                                                         ),
                                                                                                                                                                                                                                                                                                                                         iconEnd: (
                                                                                                                                                                                                                                                                                                                                             <NoCloud />
-                                                                                                                                                                                                                                                                                                                                        ),
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                ],
-                                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                                        ],
-                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                ],
-                                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                        ],
-                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                ],
-                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                        ],
-                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                ],
-                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                        ],
-                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                ],
-                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                        ],
-                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                ],
-                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                        ],
-                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                ],
-                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                        ],
-                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                ],
-                                                                                                                                                                                                            },
-                                                                                                                                                                                                        ],
-                                                                                                                                                                                                    },
-                                                                                                                                                                                                ],
-                                                                                                                                                                                            },
-                                                                                                                                                                                        ],
-                                                                                                                                                                                    },
-                                                                                                                                                                                ],
-                                                                                                                                                                            },
-                                                                                                                                                                        ],
-                                                                                                                                                                    },
-                                                                                                                                                                ],
-                                                                                                                                                            },
-                                                                                                                                                        ],
-                                                                                                                                                    },
-                                                                                                                                                ],
-                                                                                                                                            },
-                                                                                                                                        ],
-                                                                                                                                    },
-                                                                                                                                ],
-                                                                                                                            },
-                                                                                                                        ],
-                                                                                                                    },
-                                                                                                                ],
-                                                                                                            },
-                                                                                                        ],
-                                                                                                    },
-                                                                                                ],
-                                                                                            },
-                                                                                        ],
-                                                                                    },
-                                                                                ],
-                                                                            },
-                                                                        ],
-                                                                    },
-                                                                ],
-                                                            },
-                                                        ],
-                                                    },
-                                                ],
-                                            },
-                                        ],
-                                    },
-                                ],
+                                                                                                                                                                                                                                                                                                                                        )
+                                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                ]
+                                                                                                                                                                                                            }
+                                                                                                                                                                                                        ]
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                ]
+                                                                                                                                                                                            }
+                                                                                                                                                                                        ]
+                                                                                                                                                                                    }
+                                                                                                                                                                                ]
+                                                                                                                                                                            }
+                                                                                                                                                                        ]
+                                                                                                                                                                    }
+                                                                                                                                                                ]
+                                                                                                                                                            }
+                                                                                                                                                        ]
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             { id: '11', label: 'label', iconStart: <File /> },
                             {
                                 id: '12',
                                 label: 'another label',
-                                iconStart: <File />,
-                            },
-                        ],
-                    },
-                ],
+                                iconStart: <File />
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 id: 'R2',
                 label: '0-2 level2',
                 iconStart: <File />,
-                iconEnd: <NoCloud />,
+                iconEnd: <NoCloud />
             },
             {
                 id: 'R3',
                 label: '0-3 level2',
                 iconStart: <File />,
-                iconEnd: <NoCloud />,
+                iconEnd: <NoCloud />
             },
             {
                 id: 'R4',
                 label: '0-4 level2',
                 iconStart: <File />,
-                iconEnd: <NoCloud />,
-            },
-        ],
-    },
+                iconEnd: <NoCloud />
+            }
+        ]
+    }
 ];

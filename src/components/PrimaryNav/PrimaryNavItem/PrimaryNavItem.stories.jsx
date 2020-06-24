@@ -10,7 +10,7 @@ storiesOf('Components|PrimaryNavItem', module)
     .addParameters({
         component: PrimaryNavItem,
         componentSubtitle: 'PrimaryNavItem',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Default', () => (
@@ -20,7 +20,7 @@ storiesOf('Components|PrimaryNavItem', module)
                 flexDirection: 'column',
                 backgroundColor: '#131c21',
                 width: '18.75rem',
-                height: '100vh',
+                height: '100vh'
             }}
         >
             <PrimaryNavItem

@@ -17,10 +17,10 @@ const SvgSection = (initialProps) => {
 
 SvgSection.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSection.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSection;

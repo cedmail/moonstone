@@ -19,10 +19,10 @@ const SvgWork = (initialProps) => {
 
 SvgWork.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgWork.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgWork;

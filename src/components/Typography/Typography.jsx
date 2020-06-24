@@ -9,7 +9,7 @@ export const variants = [
     'subheading',
     'body',
     'caption',
-    'button',
+    'button'
 ];
 export const weights = ['default', 'bold', 'semiBold', 'light'];
 
@@ -46,7 +46,7 @@ export const Typography = ({
                 { [styles.italic]: isItalic },
                 { [styles.upperCase]: isUpperCase },
                 { [styles.lineThrough]: hasLineThrough }
-            ),
+            )
         },
         children
     );
@@ -61,7 +61,7 @@ Typography.defaultProps = {
     isUpperCase: false,
     hasLineThrough: false,
     isHtml: false,
-    isNowrap: false,
+    isNowrap: false
 };
 
 let childrenPropType = () => {};
@@ -132,7 +132,7 @@ Typography.propTypes = {
     /**
      * No wrapping for text
      */
-    isNowrap: PropTypes.bool,
+    isNowrap: PropTypes.bool
 };
 
 Typography.displayName = 'Typography';

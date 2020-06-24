@@ -17,10 +17,10 @@ const SvgAddFolder = (initialProps) => {
 
 SvgAddFolder.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgAddFolder.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgAddFolder;

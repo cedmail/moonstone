@@ -7,11 +7,11 @@ const fx = require('mkdir-recursive');
 
 const files = [
     ...glob.sync('**/*.js', {
-        cwd: 'src',
+        cwd: 'src'
     }),
     ...glob.sync('**/*.jsx', {
-        cwd: 'src',
-    }),
+        cwd: 'src'
+    })
 ];
 
 files

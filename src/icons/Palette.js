@@ -17,10 +17,10 @@ const SvgPalette = (initialProps) => {
 
 SvgPalette.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgPalette.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgPalette;

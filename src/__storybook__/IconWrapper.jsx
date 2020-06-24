@@ -9,7 +9,7 @@ export const IconWrapper = ({ iconName, size }) => {
 
 IconWrapper.propTypes = {
     iconName: PropTypes.string.isRequired,
-    size: PropTypes.string,
+    size: PropTypes.string
 };
 
 export default IconWrapper;

@@ -19,10 +19,10 @@ const SvgViewComfy = (initialProps) => {
 
 SvgViewComfy.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgViewComfy.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgViewComfy;

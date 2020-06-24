@@ -17,10 +17,10 @@ const SvgComments = (initialProps) => {
 
 SvgComments.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgComments.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgComments;

@@ -17,10 +17,10 @@ const SvgMoreVert = (initialProps) => {
 
 SvgMoreVert.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgMoreVert.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgMoreVert;

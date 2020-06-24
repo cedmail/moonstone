@@ -16,7 +16,7 @@ storiesOf('ImgWrapper', module)
     .addParameters({
         component: ImgWrapper,
         componentSubtitle: 'Image wrapper',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .addDecorator((storyFn) => (

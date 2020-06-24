@@ -17,10 +17,10 @@ const SvgDownload = (initialProps) => {
 
 SvgDownload.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgDownload.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgDownload;

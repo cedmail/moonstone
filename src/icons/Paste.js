@@ -19,10 +19,10 @@ const SvgPaste = (initialProps) => {
 
 SvgPaste.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgPaste.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgPaste;

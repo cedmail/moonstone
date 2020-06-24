@@ -22,7 +22,7 @@ SecondaryNavHeader.propTypes = {
     /**
      * Content of the component
      */
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired
 };
 
 SecondaryNavHeader.displayName = 'SecondaryNavHeader';

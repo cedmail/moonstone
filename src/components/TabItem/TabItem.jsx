@@ -36,7 +36,7 @@ export const TabItem = ({
                 className
             ),
             disabled: isDisabled,
-            ...props,
+            ...props
         },
         <>
             {icon && (
@@ -70,7 +70,7 @@ TabItem.defaultProps = {
     isSelected: false,
     color: 'default',
     isReversed: false,
-    className: null,
+    className: null
 };
 
 TabItem.propTypes = {
@@ -127,7 +127,7 @@ TabItem.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 
 TabItem.displayName = 'TabItem';

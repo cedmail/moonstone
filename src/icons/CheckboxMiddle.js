@@ -17,10 +17,10 @@ const SvgCheckboxMiddle = (initialProps) => {
 
 SvgCheckboxMiddle.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgCheckboxMiddle.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgCheckboxMiddle;

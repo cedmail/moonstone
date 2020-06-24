@@ -17,10 +17,10 @@ const SvgCancel = (initialProps) => {
 
 SvgCancel.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgCancel.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgCancel;

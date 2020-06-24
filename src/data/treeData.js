@@ -36,26 +36,26 @@ export const treeData = [
                                 typographyOptions: { isItalic: true },
                                 iconStart: toIconComponent(
                                     'https://image.flaticon.com/icons/svg/1973/1973617.svg'
-                                ),
+                                )
                             },
                             {
                                 id: 'A12',
                                 label: 'A-3 level2',
                                 iconStart: <Love />,
-                                className: myStyles.colorTest,
+                                className: myStyles.colorTest
                             },
-                            { id: 'A13', label: 'A-4 level2' },
-                        ],
+                            { id: 'A13', label: 'A-4 level2' }
+                        ]
                     },
                     {
                         id: 'A2',
                         label: 'A-2 level2',
                         iconStart: <Love />,
-                        className: myStyles.colorTest,
+                        className: myStyles.colorTest
                     },
                     { id: 'A3', label: 'A-3 level2' },
-                    { id: 'A4', label: 'A-4 level2' },
-                ],
+                    { id: 'A4', label: 'A-4 level2' }
+                ]
             },
             {
                 id: 'B',
@@ -66,17 +66,17 @@ export const treeData = [
                     {
                         id: 'B1',
                         label: 'B-1 level2',
-                        className: myStyles.colorTest,
+                        className: myStyles.colorTest
                     },
                     {
                         id: 'B2',
                         label: 'B-2 level2',
-                        className: myStyles.colorTest,
+                        className: myStyles.colorTest
                     },
                     {
                         id: 'B3',
                         label: 'B-3 level2',
-                        className: myStyles.colorTest,
+                        className: myStyles.colorTest
                     },
                     {
                         id: 'B4',
@@ -88,30 +88,30 @@ export const treeData = [
                                 id: 'B11',
                                 label: 'B-1-1 level3',
                                 iconStart: <Love />,
-                                className: myStyles.colorTest,
+                                className: myStyles.colorTest
                             },
                             {
                                 id: 'B22',
                                 label: 'B-2-2 level3',
                                 iconStart: toIconComponent(
                                     'https://image.flaticon.com/icons/svg/1973/1973617.svg'
-                                ),
+                                )
                             },
                             {
                                 id: 'B33',
                                 label: 'B-3-3 level3',
                                 iconStart: <Love />,
-                                className: myStyles.colorTest,
+                                className: myStyles.colorTest
                             },
                             {
                                 id: 'B44',
                                 label: 'B-4-4 level3',
                                 iconStart: <Love />,
-                                className: myStyles.colorTest,
-                            },
-                        ],
-                    },
-                ],
+                                className: myStyles.colorTest
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 id: 'C',
@@ -119,8 +119,8 @@ export const treeData = [
                 iconStart: toIconComponent(
                     'https://image.flaticon.com/icons/svg/1973/1973617.svg'
                 ),
-                children: [],
-            },
-        ],
-    },
+                children: []
+            }
+        ]
+    }
 ];

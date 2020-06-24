@@ -17,10 +17,10 @@ const SvgLock = (initialProps) => {
 
 SvgLock.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgLock.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgLock;

@@ -19,10 +19,10 @@ const SvgForm = (initialProps) => {
 
 SvgForm.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgForm.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgForm;

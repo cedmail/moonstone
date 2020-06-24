@@ -7,7 +7,7 @@ describe('NavItem', () => {
         const wrapper = shallow(
             <PrimaryNavItem label="Content children" onClick={() => {}} />,
             {
-                blackList: true,
+                blackList: true
             }
         );
 
@@ -20,7 +20,7 @@ describe('NavItem', () => {
                 Content children
             </PrimaryNavItem>,
             {
-                blackList: true,
+                blackList: true
             }
         );
 
@@ -35,7 +35,7 @@ describe('NavItem', () => {
                 onClick={() => {}}
             />,
             {
-                blackList: true,
+                blackList: true
             }
         );
 
@@ -52,7 +52,7 @@ describe('NavItem', () => {
                 onClick={() => {}}
             />,
             {
-                blackList: true,
+                blackList: true
             }
         );
         expect(wrapper.querySelector('Icon').exists()).toBe(true);
@@ -68,7 +68,7 @@ describe('NavItem', () => {
                 onClick={() => {}}
             />,
             {
-                blackList: true,
+                blackList: true
             }
         );
 
@@ -84,7 +84,7 @@ describe('NavItem', () => {
                 onClick={() => {}}
             />,
             {
-                blackList: true,
+                blackList: true
             }
         );
 
@@ -102,7 +102,7 @@ describe('NavItem', () => {
                 onClick={() => {}}
             />,
             {
-                blackList: true,
+                blackList: true
             }
         );
 
@@ -120,7 +120,7 @@ describe('NavItem', () => {
                 onClick={() => {}}
             />,
             {
-                blackList: true,
+                blackList: true
             }
         );
 
@@ -139,7 +139,7 @@ describe('NavItem', () => {
                 onClick={() => {}}
             />,
             {
-                blackList: true,
+                blackList: true
             }
         );
 

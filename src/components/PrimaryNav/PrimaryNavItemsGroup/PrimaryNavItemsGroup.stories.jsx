@@ -11,7 +11,7 @@ storiesOf('Components|PrimaryNavItemsGroup', module)
     .addParameters({
         component: PrimaryNavItemsGroup,
         componentSubtitle: 'PrimaryNavItemsGroup',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Default', () => (
@@ -19,7 +19,7 @@ storiesOf('Components|PrimaryNavItemsGroup', module)
             style={{
                 backgroundColor: '#131c21',
                 width: '18.75rem',
-                height: '100vh',
+                height: '100vh'
             }}
         >
             <PrimaryNavItemsGroup>

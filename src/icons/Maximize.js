@@ -17,10 +17,10 @@ const SvgMaximize = (initialProps) => {
 
 SvgMaximize.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgMaximize.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgMaximize;

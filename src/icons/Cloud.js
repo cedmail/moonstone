@@ -17,10 +17,10 @@ const SvgCloud = (initialProps) => {
 
 SvgCloud.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgCloud.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgCloud;

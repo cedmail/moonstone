@@ -21,7 +21,7 @@ const colorValues = () => select('Color', colors, 'default');
 storiesOf('Components|Chip', module)
     .addParameters({
         component: Chip,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .addDecorator((storyFn) => (

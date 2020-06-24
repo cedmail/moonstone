@@ -17,10 +17,10 @@ const SvgMoreHoriz = (initialProps) => {
 
 SvgMoreHoriz.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgMoreHoriz.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgMoreHoriz;

@@ -17,10 +17,10 @@ const SvgMenu = (initialProps) => {
 
 SvgMenu.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgMenu.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgMenu;

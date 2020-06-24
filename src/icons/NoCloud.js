@@ -26,10 +26,10 @@ const SvgNoCloud = (initialProps) => {
 
 SvgNoCloud.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgNoCloud.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgNoCloud;

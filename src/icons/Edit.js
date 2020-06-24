@@ -17,10 +17,10 @@ const SvgEdit = (initialProps) => {
 
 SvgEdit.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgEdit.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgEdit;

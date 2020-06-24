@@ -29,7 +29,7 @@ export const PrimaryNavItemsGroup = ({
 };
 
 PrimaryNavItemsGroup.defaultProps = {
-    isDisplayedWhenCollapsed: true,
+    isDisplayedWhenCollapsed: true
 };
 
 PrimaryNavItemsGroup.propTypes = {
@@ -41,7 +41,7 @@ PrimaryNavItemsGroup.propTypes = {
     /**
      * Items displayed inside the group
      */
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired
 };
 
 PrimaryNavItemsGroup.displayName = 'PrimaryNavItemsGroup';

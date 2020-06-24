@@ -89,8 +89,8 @@ describe('Accordion', () => {
                 {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true,
-                    },
+                        ControlledAccordion: true
+                    }
                 }
             );
 
@@ -109,8 +109,8 @@ describe('Accordion', () => {
                 {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true,
-                    },
+                        ControlledAccordion: true
+                    }
                 }
             );
 
@@ -130,8 +130,8 @@ describe('Accordion', () => {
                 {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true,
-                    },
+                        ControlledAccordion: true
+                    }
                 }
             );
 
@@ -151,8 +151,8 @@ describe('Accordion', () => {
                 {
                     mocks: {
                         AccordionItemMock: true,
-                        ControlledAccordion: true,
-                    },
+                        ControlledAccordion: true
+                    }
                 }
             );
 

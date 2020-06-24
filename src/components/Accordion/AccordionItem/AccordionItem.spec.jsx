@@ -49,11 +49,11 @@ describe('AccordionItem', () => {
                             value: {
                                 setOpenedItemId: jest.fn(),
                                 currentItem: 'not correspond',
-                                isReversed: true,
-                            },
-                        },
-                    ],
-                },
+                                isReversed: true
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -77,11 +77,11 @@ describe('AccordionItem', () => {
                             id: AccordionContext,
                             value: {
                                 onSetOpenedItemId: jest.fn(),
-                                currentItem: 'not correspond',
-                            },
-                        },
-                    ],
-                },
+                                currentItem: 'not correspond'
+                            }
+                        }
+                    ]
+                }
             }
         );
         expect(wrapper.html()).not.toContain('content here');
@@ -104,11 +104,11 @@ describe('AccordionItem', () => {
                             id: AccordionContext,
                             value: {
                                 setOpenedItemId: jest.fn(),
-                                currentItem: '007',
-                            },
-                        },
-                    ],
-                },
+                                currentItem: '007'
+                            }
+                        }
+                    ]
+                }
             }
         );
         expect(wrapper.html()).toContain('content here');
@@ -131,11 +131,11 @@ describe('AccordionItem', () => {
                             id: AccordionContext,
                             value: {
                                 onSetOpenedItem: jest.fn(),
-                                currentItem: 'not correspond',
-                            },
-                        },
-                    ],
-                },
+                                currentItem: 'not correspond'
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -165,11 +165,11 @@ describe('AccordionItem', () => {
                             id: AccordionContext,
                             value: {
                                 onSetOpenedItem: jest.fn(),
-                                currentItem: 'not correspond',
-                            },
-                        },
-                    ],
-                },
+                                currentItem: 'not correspond'
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -199,11 +199,11 @@ describe('AccordionItem', () => {
                             id: AccordionContext,
                             value: {
                                 onSetOpenedItem: jest.fn(),
-                                currentItem: '007',
-                            },
-                        },
-                    ],
-                },
+                                currentItem: '007'
+                            }
+                        }
+                    ]
+                }
             }
         );
 
@@ -224,11 +224,11 @@ describe('AccordionItem', () => {
                             id: AccordionContext,
                             value: {
                                 onSetOpenedItem: jest.fn(),
-                                currentItem: '007',
-                            },
-                        },
-                    ],
-                },
+                                currentItem: '007'
+                            }
+                        }
+                    ]
+                }
             }
         );
 

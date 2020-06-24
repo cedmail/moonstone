@@ -72,7 +72,7 @@ export const ControlledTreeView = ({
                 styles.treeView_item,
                 {
                     [styles.selected]: isSelected,
-                    [styles.reversed]: isReversed,
+                    [styles.reversed]: isReversed
                 }
             );
 
@@ -117,7 +117,7 @@ export const ControlledTreeView = ({
                         <div
                             className={cssTreeViewItem}
                             style={{
-                                paddingLeft: `calc((var(--spacing-medium) + var(--spacing-nano)) * ${deep} + var(--spacing-medium))`,
+                                paddingLeft: `calc((var(--spacing-medium) + var(--spacing-nano)) * ${deep} + var(--spacing-medium))`
                             }}
                         >
                             {/* Icon arrow */}
@@ -216,7 +216,7 @@ ControlledTreeView.propTypes = {
             isLoading: PropTypes.bool,
             className: PropTypes.string,
             typographyOptions: PropTypes.object,
-            treeItemProps: PropTypes.object,
+            treeItemProps: PropTypes.object
         })
     ).isRequired,
 
@@ -258,7 +258,7 @@ ControlledTreeView.propTypes = {
     /**
      * Reverse color usefull for context with dark background
      */
-    isReversed: PropTypes.bool,
+    isReversed: PropTypes.bool
 };
 
 ControlledTreeView.defaultProps = {
@@ -269,5 +269,5 @@ ControlledTreeView.defaultProps = {
     onCloseItem: () => {},
     openedItems: [],
     selectedItems: [],
-    isReversed: false,
+    isReversed: false
 };

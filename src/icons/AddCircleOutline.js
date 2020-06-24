@@ -19,10 +19,10 @@ const SvgAddCircleOutline = (initialProps) => {
 
 SvgAddCircleOutline.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgAddCircleOutline.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgAddCircleOutline;

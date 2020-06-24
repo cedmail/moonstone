@@ -17,10 +17,10 @@ const SvgUpload = (initialProps) => {
 
 SvgUpload.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgUpload.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgUpload;

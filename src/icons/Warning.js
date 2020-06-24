@@ -17,10 +17,10 @@ const SvgWarning = (initialProps) => {
 
 SvgWarning.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgWarning.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgWarning;

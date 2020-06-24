@@ -31,10 +31,10 @@ const SvgJContent = (initialProps) => {
 
 SvgJContent.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgJContent.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgJContent;

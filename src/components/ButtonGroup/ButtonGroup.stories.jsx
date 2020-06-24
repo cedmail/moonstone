@@ -9,7 +9,7 @@ import {
     Button,
     buttonColors,
     buttonSizes,
-    buttonVariants,
+    buttonVariants
 } from '~/components/Button';
 import { ChevronDown } from '~/icons';
 import { ButtonGroup } from './index';
@@ -23,7 +23,7 @@ storiesOf('Components|ButtonGroup', module)
     .addParameters({
         component: Button,
         componentSubtitle: 'ButtonGroup',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Default', () => (

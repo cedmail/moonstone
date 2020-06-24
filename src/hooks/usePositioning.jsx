@@ -3,7 +3,7 @@ import toPX from 'to-px';
 
 const initialPosition = {
     top: -1000,
-    left: -1000,
+    left: -1000
 };
 
 function getPosition(anchorPosition) {
@@ -15,7 +15,7 @@ function getPosition(anchorPosition) {
         left:
             typeof anchorPosition.left === 'string'
                 ? toPX(anchorPosition.left)
-                : anchorPosition.left,
+                : anchorPosition.left
     };
 }
 
@@ -154,7 +154,7 @@ export const usePositioning = (
         isDisplayed,
         itemRef,
         anchorElOrigin,
-        transformElOrigin,
+        transformElOrigin
     ]);
 
     return [stylePosition, itemRef];

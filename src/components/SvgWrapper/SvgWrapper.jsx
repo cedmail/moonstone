@@ -46,7 +46,7 @@ export const SvgWrapper = (initialProps) => {
 
 SvgWrapper.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 
 SvgWrapper.propTypes = {
@@ -63,5 +63,5 @@ SvgWrapper.propTypes = {
     /**
      * Extra CSS class
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };

@@ -10,7 +10,7 @@ export const SeparatorInvisible = [
     'firstChild',
     'lastChild',
     'onlyChild',
-    'firstOrLastChild',
+    'firstOrLastChild'
 ];
 
 export const Separator = ({
@@ -40,7 +40,7 @@ Separator.defaultProps = {
     variant: 'horizontal',
     size: 'full',
     spacing: 'small',
-    invisible: null,
+    invisible: null
 };
 
 Separator.propTypes = {
@@ -68,7 +68,7 @@ Separator.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 
 Separator.displayName = 'Separator';

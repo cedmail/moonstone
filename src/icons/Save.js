@@ -17,10 +17,10 @@ const SvgSave = (initialProps) => {
 
 SvgSave.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSave.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSave;

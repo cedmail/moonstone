@@ -36,7 +36,7 @@ export const SecondaryNav = ({
             maxWidth="900"
             defaultSize={{
                 height: '0%',
-                width: '245px',
+                width: '245px'
             }}
             {...props}
         >
@@ -67,7 +67,7 @@ export const SecondaryNav = ({
 
 SecondaryNav.defaultProps = {
     isDefaultVisible: true,
-    onToggled: () => {},
+    onToggled: () => {}
 };
 
 SecondaryNav.propTypes = {
@@ -94,7 +94,7 @@ SecondaryNav.propTypes = {
     /**
      * Triggered when the visibility is toggled
      */
-    onToggled: PropTypes.func,
+    onToggled: PropTypes.func
 };
 
 SecondaryNav.displayName = 'SecondaryNav';

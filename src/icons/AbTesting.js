@@ -17,10 +17,10 @@ const SvgAbTesting = (initialProps) => {
 
 SvgAbTesting.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgAbTesting.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgAbTesting;

@@ -10,7 +10,7 @@ storiesOf('Components|SecondaryNav', module)
     .addParameters({
         component: SecondaryNav,
         componentSubtitle: 'SecondaryNav',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('with title', () => (

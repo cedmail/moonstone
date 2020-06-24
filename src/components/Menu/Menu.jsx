@@ -67,7 +67,7 @@ export const Menu = ({
                 ref={itemRef}
                 style={styleMenu}
                 className={classnames(styles.menu, className, {
-                    [styles.hidden]: !isDisplayed || !stylePosition,
+                    [styles.hidden]: !isDisplayed || !stylePosition
                 })}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
@@ -91,16 +91,16 @@ Menu.defaultProps = {
     anchorEl: null,
     anchorPosition: {
         top: 0,
-        left: 0,
+        left: 0
     },
     anchorElOrigin: {
         vertical: 'bottom',
-        horizontal: 'left',
+        horizontal: 'left'
     },
     transformElOrigin: {
         vertical: 'top',
-        horizontal: 'left',
-    },
+        horizontal: 'left'
+    }
 };
 
 Menu.propTypes = {
@@ -139,7 +139,7 @@ Menu.propTypes = {
      */
     anchorPosition: PropTypes.shape({
         top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-        left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        left: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     }),
 
     /**
@@ -147,7 +147,7 @@ Menu.propTypes = {
      */
     anchorElOrigin: PropTypes.shape({
         horizontal: PropTypes.oneOf(['left', 'center', 'right']).isRequired,
-        vertical: PropTypes.oneOf(['top', 'center', 'bottom']).isRequired,
+        vertical: PropTypes.oneOf(['top', 'center', 'bottom']).isRequired
     }),
 
     /**
@@ -155,7 +155,7 @@ Menu.propTypes = {
      */
     transformElOrigin: PropTypes.shape({
         horizontal: PropTypes.oneOf(['left', 'right']).isRequired,
-        vertical: PropTypes.oneOf(['top', 'bottom']).isRequired,
+        vertical: PropTypes.oneOf(['top', 'bottom']).isRequired
     }),
 
     /**
@@ -206,7 +206,7 @@ Menu.propTypes = {
     /**
      * The menu has overlay or not
      */
-    hasOverlay: PropTypes.bool,
+    hasOverlay: PropTypes.bool
 };
 
 Menu.displayName = 'Menu';

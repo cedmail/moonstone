@@ -15,7 +15,7 @@ const label = () => text('Label', 'item');
 storiesOf('Components|Breadcrumb', module)
     .addParameters({
         component: Breadcrumb,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Default', () => (

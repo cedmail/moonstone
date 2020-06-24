@@ -19,7 +19,7 @@ export const MenuItem = ({
             [styles.hover]: isHover,
             [styles.selected]: isSelected,
             [styles.disabled]: isDisabled,
-            [styles.title]: variant === 'title',
+            [styles.title]: variant === 'title'
         })}
         variant={variant}
         {...props}
@@ -34,7 +34,7 @@ MenuItem.defaultProps = {
     isHtml: false,
     onClick: () => {},
     onMouseEnter: () => {},
-    onMouseLeave: () => {},
+    onMouseLeave: () => {}
 };
 
 MenuItem.propTypes = {
@@ -96,7 +96,7 @@ MenuItem.propTypes = {
     /**
      * Function triggered when the mouse pointer move off the item
      */
-    onMouseLeave: PropTypes.func,
+    onMouseLeave: PropTypes.func
 };
 
 MenuItem.displayName = 'MenuItem';

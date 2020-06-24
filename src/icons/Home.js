@@ -17,10 +17,10 @@ const SvgHome = (initialProps) => {
 
 SvgHome.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgHome.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgHome;

@@ -14,7 +14,7 @@ const FakeNavigation = () => {
                 border: '5px solid gray',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'center'
             }}
         >
             Nav
@@ -31,7 +31,7 @@ const FakeContent = () => {
                 border: '5px solid lightgray',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'center'
             }}
         >
             Content
@@ -43,7 +43,7 @@ storiesOf('Layouts|LayoutApp', module)
     .addParameters({
         component: LayoutApp,
         componentSubtitle: 'How to use our root application layout',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Default', () => (

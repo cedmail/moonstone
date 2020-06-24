@@ -19,10 +19,10 @@ const SvgSetting = (initialProps) => {
 
 SvgSetting.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSetting.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSetting;

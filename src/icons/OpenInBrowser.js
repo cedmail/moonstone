@@ -17,10 +17,10 @@ const SvgOpenInBrowser = (initialProps) => {
 
 SvgOpenInBrowser.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgOpenInBrowser.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgOpenInBrowser;

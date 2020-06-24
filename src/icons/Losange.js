@@ -14,10 +14,10 @@ const SvgLosange = (initialProps) => {
 
 SvgLosange.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgLosange.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgLosange;

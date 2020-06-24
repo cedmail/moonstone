@@ -10,7 +10,7 @@ export const colors = [
     'success',
     'warning',
     'danger',
-    'reassuring',
+    'reassuring'
 ];
 
 export const Chip = ({
@@ -48,7 +48,7 @@ Chip.defaultProps = {
     label: '',
     color: 'default',
     icon: null,
-    isDisabled: false,
+    isDisabled: false
 };
 
 Chip.propTypes = {
@@ -75,7 +75,7 @@ Chip.propTypes = {
     /**
      * Is this component disabled
      */
-    isDisabled: PropTypes.bool,
+    isDisabled: PropTypes.bool
 };
 
 Chip.displayName = 'Chip';

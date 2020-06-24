@@ -22,7 +22,7 @@ storiesOf('Components|TabItem', module)
     .addParameters({
         component: TabItem,
         componentSubtitle: 'TabItem',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('TabItem with icon and label', () => (

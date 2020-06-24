@@ -19,10 +19,10 @@ const SvgTask = (initialProps) => {
 
 SvgTask.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgTask.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgTask;

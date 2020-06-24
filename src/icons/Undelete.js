@@ -24,10 +24,10 @@ const SvgUndelete = (initialProps) => {
 
 SvgUndelete.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgUndelete.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgUndelete;

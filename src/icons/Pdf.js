@@ -17,10 +17,10 @@ const SvgPdf = (initialProps) => {
 
 SvgPdf.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgPdf.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgPdf;

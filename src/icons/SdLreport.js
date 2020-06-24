@@ -23,10 +23,10 @@ const SvgSdLreport = (initialProps) => {
 
 SvgSdLreport.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgSdLreport.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgSdLreport;

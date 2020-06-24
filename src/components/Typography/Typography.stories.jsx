@@ -11,7 +11,7 @@ storiesOf('Components|Typography', module)
     .addParameters({
         component: Typography,
         componentSubtitle: 'Displays text',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .addDecorator((storyFn) => (

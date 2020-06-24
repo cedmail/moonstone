@@ -45,7 +45,7 @@ TreeView.propTypes = {
             isLoading: PropTypes.bool,
             className: PropTypes.string,
             typographyOptions: PropTypes.object,
-            treeItemProps: PropTypes.object,
+            treeItemProps: PropTypes.object
         })
     ).isRequired,
 
@@ -93,7 +93,7 @@ TreeView.propTypes = {
     /**
      * Reverse color usefull for context with dark background
      */
-    isReversed: PropTypes.bool,
+    isReversed: PropTypes.bool
 };
 
 TreeView.defaultProps = {
@@ -103,7 +103,7 @@ TreeView.defaultProps = {
     openedItems: undefined,
     defaultOpenedItems: [],
     selectedItems: [],
-    isReversed: false,
+    isReversed: false
 };
 
 TreeView.displayName = 'TreeView';

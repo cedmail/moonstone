@@ -17,10 +17,10 @@ const SvgViewQuilt = (initialProps) => {
 
 SvgViewQuilt.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgViewQuilt.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgViewQuilt;

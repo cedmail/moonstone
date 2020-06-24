@@ -38,6 +38,6 @@ export const useEnterExitCallbacks = (
         onEntering,
         onExited,
         onExiting,
-        previousIsDisplayed,
+        previousIsDisplayed
     ]);
 };

@@ -23,10 +23,10 @@ const SvgNotices = (initialProps) => {
 
 SvgNotices.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgNotices.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgNotices;

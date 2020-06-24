@@ -4,7 +4,7 @@ import styles from './PrimaryNavItem.scss';
 import classnames from 'clsx';
 import {
     Typography,
-    variants as typographyVariants,
+    variants as typographyVariants
 } from '~/components/Typography';
 import { PrimaryNavContext } from '../PrimaryNav.context';
 
@@ -53,7 +53,7 @@ Item.propTypes = {
     icon: PropTypes.element,
     textVariant: PropTypes.oneOf(typographyVariants),
     subtitle: PropTypes.string,
-    button: PropTypes.node,
+    button: PropTypes.node
 };
 
 // Internal component
@@ -97,7 +97,7 @@ ItemTypeResolver.propTypes = {
     label: PropTypes.string,
     icon: PropTypes.element,
     subtitle: PropTypes.string,
-    button: PropTypes.node,
+    button: PropTypes.node
 };
 
 export const PrimaryNavItem = ({
@@ -157,7 +157,7 @@ PrimaryNavItem.defaultProps = {
     badge: null,
     className: '',
     url: null,
-    onClick: () => {},
+    onClick: () => {}
 };
 
 PrimaryNavItem.propTypes = {
@@ -204,7 +204,7 @@ PrimaryNavItem.propTypes = {
     /**
      * Function triggered on click
      */
-    onClick: PropTypes.func,
+    onClick: PropTypes.func
 };
 
 PrimaryNavItem.displayName = 'PrimaryNavItem';

@@ -10,7 +10,7 @@ import {
     SeparatorSizes,
     SeparatorSpacings,
     SeparatorInvisible,
-    Typography,
+    Typography
 } from '~/components';
 import markdownNotes from './Separator.md';
 
@@ -20,7 +20,7 @@ const separatorInvisibleValue = () =>
 storiesOf('Components|Separator', module)
     .addParameters({
         component: Separator,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Horizontal', () => (

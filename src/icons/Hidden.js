@@ -17,10 +17,10 @@ const SvgHidden = (initialProps) => {
 
 SvgHidden.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgHidden.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgHidden;

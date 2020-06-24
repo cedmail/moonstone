@@ -17,10 +17,10 @@ const SvgFolderSpecial = (initialProps) => {
 
 SvgFolderSpecial.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgFolderSpecial.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgFolderSpecial;

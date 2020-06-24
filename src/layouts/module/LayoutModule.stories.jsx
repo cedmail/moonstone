@@ -14,7 +14,7 @@ const FakeNavigation = () => {
                 border: '5px solid gray',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'center'
             }}
         >
             Nav
@@ -31,7 +31,7 @@ const FakeContent = () => {
                 border: '5px solid lightgray',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'center'
             }}
         >
             Content
@@ -43,7 +43,7 @@ storiesOf('Layouts|LayoutModule', module)
     .addParameters({
         component: LayoutModule,
         componentSubtitle: 'How to use our layout for modules',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('Default', () => (
@@ -51,7 +51,7 @@ storiesOf('Layouts|LayoutModule', module)
             style={{
                 width: '100vw',
                 height: '100vh',
-                display: 'flex',
+                display: 'flex'
             }}
         >
             <LayoutModule

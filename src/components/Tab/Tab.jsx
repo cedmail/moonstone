@@ -20,7 +20,7 @@ export const Tab = ({ children, className, ...props }) => {
 };
 
 Tab.defaultProps = {
-    className: '',
+    className: ''
 };
 
 Tab.propTypes = {
@@ -32,7 +32,7 @@ Tab.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 
 Tab.displayName = 'Tab';

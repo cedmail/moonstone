@@ -5,17 +5,17 @@ import { Dropdown } from './index';
 const data = [
     {
         label: 'option 1',
-        value: '1',
+        value: '1'
     },
     {
         label: 'option 2',
-        value: '2',
+        value: '2'
     },
     {
         label: 'option 3',
         value: '3',
-        isDisabled: true,
-    },
+        isDisabled: true
+    }
 ];
 
 describe('Dropdown', () => {

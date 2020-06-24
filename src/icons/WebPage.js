@@ -17,10 +17,10 @@ const SvgWebPage = (initialProps) => {
 
 SvgWebPage.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgWebPage.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgWebPage;

@@ -19,7 +19,7 @@ const paletteNeutral = [
     'gray40',
     'gray_dark',
     'gray_dark60',
-    'gray_dark40',
+    'gray_dark40'
 ];
 const paletteAccent = [
     'accent_dark_contrast',
@@ -31,7 +31,7 @@ const paletteAccent = [
     'accent60',
     'accent_light',
     'accent_light40',
-    'accent_light60',
+    'accent_light60'
 ];
 const paletteSupport = [
     'success',
@@ -43,7 +43,7 @@ const paletteSupport = [
     'danger',
     'danger40',
     'danger60',
-    'danger_dark',
+    'danger_dark'
 ];
 
 const paletteColors = ['purple', 'purple40', 'purple60'];
@@ -96,5 +96,5 @@ storiesOf('Tokens|Colors', module)
 
 Color.propTypes = {
     color: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
 };

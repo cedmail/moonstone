@@ -17,10 +17,10 @@ const SvgCloudUpload = (initialProps) => {
 
 SvgCloudUpload.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgCloudUpload.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgCloudUpload;

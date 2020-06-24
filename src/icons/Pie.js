@@ -18,10 +18,10 @@ const SvgPie = (initialProps) => {
 
 SvgPie.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgPie.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgPie;

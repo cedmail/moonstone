@@ -13,7 +13,7 @@ storiesOf('SvgWrapper', module)
     .addParameters({
         component: SvgWrapper,
         componentSubtitle: 'Svg wrapper',
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .addDecorator((storyFn) => (

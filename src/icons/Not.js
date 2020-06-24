@@ -17,10 +17,10 @@ const SvgNot = (initialProps) => {
 
 SvgNot.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgNot.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgNot;

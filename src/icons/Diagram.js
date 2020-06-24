@@ -17,10 +17,10 @@ const SvgDiagram = (initialProps) => {
 
 SvgDiagram.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgDiagram.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgDiagram;

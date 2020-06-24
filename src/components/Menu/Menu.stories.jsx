@@ -5,7 +5,7 @@ import {
     number,
     select,
     text,
-    withKnobs,
+    withKnobs
 } from '@storybook/addon-knobs';
 import markdownNotes from './Menu.md';
 import { Menu, MenuItem } from './index';
@@ -14,7 +14,7 @@ import { Separator } from '~/components';
 storiesOf('Components|Menu', module)
     .addParameters({
         component: Menu,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .add('default', () => (
@@ -47,7 +47,7 @@ storiesOf('Components|Menu', module)
                 setIsDisplayed(true);
                 setMenuPosition({
                     top: e.clientY,
-                    left: e.clientX,
+                    left: e.clientX
                 });
             }
         };
@@ -109,7 +109,7 @@ storiesOf('Components|Menu', module)
                     anchorEl={anchorEl}
                     anchorPosition={{
                         top: number('top', 0),
-                        left: number('left', 0),
+                        left: number('left', 0)
                     }}
                     anchorElOrigin={{
                         vertical: select(
@@ -121,7 +121,7 @@ storiesOf('Components|Menu', module)
                             'anchor-horizontal',
                             ['left', 'right', 'center'],
                             'left'
-                        ),
+                        )
                     }}
                     transformElOrigin={{
                         vertical: select(
@@ -133,7 +133,7 @@ storiesOf('Components|Menu', module)
                             'transform-horizontal',
                             ['left', 'right'],
                             'left'
-                        ),
+                        )
                     }}
                     onClose={handleClose}
                 >

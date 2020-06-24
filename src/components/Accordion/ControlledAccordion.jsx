@@ -16,7 +16,7 @@ export const ControlledAccordion = ({
     const provider = {
         currentItem: openedItem,
         onSetOpenedItem,
-        isReversed: isReversed,
+        isReversed: isReversed
     };
 
     return (
@@ -37,7 +37,7 @@ export const ControlledAccordion = ({
 };
 
 ControlledAccordion.defaultProps = {
-    isReversed: false,
+    isReversed: false
 };
 
 ControlledAccordion.propTypes = {
@@ -51,13 +51,13 @@ ControlledAccordion.propTypes = {
      */
     children: PropTypes.oneOfType([
         PropTypes.shape({
-            type: PropTypes.oneOf([AccordionItem]),
+            type: PropTypes.oneOf([AccordionItem])
         }),
         PropTypes.arrayOf(
             PropTypes.shape({
-                type: PropTypes.oneOf([AccordionItem]),
+                type: PropTypes.oneOf([AccordionItem])
             })
-        ),
+        )
     ]).isRequired,
 
     /**
@@ -73,5 +73,5 @@ ControlledAccordion.propTypes = {
     /**
      * Function to set accoridonItem opened
      */
-    onSetOpenedItem: PropTypes.func,
+    onSetOpenedItem: PropTypes.func
 };

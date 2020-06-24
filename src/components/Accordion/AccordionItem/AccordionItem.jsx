@@ -38,7 +38,7 @@ export const AccordionItem = ({
                     styles.accordionItem_header,
                     {
                         [styles.selected]: open,
-                        [styles.reversed]: context.isReversed,
+                        [styles.reversed]: context.isReversed
                     },
                     'flexRow',
                     'alignCenter'
@@ -87,7 +87,7 @@ export const AccordionItem = ({
 
 AccordionItem.defaultProps = {
     icon: null,
-    onClick: () => {},
+    onClick: () => {}
 };
 
 AccordionItem.propTypes = {
@@ -119,7 +119,7 @@ AccordionItem.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 
 AccordionItem.displayName = 'AccordionItem';

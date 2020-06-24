@@ -17,10 +17,10 @@ const SvgBar = (initialProps) => {
 
 SvgBar.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgBar.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgBar;

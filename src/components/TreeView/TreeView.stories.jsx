@@ -10,13 +10,13 @@ import { TreeView } from './index';
 const css = {
     transform: 'scale(1)',
     width: '300px',
-    height: '100vh',
+    height: '100vh'
 };
 
 storiesOf('Components|TreeView', module)
     .addParameters({
         component: TreeView,
-        notes: { markdown: markdownNotes },
+        notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
     .addDecorator((storyFn) => <div style={css}>{storyFn()}</div>)
@@ -31,9 +31,9 @@ storiesOf('Components|TreeView', module)
                 {
                     id: 'A2',
                     label: 'A-2 level1',
-                    children: [{ id: 'B1', label: 'B1 level2' }],
+                    children: [{ id: 'B1', label: 'B1 level2' }]
                 },
-                { id: 'A3', label: 'A-3 level1' },
+                { id: 'A3', label: 'A-3 level1' }
             ])}
         />
     ))
@@ -45,7 +45,7 @@ storiesOf('Components|TreeView', module)
                 { id: 'A3', label: 'A-3 level1' },
                 { id: 'A4', label: 'A-4 level1' },
                 { id: 'A5', label: 'A-5 level1' },
-                { id: 'A6', label: 'A-6 level1' },
+                { id: 'A6', label: 'A-6 level1' }
             ])}
         />
     ))
@@ -122,7 +122,7 @@ storiesOf('Components|TreeView', module)
         const [treeData, setData] = useState([
             { id: 'A1', label: 'A-1', hasChildren: true },
             { id: 'A2', label: 'A-2', hasChildren: true },
-            { id: 'A3', label: 'A-3', hasChildren: true },
+            { id: 'A3', label: 'A-3', hasChildren: true }
         ]);
         const loadChidren = (node) => {
             setData((data) =>
@@ -133,8 +133,8 @@ storiesOf('Components|TreeView', module)
                             isLoading: false,
                             children: [
                                 { id: n.id + '1', label: n.label + '-1' },
-                                { id: n.id + '2', label: n.label + '-2' },
-                            ],
+                                { id: n.id + '2', label: n.label + '-2' }
+                            ]
                         };
                     }
 

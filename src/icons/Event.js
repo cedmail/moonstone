@@ -17,10 +17,10 @@ const SvgEvent = (initialProps) => {
 
 SvgEvent.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgEvent.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgEvent;

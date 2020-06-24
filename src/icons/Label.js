@@ -17,10 +17,10 @@ const SvgLabel = (initialProps) => {
 
 SvgLabel.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgLabel.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgLabel;

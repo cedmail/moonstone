@@ -28,7 +28,7 @@ export const UncontrolledAccordion = ({
 };
 
 UncontrolledAccordion.defaultProps = {
-    isReversed: false,
+    isReversed: false
 };
 
 UncontrolledAccordion.propTypes = {
@@ -42,13 +42,13 @@ UncontrolledAccordion.propTypes = {
      */
     children: PropTypes.oneOfType([
         PropTypes.shape({
-            type: PropTypes.oneOf([AccordionItem]),
+            type: PropTypes.oneOf([AccordionItem])
         }),
         PropTypes.arrayOf(
             PropTypes.shape({
-                type: PropTypes.oneOf([AccordionItem]),
+                type: PropTypes.oneOf([AccordionItem])
             })
-        ),
+        )
     ]).isRequired,
 
     /**
@@ -59,5 +59,5 @@ UncontrolledAccordion.propTypes = {
     /**
      * Additional classname
      */
-    className: PropTypes.string,
+    className: PropTypes.string
 };

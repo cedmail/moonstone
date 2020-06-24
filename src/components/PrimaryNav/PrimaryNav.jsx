@@ -23,7 +23,7 @@ const NavButton = ({ isExpanded, toggleExpand, modeIcon }) => {
 
     if (modeIcon) {
         icon = React.cloneElement(modeIcon, {
-            className: classnames(styles.modeIcon),
+            className: classnames(styles.modeIcon)
         });
     }
 
@@ -45,7 +45,7 @@ const NavButton = ({ isExpanded, toggleExpand, modeIcon }) => {
 NavButton.propTypes = {
     isExpanded: PropTypes.bool.isRequired,
     toggleExpand: PropTypes.func.isRequired,
-    modeIcon: PropTypes.element,
+    modeIcon: PropTypes.element
 };
 
 const NavHeader = ({ headerCaption, modeIcon, headerLogo }) => {
@@ -53,7 +53,7 @@ const NavHeader = ({ headerCaption, modeIcon, headerLogo }) => {
 
     if (modeIcon) {
         icon = React.cloneElement(modeIcon, {
-            className: classnames(styles.modeIconHeader),
+            className: classnames(styles.modeIconHeader)
         });
     }
 
@@ -77,7 +77,7 @@ const NavHeader = ({ headerCaption, modeIcon, headerLogo }) => {
 NavHeader.propTypes = {
     headerCaption: PropTypes.string.isRequired,
     modeIcon: PropTypes.element,
-    headerLogo: PropTypes.node,
+    headerLogo: PropTypes.node
 };
 
 export const PrimaryNav = ({
@@ -98,7 +98,7 @@ export const PrimaryNav = ({
         <PrimaryNavContext.Provider
             value={{
                 isExpanded: isExpanded,
-                collapse: () => setExpanded(false),
+                collapse: () => setExpanded(false)
             }}
         >
             <nav
@@ -155,7 +155,7 @@ PrimaryNav.defaultProps = {
     headerLogo: '',
     headerCaption: '',
     top: null,
-    bottom: null,
+    bottom: null
 };
 
 PrimaryNav.propTypes = {
@@ -179,7 +179,7 @@ PrimaryNav.propTypes = {
      */
     top: PropTypes.oneOfType([
         PropTypes.element,
-        PropTypes.arrayOf(PropTypes.element),
+        PropTypes.arrayOf(PropTypes.element)
     ]),
 
     /**
@@ -187,8 +187,8 @@ PrimaryNav.propTypes = {
      */
     bottom: PropTypes.oneOfType([
         PropTypes.element,
-        PropTypes.arrayOf(PropTypes.element),
-    ]),
+        PropTypes.arrayOf(PropTypes.element)
+    ])
 };
 
 PrimaryNav.displayName = 'PrimaryNav';

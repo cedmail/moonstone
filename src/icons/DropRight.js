@@ -14,10 +14,10 @@ const SvgDropRight = (initialProps) => {
 
 SvgDropRight.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgDropRight.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgDropRight;

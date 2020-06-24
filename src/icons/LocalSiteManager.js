@@ -17,10 +17,10 @@ const SvgLocalSiteManager = (initialProps) => {
 
 SvgLocalSiteManager.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgLocalSiteManager.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgLocalSiteManager;

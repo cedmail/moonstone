@@ -17,10 +17,10 @@ const SvgGroup = (initialProps) => {
 
 SvgGroup.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgGroup.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgGroup;

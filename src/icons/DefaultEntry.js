@@ -14,10 +14,10 @@ const SvgDefaultEntry = (initialProps) => {
 
 SvgDefaultEntry.defaultProps = {
     size: 'default',
-    className: '',
+    className: ''
 };
 SvgDefaultEntry.propTypes = {
     size: PropTypes.oneOf(['small', 'default', 'big']),
-    className: PropTypes.string,
+    className: PropTypes.string
 };
 export default SvgDefaultEntry;
