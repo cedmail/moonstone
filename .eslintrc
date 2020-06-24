@@ -1,5 +1,5 @@
 {
-    "extends": ["@jahia", "plugin:prettier/recommended"],
+    "extends": ["@jahia", "prettier"],
     "plugins": ["json"],
     "parser": "babel-eslint",
     "rules": {

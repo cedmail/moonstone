@@ -1,5 +1,5 @@
 {
-    "extends": ["@jahia/stylelint-config", "stylelint-prettier/recommended"],
+    "extends": ["@jahia/stylelint-config", "stylelint-config-prettier"],
     "rules": {
         "declaration-property-unit-blacklist": {
             "height": ["%"]
