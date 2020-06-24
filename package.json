@@ -21,7 +21,7 @@
     "lint:scss:fix": "yarn lint:scss --fix",
     "lint:fix": "yarn lint:js:fix && yarn lint:scss:fix",
     "prettier:fix": "prettier --write '{src,scripts}/**/*.{js,jsx,scss}'",
-    "prettier:check": "prettier --check 'src/**/*.jsx'",
+    "prettier": "prettier --check '{src,scripts}/**/*.{js,jsx,scss}'",
     "compilejs": "node ./scripts/compile.js",
     "tsc": "tsc --build tsconfig.json",
     "prebuild-icons": "node ./scripts/rename.js ./src/icons/index.js ./src/icons/tmp.js",
@@ -49,6 +49,7 @@
   "lint-staged": {
     "src/**/*.{js,jsx,scss}": [
       "yarn lint:fix",
+      "yarn prettier:fix",
       "git add"
     ]
   },
