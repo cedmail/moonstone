@@ -9,25 +9,19 @@ describe('ListItem', () => {
     });
 
     it('should add extra attribute', () => {
-        const wrapper = shallow(
-            <ListItem label="my label" data-custom="test" />
-        );
+        const wrapper = shallow(<ListItem label="my label" data-custom="test" />);
         expect(wrapper.html()).toContain('data-custom="test"');
     });
 
     it('should display iconStart', () => {
         const Icon = () => <svg />;
-        const wrapper = shallow(
-            <ListItem label="Say my name" iconStart={<Icon />} />
-        );
+        const wrapper = shallow(<ListItem label="Say my name" iconStart={<Icon />} />);
         expect(wrapper.html()).toContain('Icon');
     });
 
     it('should display iconEnd', () => {
         const Icon = () => <svg />;
-        const wrapper = shallow(
-            <ListItem label="my label" iconEnd={<Icon />} />
-        );
+        const wrapper = shallow(<ListItem label="my label" iconEnd={<Icon />} />);
         expect(wrapper.html()).toContain('Icon');
     });
 
@@ -37,17 +31,13 @@ describe('ListItem', () => {
     });
 
     it('should add additional classname', () => {
-        const wrapper = shallow(
-            <ListItem className="hello" label="my label" />
-        );
+        const wrapper = shallow(<ListItem className="hello" label="my label" />);
         expect(wrapper.html()).toContain('hello');
     });
 
     it('should call onClick when click on an item', () => {
         const handleClick = jest.fn();
-        const wrapper = shallow(
-            <ListItem label="my label" onClick={handleClick} />
-        );
+        const wrapper = shallow(<ListItem label="my label" onClick={handleClick} />);
 
         wrapper.querySelector('li').dispatchEvent('click');
 

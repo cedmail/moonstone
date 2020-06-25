@@ -15,9 +15,7 @@ describe('Typography', () => {
 
     it('should display the specified variant', () => {
         variants.forEach(variant => {
-            const wrapper = shallow(
-                <Typography variant={variant}>Content children</Typography>
-            );
+            const wrapper = shallow(<Typography variant={variant}>Content children</Typography>);
             expect(wrapper.props.className).toContain(`variant_${variant}`);
         });
     });
@@ -29,9 +27,7 @@ describe('Typography', () => {
 
     it('should use the specified weight', () => {
         weights.forEach(weight => {
-            const wrapper = shallow(
-                <Typography weight={weight}>Test</Typography>
-            );
+            const wrapper = shallow(<Typography weight={weight}>Test</Typography>);
             expect(wrapper.props.className).toContain(`weight_${weight}`);
         });
     });
@@ -72,23 +68,17 @@ describe('Typography', () => {
     });
 
     it('should display a tag html h1', () => {
-        const wrapper = shallow(
-            <Typography component="h1">Content children</Typography>
-        );
+        const wrapper = shallow(<Typography component="h1">Content children</Typography>);
         expect(wrapper.html()).toContain('h1');
     });
 
     it('should add extra props', () => {
-        const wrapper = shallow(
-            <Typography onClick={() => {}}>Content children</Typography>
-        );
+        const wrapper = shallow(<Typography onClick={() => {}}>Content children</Typography>);
         expect(wrapper.html()).toContain('onClick');
     });
 
     it('should add extra className', () => {
-        const wrapper = shallow(
-            <Typography className="yoloooo">Content children</Typography>
-        );
+        const wrapper = shallow(<Typography className="yoloooo">Content children</Typography>);
         expect(wrapper.props.className).toContain('yoloooo');
     });
 

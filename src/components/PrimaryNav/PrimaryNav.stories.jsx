@@ -4,22 +4,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 import markdownNotes from './PrimaryNav.md';
 
 import { PrimaryNav } from './index';
-import {
-    PrimaryNavItemsGroup,
-    PrimaryNavItem,
-    Button,
-    Badge
-} from '~/components';
-import {
-    Apps,
-    Feather,
-    Setting,
-    Profile,
-    Person,
-    Power,
-    Star,
-    Workflow
-} from '~/icons';
+import { PrimaryNavItemsGroup, PrimaryNavItem, Button, Badge } from '~/components';
+import { Apps, Feather, Setting, Profile, Person, Power, Star, Workflow } from '~/icons';
 
 storiesOf('Components|PrimaryNav', module)
     .addParameters({
@@ -31,23 +17,14 @@ storiesOf('Components|PrimaryNav', module)
     .add('default', () => (
         <div style={{ transform: 'scale(1)', height: '100vh' }}>
             <PrimaryNav
-                headerLogo={
-                    <img src="https://via.placeholder.com/100x40?text=Logo" />
-                }
+                headerLogo={<img src="https://via.placeholder.com/100x40?text=Logo" />}
                 headerCaption="development"
                 modeIcon={<Star />}
                 top={
                     <>
                         <PrimaryNavItemsGroup>
-                            <PrimaryNavItem
-                                label="NavItem not selected"
-                                icon={<Feather />}
-                            />
-                            <PrimaryNavItem
-                                isSelected
-                                label="NavItem selected"
-                                icon={<Apps />}
-                            />
+                            <PrimaryNavItem label="NavItem not selected" icon={<Feather />} />
+                            <PrimaryNavItem isSelected label="NavItem selected" icon={<Apps />} />
                         </PrimaryNavItemsGroup>
                         <PrimaryNavItemsGroup>
                             <PrimaryNavItem
@@ -85,26 +62,17 @@ storiesOf('Components|PrimaryNav', module)
                             />
                         </PrimaryNavItemsGroup>
                         <PrimaryNavItemsGroup isDisplayedWhenCollapsed={false}>
-                            <PrimaryNavItem
-                                url="https://jahia.com"
-                                label="Jahia Link"
-                            />
+                            <PrimaryNavItem url="https://jahia.com" label="Jahia Link" />
                         </PrimaryNavItemsGroup>
                     </>
                 }
                 bottom={
                     <>
                         <PrimaryNavItemsGroup>
-                            <PrimaryNavItem
-                                label="Another bottom item"
-                                icon={<Profile />}
-                            />
+                            <PrimaryNavItem label="Another bottom item" icon={<Profile />} />
                         </PrimaryNavItemsGroup>
                         <PrimaryNavItemsGroup>
-                            <PrimaryNavItem
-                                label="Bottom item"
-                                icon={<Setting />}
-                            />
+                            <PrimaryNavItem label="Bottom item" icon={<Setting />} />
                         </PrimaryNavItemsGroup>
                     </>
                 }

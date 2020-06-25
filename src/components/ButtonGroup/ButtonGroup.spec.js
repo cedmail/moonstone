@@ -57,8 +57,6 @@ describe('ButtonGroup', () => {
                 <Button label="One" onClick={() => {}} />
             </ButtonGroup>
         );
-        expect(
-            buttonGroup.querySelector('[data-custom="test"]').exists()
-        ).toBeTruthy();
+        expect(buttonGroup.querySelector('[data-custom="test"]').exists()).toBeTruthy();
     });
 });

@@ -5,8 +5,7 @@ export const ImgWrapperSize = ['small', 'default', 'big'];
 
 export const ImgWrapper = initialProps => {
     let { size, ...props } = initialProps;
-    props.className =
-        initialProps.className + ' moonstone-icon moonstone-icon_' + size;
+    props.className = initialProps.className + ' moonstone-icon moonstone-icon_' + size;
     return <img {...props} />;
 };
 

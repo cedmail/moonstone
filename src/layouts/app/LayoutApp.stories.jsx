@@ -46,6 +46,4 @@ storiesOf('Layouts|LayoutApp', module)
         notes: { markdown: markdownNotes }
     })
     .addDecorator(withKnobs)
-    .add('Default', () => (
-        <LayoutApp navigation={<FakeNavigation />} content={<FakeContent />} />
-    ));
+    .add('Default', () => <LayoutApp navigation={<FakeNavigation />} content={<FakeContent />} />);

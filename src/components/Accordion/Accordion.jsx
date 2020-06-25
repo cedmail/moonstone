@@ -13,21 +13,14 @@ export const Accordion = ({
 }) => {
     if (typeof openedItem === 'undefined') {
         return (
-            <UncontrolledAccordion
-                defaultOpenedItem={defaultOpenedItem}
-                {...props}
-            >
+            <UncontrolledAccordion defaultOpenedItem={defaultOpenedItem} {...props}>
                 {children}
             </UncontrolledAccordion>
         );
     }
 
     return (
-        <ControlledAccordion
-            openedItem={openedItem}
-            onSetOpenedItem={onSetOpenedItem}
-            {...props}
-        >
+        <ControlledAccordion openedItem={openedItem} onSetOpenedItem={onSetOpenedItem} {...props}>
             {children}
         </ControlledAccordion>
     );

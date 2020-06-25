@@ -25,23 +25,17 @@ describe('Dropdown', () => {
     });
 
     it('should add additional classname', () => {
-        const wrapper = shallow(
-            <Dropdown className="hello" data={data} onChange={() => {}} />
-        );
+        const wrapper = shallow(<Dropdown className="hello" data={data} onChange={() => {}} />);
         expect(wrapper.html()).toContain('hello');
     });
 
     it('should add additional attributes', () => {
-        const wrapper = shallow(
-            <Dropdown data-custom="test" data={data} onChange={() => {}} />
-        );
+        const wrapper = shallow(<Dropdown data-custom="test" data={data} onChange={() => {}} />);
         expect(wrapper.html()).toContain('data-custom="test"');
     });
 
     it('should add dropdown-disabled classe if the dropdowon is disabled', () => {
-        const wrapper = shallow(
-            <Dropdown isDisabled data={data} onChange={() => {}} />
-        );
+        const wrapper = shallow(<Dropdown isDisabled data={data} onChange={() => {}} />);
         expect(wrapper.html()).toContain('disabled');
     });
 });

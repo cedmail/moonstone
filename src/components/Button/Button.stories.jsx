@@ -25,22 +25,13 @@ storiesOf('Components|Button', module)
     })
     .addDecorator(withKnobs)
     .add('Button with icon and label', () => (
-        <div
-            style={
-                isReversed()
-                    ? { backgroundColor: 'var(--color-gray_dark)' }
-                    : null
-            }
-        >
+        <div style={isReversed() ? { backgroundColor: 'var(--color-gray_dark)' } : null}>
             <section className={classnames(storyStyles.storyGrid)}>
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <h3>{color}</h3>
                     </div>
                 ))}
@@ -50,10 +41,7 @@ storiesOf('Components|Button', module)
                     <h3>default</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             icon={<IconWrapper iconName={selectIcon()} />}
                             label="Button"
@@ -71,10 +59,7 @@ storiesOf('Components|Button', module)
                     <h3>outlined</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             icon={<IconWrapper iconName={selectIcon()} />}
                             label="Button"
@@ -92,10 +77,7 @@ storiesOf('Components|Button', module)
                     <h3>ghost</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             icon={<IconWrapper iconName={selectIcon()} />}
                             label="Button"
@@ -111,22 +93,13 @@ storiesOf('Components|Button', module)
         </div>
     ))
     .add('Button with label only', () => (
-        <div
-            style={
-                isReversed()
-                    ? { backgroundColor: 'var(--color-gray_dark)' }
-                    : null
-            }
-        >
+        <div style={isReversed() ? { backgroundColor: 'var(--color-gray_dark)' } : null}>
             <section className={classnames(storyStyles.storyGrid)}>
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <h3>{color}</h3>
                     </div>
                 ))}
@@ -136,10 +109,7 @@ storiesOf('Components|Button', module)
                     <h3>default</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             label={labelValue()}
                             color={color}
@@ -156,10 +126,7 @@ storiesOf('Components|Button', module)
                     <h3>outlined</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             label={labelValue()}
                             color={color}
@@ -176,10 +143,7 @@ storiesOf('Components|Button', module)
                     <h3>ghost</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             label={labelValue()}
                             color={color}
@@ -194,22 +158,13 @@ storiesOf('Components|Button', module)
         </div>
     ))
     .add('Button with icon only', () => (
-        <div
-            style={
-                isReversed()
-                    ? { backgroundColor: 'var(--color-gray_dark)' }
-                    : null
-            }
-        >
+        <div style={isReversed() ? { backgroundColor: 'var(--color-gray_dark)' } : null}>
             <section className={classnames(storyStyles.storyGrid)}>
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <h3>{color}</h3>
                     </div>
                 ))}
@@ -219,10 +174,7 @@ storiesOf('Components|Button', module)
                     <h3>default</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             icon={<IconWrapper iconName={selectIcon()} />}
                             color={color}
@@ -239,10 +191,7 @@ storiesOf('Components|Button', module)
                     <h3>outlined</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             icon={<IconWrapper iconName={selectIcon()} />}
                             color={color}
@@ -259,10 +208,7 @@ storiesOf('Components|Button', module)
                     <h3>ghost</h3>
                 </div>
                 {buttonColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <Button
                             icon={<IconWrapper iconName={selectIcon()} />}
                             color={color}
@@ -277,44 +223,20 @@ storiesOf('Components|Button', module)
         </div>
     ))
     .add('Playground', () => (
-        <div
-            style={
-                isReversed()
-                    ? { backgroundColor: 'var(--color-gray_dark)' }
-                    : null
-            }
-        >
+        <div style={isReversed() ? { backgroundColor: 'var(--color-gray_dark)' } : null}>
             <section className={classnames(storyStyles.storyGrid)}>
                 <div className={classnames(storyStyles.storyGridItem)}>
-                    <h3
-                        style={
-                            isReversed()
-                                ? { color: 'var(--color-white)' }
-                                : null
-                        }
-                    >
+                    <h3 style={isReversed() ? { color: 'var(--color-white)' } : null}>
                         Button with icon and label
                     </h3>
                 </div>
                 <div className={classnames(storyStyles.storyGridItem)}>
-                    <h3
-                        style={
-                            isReversed()
-                                ? { color: 'var(--color-white)' }
-                                : null
-                        }
-                    >
+                    <h3 style={isReversed() ? { color: 'var(--color-white)' } : null}>
                         Button with label only
                     </h3>
                 </div>
                 <div className={classnames(storyStyles.storyGridItem)}>
-                    <h3
-                        style={
-                            isReversed()
-                                ? { color: 'var(--color-white)' }
-                                : null
-                        }
-                    >
+                    <h3 style={isReversed() ? { color: 'var(--color-white)' } : null}>
                         Button with icon only
                     </h3>
                 </div>

@@ -25,17 +25,11 @@ storiesOf('Components|Separator', module)
     .addDecorator(withKnobs)
     .add('Horizontal', () => (
         <>
-            <Typography variant="heading">
-                Content before a separator
-            </Typography>
+            <Typography variant="heading">Content before a separator</Typography>
             <Separator
                 variant="horizontal"
                 size={select('Size', optionsFromArray(SeparatorSizes), 'full')}
-                spacing={select(
-                    'Spacing',
-                    optionsFromArray(SeparatorSpacings),
-                    'medium'
-                )}
+                spacing={select('Spacing', optionsFromArray(SeparatorSpacings), 'medium')}
             />
             <Typography variant="heading">Content after a separator</Typography>
         </>
@@ -47,11 +41,7 @@ storiesOf('Components|Separator', module)
             <Separator
                 variant="vertical"
                 size={select('Size', optionsFromArray(SeparatorSizes), 'full')}
-                spacing={select(
-                    'Spacing',
-                    optionsFromArray(SeparatorSpacings),
-                    'medium'
-                )}
+                spacing={select('Spacing', optionsFromArray(SeparatorSpacings), 'medium')}
             />
             <Typography variant="heading">After</Typography>
         </div>

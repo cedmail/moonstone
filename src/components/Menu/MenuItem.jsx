@@ -4,14 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'clsx';
 import styles from './MenuItem.scss';
 
-export const MenuItem = ({
-    isHover,
-    isSelected,
-    isDisabled,
-    variant,
-    className,
-    ...props
-}) => (
+export const MenuItem = ({ isHover, isSelected, isDisabled, variant, className, ...props }) => (
     <ListItem
         tabIndex={isDisabled || variant === 'title' || isSelected ? null : '0'}
         aria-disabled={isDisabled}

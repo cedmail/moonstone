@@ -54,9 +54,6 @@ storiesOf('Layouts|LayoutModule', module)
                 display: 'flex'
             }}
         >
-            <LayoutModule
-                navigation={<FakeNavigation />}
-                content={<FakeContent />}
-            />
+            <LayoutModule navigation={<FakeNavigation />} content={<FakeContent />} />
         </div>
     ));

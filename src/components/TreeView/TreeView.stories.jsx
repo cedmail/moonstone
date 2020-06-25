@@ -21,9 +21,7 @@ storiesOf('Components|TreeView', module)
     .addDecorator(withKnobs)
     .addDecorator(storyFn => <div style={css}>{storyFn()}</div>)
     .add('default', () => <TreeView data={treeData} />)
-    .add('opened by default', () => (
-        <TreeView defaultOpenedItems={['A']} data={treeData} />
-    ))
+    .add('opened by default', () => <TreeView defaultOpenedItems={['A']} data={treeData} />)
     .add('data', () => (
         <TreeView
             data={object('data', [
@@ -53,21 +51,13 @@ storiesOf('Components|TreeView', module)
         const [selectedItems, setSelectedItems] = useState([]);
         const handleClick = node => {
             if (selectedItems.includes(node.id)) {
-                setSelectedItems(
-                    selectedItems.filter(item => item !== node.id)
-                );
+                setSelectedItems(selectedItems.filter(item => item !== node.id));
             } else {
                 setSelectedItems([node.id]);
             }
         };
 
-        return (
-            <TreeView
-                selectedItems={selectedItems}
-                data={treeData}
-                onClickItem={handleClick}
-            />
-        );
+        return <TreeView selectedItems={selectedItems} data={treeData} onClickItem={handleClick} />;
     })
     .add('isReversed', () => {
         return (
@@ -99,11 +89,7 @@ storiesOf('Components|TreeView', module)
                 <span>
                     Opened items ={' '}
                     {openedItems.map(n => (
-                        <button
-                            key={n}
-                            type="button"
-                            onClick={e => handleClose({ id: n }, e)}
-                        >
+                        <button key={n} type="button" onClick={e => handleClose({ id: n }, e)}>
                             {n}
                         </button>
                     ))}
@@ -166,11 +152,7 @@ storiesOf('Components|TreeView', module)
                 <span>
                     Opened items ={' '}
                     {openedItems.map(n => (
-                        <button
-                            key={n}
-                            type="button"
-                            onClick={e => handleClose({ id: n }, e)}
-                        >
+                        <button key={n} type="button" onClick={e => handleClose({ id: n }, e)}>
                             {n}
                         </button>
                     ))}

@@ -60,13 +60,7 @@ const NavHeader = ({ headerCaption, modeIcon, headerLogo }) => {
     return (
         <>
             {headerLogo}
-            <div
-                className={classnames(
-                    'flexRow_nowrap',
-                    'alignCenter',
-                    styles.headerCaption
-                )}
-            >
+            <div className={classnames('flexRow_nowrap', 'alignCenter', styles.headerCaption)}>
                 {icon}
                 {headerCaption}
             </div>
@@ -80,14 +74,7 @@ NavHeader.propTypes = {
     headerLogo: PropTypes.node
 };
 
-export const PrimaryNav = ({
-    headerLogo,
-    top,
-    bottom,
-    headerCaption,
-    modeIcon,
-    ...props
-}) => {
+export const PrimaryNav = ({ headerLogo, top, bottom, headerCaption, modeIcon, ...props }) => {
     const [isExpanded, setExpanded] = useState(false);
 
     function toggleExpand() {
@@ -144,9 +131,7 @@ export const PrimaryNav = ({
 
                 <ul>{bottom}</ul>
             </nav>
-            {isExpanded && (
-                <div className={styles.overlay} onClick={toggleExpand} />
-            )}
+            {isExpanded && <div className={styles.overlay} onClick={toggleExpand} />}
         </PrimaryNavContext.Provider>
     );
 };
@@ -177,18 +162,12 @@ PrimaryNav.propTypes = {
     /**
      * Primary nav groups displayed at the top
      */
-    top: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.arrayOf(PropTypes.element)
-    ]),
+    top: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
 
     /**
      * Primary nav groups displayed at the bottom
      */
-    bottom: PropTypes.oneOfType([
-        PropTypes.element,
-        PropTypes.arrayOf(PropTypes.element)
-    ])
+    bottom: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
 };
 
 PrimaryNav.displayName = 'PrimaryNav';

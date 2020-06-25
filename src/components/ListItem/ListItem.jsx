@@ -4,20 +4,8 @@ import classnames from 'clsx';
 import styles from './ListItem.scss';
 import { Typography } from '../Typography/Typography';
 
-export const ListItem = ({
-    label,
-    isHtml,
-    iconStart,
-    iconEnd,
-    className,
-    ...props
-}) => {
-    const cssListItem = classnames(
-        className,
-        styles.listItem,
-        'flexRow',
-        'alignCenter'
-    );
+export const ListItem = ({ label, isHtml, iconStart, iconEnd, className, ...props }) => {
+    const cssListItem = classnames(className, styles.listItem, 'flexRow', 'alignCenter');
 
     return (
         <li className={classnames(cssListItem)} {...props}>

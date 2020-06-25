@@ -17,8 +17,7 @@ const data = [
         value: '2'
     },
     {
-        label:
-            'option 3 with very long long label label label label label label label label',
+        label: 'option 3 with very long long label label label label label label label label',
         value: '3'
     },
     {

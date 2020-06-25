@@ -23,9 +23,7 @@ storiesOf('Components|ResizableBox', module)
                 height: 'auto'
             }}
         >
-            <div style={{ height: '400px', background: 'yellow' }}>
-                content resizable
-            </div>
+            <div style={{ height: '400px', background: 'yellow' }}>content resizable</div>
         </ResizableBox>
     ))
     .add('actions', () => (
@@ -41,8 +39,6 @@ storiesOf('Components|ResizableBox', module)
             onResizing={action('onResizing')}
             onResizeStop={action('onResizeStop')}
         >
-            <div style={{ height: '400px', background: 'yellow' }}>
-                content resizable
-            </div>
+            <div style={{ height: '400px', background: 'yellow' }}>content resizable</div>
         </ResizableBox>
     ));

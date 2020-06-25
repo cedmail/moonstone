@@ -59,11 +59,7 @@ describe('Accordion', () => {
             const open = context.currentItem === id;
 
             return (
-                <button
-                    type="button"
-                    id={id}
-                    onClick={() => context.onSetOpenedItem(id)}
-                >
+                <button type="button" id={id} onClick={() => context.onSetOpenedItem(id)}>
                     {id} - {open ? 'open' : 'close'}
                 </button>
             );

@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-    boolean,
-    number,
-    select,
-    text,
-    withKnobs
-} from '@storybook/addon-knobs';
+import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
 import markdownNotes from './Menu.md';
 import { Menu, MenuItem } from './index';
 import { Separator } from '~/components';
@@ -57,18 +51,9 @@ storiesOf('Components|Menu', module)
         };
 
         return (
-            <div
-                style={{ transform: 'scale(1)', height: '100vh' }}
-                onClick={handleOnClick}
-            >
-                <p>
-                    Click somewhere to display the menu, another click close it
-                </p>
-                <Menu
-                    isDisplayed={isDisplayed}
-                    anchorPosition={menuPosition}
-                    onClose={handleClose}
-                >
+            <div style={{ transform: 'scale(1)', height: '100vh' }} onClick={handleOnClick}>
+                <p>Click somewhere to display the menu, another click close it</p>
+                <Menu isDisplayed={isDisplayed} anchorPosition={menuPosition} onClose={handleClose}>
                     <MenuItem label="Item1" />
                     <MenuItem label="Item2" />
                     <MenuItem label="Item3" />
@@ -112,28 +97,12 @@ storiesOf('Components|Menu', module)
                         left: number('left', 0)
                     }}
                     anchorElOrigin={{
-                        vertical: select(
-                            'anchor-vertical',
-                            ['top', 'bottom', 'center'],
-                            'bottom'
-                        ),
-                        horizontal: select(
-                            'anchor-horizontal',
-                            ['left', 'right', 'center'],
-                            'left'
-                        )
+                        vertical: select('anchor-vertical', ['top', 'bottom', 'center'], 'bottom'),
+                        horizontal: select('anchor-horizontal', ['left', 'right', 'center'], 'left')
                     }}
                     transformElOrigin={{
-                        vertical: select(
-                            'transform-vertical',
-                            ['top', 'bottom'],
-                            'top'
-                        ),
-                        horizontal: select(
-                            'transform-horizontal',
-                            ['left', 'right'],
-                            'left'
-                        )
+                        vertical: select('transform-vertical', ['top', 'bottom'], 'top'),
+                        horizontal: select('transform-horizontal', ['left', 'right'], 'left')
                     }}
                     onClose={handleClose}
                 >

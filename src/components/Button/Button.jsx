@@ -55,12 +55,7 @@ export const Button = ({
             onClick={e => handleOnClick(e)}
             {...props}
         >
-            {icon && (
-                <icon.type
-                    {...icon.props}
-                    size={size === 'big' ? 'default' : size}
-                />
-            )}
+            {icon && <icon.type {...icon.props} size={size === 'big' ? 'default' : size} />}
             {label && (
                 <Typography
                     isNowrap

@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 
 const SvgRemotePublication = initialProps => {
     const props = Object.assign({}, initialProps);
-    props.className =
-        initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
+    props.className = initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
     return (
         <svg viewBox="0 0 24 24" fill="none" {...props}>
-            <path
-                d="M12 9v2H9v2h3v2l3-3-3-3zM3 5h5v14H3V5zM16 5h5v14h-5V5z"
-                fill="currentColor"
-            />
+            <path d="M12 9v2H9v2h3v2l3-3-3-3zM3 5h5v14H3V5zM16 5h5v14h-5V5z" fill="currentColor" />
         </svg>
     );
 };

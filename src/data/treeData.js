@@ -7,17 +7,13 @@ export const treeData = [
     {
         id: 'ROOT',
         label: 'Root',
-        iconStart: toIconComponent(
-            'https://image.flaticon.com/icons/svg/1973/1973617.svg'
-        ),
+        iconStart: toIconComponent('https://image.flaticon.com/icons/svg/1973/1973617.svg'),
         isClosable: false,
         children: [
             {
                 id: 'A',
                 label: 'A level 1',
-                iconStart: toIconComponent(
-                    'https://image.flaticon.com/icons/svg/1973/1973617.svg'
-                ),
+                iconStart: toIconComponent('https://image.flaticon.com/icons/svg/1973/1973617.svg'),
                 iconEnd: <NoCloud />,
                 children: [
                     {
@@ -116,9 +112,7 @@ export const treeData = [
             {
                 id: 'C',
                 label: 'C level1',
-                iconStart: toIconComponent(
-                    'https://image.flaticon.com/icons/svg/1973/1973617.svg'
-                ),
+                iconStart: toIconComponent('https://image.flaticon.com/icons/svg/1973/1973617.svg'),
                 children: []
             }
         ]

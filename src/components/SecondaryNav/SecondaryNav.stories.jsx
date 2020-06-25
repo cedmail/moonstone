@@ -14,14 +14,10 @@ storiesOf('Components|SecondaryNav', module)
     })
     .addDecorator(withKnobs)
     .add('with title', () => (
-        <SecondaryNav header={text('Title', 'my header')}>
-            My content here
-        </SecondaryNav>
+        <SecondaryNav header={text('Title', 'my header')}>My content here</SecondaryNav>
     ))
     .add('with header images', () => (
-        <SecondaryNav header={<Love size="big" />}>
-            My content here
-        </SecondaryNav>
+        <SecondaryNav header={<Love size="big" />}>My content here</SecondaryNav>
     ))
     .add('with header component', () => (
         <SecondaryNav
@@ -35,9 +31,7 @@ storiesOf('Components|SecondaryNav', module)
         </SecondaryNav>
     ))
     .add('with text in header component', () => (
-        <SecondaryNav
-            header={<SecondaryNavHeader>Secondary Header</SecondaryNavHeader>}
-        >
+        <SecondaryNav header={<SecondaryNavHeader>Secondary Header</SecondaryNavHeader>}>
             My content here
         </SecondaryNav>
     ));

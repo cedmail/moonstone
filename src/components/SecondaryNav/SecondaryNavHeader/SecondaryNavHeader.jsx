@@ -7,11 +7,7 @@ import { Typography } from '../../Typography';
 const SecondaryNavHeader = ({ children }) => (
     <Typography
         component="header"
-        className={classnames(
-            styles.secondaryNavHeader,
-            'flexCol_center',
-            'alignCenter'
-        )}
+        className={classnames(styles.secondaryNavHeader, 'flexCol_center', 'alignCenter')}
         variant="heading"
     >
         {children}

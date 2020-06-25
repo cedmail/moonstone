@@ -42,16 +42,10 @@ export const ResizableBox = ({
             }}
             handleComponent={{
                 right: (
-                    <HandleResize
-                        className={classnames(styles.resizable_handle_icon)}
-                        size="big"
-                    />
+                    <HandleResize className={classnames(styles.resizable_handle_icon)} size="big" />
                 ),
                 left: (
-                    <HandleResize
-                        className={classnames(styles.resizable_handle_icon)}
-                        size="big"
-                    />
+                    <HandleResize className={classnames(styles.resizable_handle_icon)} size="big" />
                 )
             }}
             className={classnames(className)}

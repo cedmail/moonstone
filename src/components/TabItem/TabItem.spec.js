@@ -24,9 +24,7 @@ describe('TabItem', () => {
 
     it('should have the specified label and an icon', () => {
         const label = 'tabItem Toto';
-        const tabItem = shallow(
-            <TabItem label={label} icon={<Love />} onClick={() => {}} />
-        );
+        const tabItem = shallow(<TabItem label={label} icon={<Love />} onClick={() => {}} />);
         expect(tabItem.html()).toContain(label);
         expect(tabItem.querySelector('SvgLove').exists()).toBeTruthy();
     });
@@ -35,20 +33,14 @@ describe('TabItem', () => {
         const tabItem1 = shallow(<TabItem onClick={() => {}} />);
         expect(tabItem1.querySelector('.variant_ghost').exists()).toBeTruthy();
 
-        const tabItem2 = shallow(
-            <TabItem variant="ghost" onClick={() => {}} />
-        );
+        const tabItem2 = shallow(<TabItem variant="ghost" onClick={() => {}} />);
         expect(tabItem2.querySelector('.variant_ghost').exists()).toBeTruthy();
     });
 
     it('should use the specified variant', () => {
         tabItemVariants.forEach(variant => {
-            const tabItem = shallow(
-                <TabItem variant={variant} onClick={() => {}} />
-            );
-            expect(
-                tabItem.querySelector(`.variant_${variant}`).exists()
-            ).toBeTruthy();
+            const tabItem = shallow(<TabItem variant={variant} onClick={() => {}} />);
+            expect(tabItem.querySelector(`.variant_${variant}`).exists()).toBeTruthy();
         });
     });
 
@@ -68,9 +60,7 @@ describe('TabItem', () => {
     });
 
     it('should not be selected', () => {
-        const tabItem = shallow(
-            <TabItem isSelected={false} onClick={() => {}} />
-        );
+        const tabItem = shallow(<TabItem isSelected={false} onClick={() => {}} />);
         expect(tabItem.props.isSelected).toBeFalsy();
     });
 
@@ -78,20 +68,14 @@ describe('TabItem', () => {
         const tabItem1 = shallow(<TabItem onClick={() => {}} />);
         expect(tabItem1.querySelector('.color_default').exists()).toBeTruthy();
 
-        const tabItem2 = shallow(
-            <TabItem color="default" onClick={() => {}} />
-        );
+        const tabItem2 = shallow(<TabItem color="default" onClick={() => {}} />);
         expect(tabItem2.querySelector('.color_default').exists()).toBeTruthy();
     });
 
     it('should use the specified color', () => {
         tabItemColors.forEach(color => {
-            const tabItem = shallow(
-                <TabItem color={color} onClick={() => {}} />
-            );
-            expect(
-                tabItem.querySelector(`.color_${color}`).exists()
-            ).toBeTruthy();
+            const tabItem = shallow(<TabItem color={color} onClick={() => {}} />);
+            expect(tabItem.querySelector(`.color_${color}`).exists()).toBeTruthy();
         });
     });
 
@@ -106,25 +90,17 @@ describe('TabItem', () => {
     it('should use the specified size', () => {
         tabItemSizes.forEach(size => {
             const tabItem = shallow(<TabItem size={size} onClick={() => {}} />);
-            expect(
-                tabItem.querySelector(`.size_${size}`).exists()
-            ).toBeTruthy();
+            expect(tabItem.querySelector(`.size_${size}`).exists()).toBeTruthy();
         });
     });
 
     it('should have extra attribute', () => {
-        const tabItem = shallow(
-            <TabItem data-custom="test" onClick={() => {}} />
-        );
-        expect(
-            tabItem.html().indexOf('data-custom="test"') !== -1
-        ).toBeTruthy();
+        const tabItem = shallow(<TabItem data-custom="test" onClick={() => {}} />);
+        expect(tabItem.html().indexOf('data-custom="test"') !== -1).toBeTruthy();
     });
 
     it('should have extra CSS class', () => {
-        const tabItem = shallow(
-            <TabItem className="toto" onClick={() => {}} />
-        );
+        const tabItem = shallow(<TabItem className="toto" onClick={() => {}} />);
         expect(tabItem.querySelector('.toto').exists()).toBeTruthy();
     });
 });

@@ -49,17 +49,9 @@ export const SecondaryNav = ({
                 {!isVisible && <ChevronDoubleRight />}
             </button>
 
-            <div
-                className={classnames(
-                    styles.secondaryNav_wrapper,
-                    'flexFluid',
-                    'flexCol_nowrap'
-                )}
-            >
+            <div className={classnames(styles.secondaryNav_wrapper, 'flexFluid', 'flexCol_nowrap')}>
                 {header}
-                <div className={classnames('flexFluid', 'flexCol_nowrap')}>
-                    {children}
-                </div>
+                <div className={classnames('flexFluid', 'flexCol_nowrap')}>{children}</div>
             </div>
         </ResizableBox>
     );

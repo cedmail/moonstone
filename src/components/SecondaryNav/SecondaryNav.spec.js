@@ -4,16 +4,12 @@ import { SecondaryNav } from './index';
 
 describe('SecondaryNav', () => {
     it('should display children content', () => {
-        const wrapper = shallow(
-            <SecondaryNav header="">content here</SecondaryNav>
-        );
+        const wrapper = shallow(<SecondaryNav header="">content here</SecondaryNav>);
 
         expect(wrapper.html()).toContain('content here');
     });
     it('should display a string in the header', () => {
-        const wrapper = shallow(
-            <SecondaryNav header="my header">hello</SecondaryNav>
-        );
+        const wrapper = shallow(<SecondaryNav header="my header">hello</SecondaryNav>);
 
         expect(wrapper.html()).toContain('my header');
     });
@@ -39,9 +35,7 @@ describe('SecondaryNav', () => {
     });
 
     it('should not have .secondaryNav_hidden when the menu is visible', () => {
-        const wrapper = shallow(
-            <SecondaryNav header="my header">hello</SecondaryNav>
-        );
+        const wrapper = shallow(<SecondaryNav header="my header">hello</SecondaryNav>);
 
         expect(wrapper.html()).not.toContain('secondaryNav_hidden');
     });
@@ -63,32 +57,22 @@ describe('SecondaryNav', () => {
             </SecondaryNav>
         );
 
-        wrapper
-            .querySelector('.secondaryNav_buttonToggle')
-            .dispatchEvent('click');
+        wrapper.querySelector('.secondaryNav_buttonToggle').dispatchEvent('click');
         expect(wrapper.html()).not.toContain('secondaryNav_hidden');
     });
 
     it('should hide the navigation by clicking on expand button when the menu is visible', () => {
-        const wrapper = shallow(
-            <SecondaryNav header="my header">hello</SecondaryNav>
-        );
+        const wrapper = shallow(<SecondaryNav header="my header">hello</SecondaryNav>);
 
-        wrapper
-            .querySelector('.secondaryNav_buttonToggle')
-            .dispatchEvent('click');
+        wrapper.querySelector('.secondaryNav_buttonToggle').dispatchEvent('click');
         expect(wrapper.html()).toContain('secondaryNav_hidden');
     });
 
     it('should not throw error when there is no onToggled defined', () => {
-        const wrapper = shallow(
-            <SecondaryNav header="my header">hello</SecondaryNav>
-        );
+        const wrapper = shallow(<SecondaryNav header="my header">hello</SecondaryNav>);
 
         // No error should occur when there is no onClick defined
-        wrapper
-            .querySelector('.secondaryNav_buttonToggle')
-            .dispatchEvent('click');
+        wrapper.querySelector('.secondaryNav_buttonToggle').dispatchEvent('click');
     });
 
     it('should call onToggled when clicking on expand button', () => {
@@ -99,9 +83,7 @@ describe('SecondaryNav', () => {
             </SecondaryNav>
         );
 
-        wrapper
-            .querySelector('.secondaryNav_buttonToggle')
-            .dispatchEvent('click');
+        wrapper.querySelector('.secondaryNav_buttonToggle').dispatchEvent('click');
         expect(clickHandler).toHaveBeenCalled();
     });
 });

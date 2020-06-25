@@ -146,11 +146,7 @@ export const Dropdown = ({
                     />
                 )}
 
-                <Typography
-                    isNowrap
-                    component="span"
-                    className={classnames('flexFluid')}
-                >
+                <Typography isNowrap component="span" className={classnames('flexFluid')}>
                     {label}
                 </Typography>
                 <ChevronDown />
@@ -170,11 +166,7 @@ export const Dropdown = ({
                         item.options.map(o => {
                             return dropdownOption(o, handleSelect);
                         });
-                        return dropdownGrouped(
-                            item.options,
-                            item.groupLabel,
-                            index
-                        );
+                        return dropdownGrouped(item.options, item.groupLabel, index);
                     }
 
                     return dropdownOption(item, handleSelect);

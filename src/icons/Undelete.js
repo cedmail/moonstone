@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 
 const SvgUndelete = initialProps => {
     const props = Object.assign({}, initialProps);
-    props.className =
-        initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
+    props.className = initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
     return (
         <svg viewBox="0 0 24 24" fill="none" {...props}>
-            <path
-                d="M6.514 4l1.999 2H19V4h-3.5l-1-1h-5l-1 1H6.514z"
-                fill="currentColor"
-            />
+            <path d="M6.514 4l1.999 2H19V4h-3.5l-1-1h-5l-1 1H6.514z" fill="currentColor" />
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"

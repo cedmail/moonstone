@@ -6,12 +6,7 @@ import { Button } from '~/components/Button';
 
 export const BreadcrumbItem = ({ className, ...props }) => (
     <li className={classnames(styles.breadcrumbItem, 'flexRow_center')}>
-        <Button
-            {...props}
-            variant="ghost"
-            size="small"
-            className={classnames(className)}
-        />
+        <Button {...props} variant="ghost" size="small" className={classnames(className)} />
     </li>
 );
 

@@ -34,13 +34,7 @@ export const Menu = ({
         anchorElOrigin,
         transformElOrigin
     );
-    useEnterExitCallbacks(
-        isDisplayed,
-        onExiting,
-        onExited,
-        onEntering,
-        onEntered
-    );
+    useEnterExitCallbacks(isDisplayed, onExiting, onExited, onEntering, onEntered);
 
     // ---
     // Styling

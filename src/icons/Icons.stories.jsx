@@ -11,19 +11,12 @@ import * as Icons from './assets';
 // Storybook knobs
 const iconsName = Object.keys(Icons);
 const iconsSize = () =>
-    select(
-        'Set icon size',
-        { Big: 'big', Default: 'default', Small: 'small' },
-        'big'
-    );
+    select('Set icon size', { Big: 'big', Default: 'default', Small: 'small' }, 'big');
 
 // Create a component to display in storybook
 export const IconWrapper = ({ iconName, size, color }) => {
     return (
-        <div
-            className={classnames(storyStyles.storyGridItem)}
-            style={{ color: color }}
-        >
+        <div className={classnames(storyStyles.storyGridItem)} style={{ color: color }}>
             {React.createElement(Icons[iconName], { size: size })}
             <span>{iconName}</span>
         </div>
@@ -35,9 +28,7 @@ function displayIcons() {
     let allIcons = [];
 
     for (const name of iconsName) {
-        allIcons.push(
-            <IconWrapper key={`key-${name}`} iconName={name} size="big" />
-        );
+        allIcons.push(<IconWrapper key={`key-${name}`} iconName={name} size="big" />);
     }
 
     return allIcons;
@@ -51,9 +42,7 @@ storiesOf('Tokens|Icons', module)
     })
     .addDecorator(withKnobs)
     .add('Default', () => (
-        <section className={classnames(storyStyles.storyGrid)}>
-            {displayIcons()}
-        </section>
+        <section className={classnames(storyStyles.storyGrid)}>{displayIcons()}</section>
     ))
     .add('⚽️Playground', () => (
         <IconWrapper

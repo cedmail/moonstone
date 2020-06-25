@@ -19,20 +19,16 @@ export const ControlledTreeView = ({
     isReversed,
     ...props
 }) => {
-    const isFlatData =
-        data.filter(item => item.children && item.children.length > 0)
-            .length === 0;
+    const isFlatData = data.filter(item => item.children && item.children.length > 0).length === 0;
 
     function generateLevelJSX(data, deep, parentHasIconStart, isFlatData) {
         return data.map(node => {
             const hasChild = Boolean(
-                node.hasChildren ||
-                    (node.children && node.children.length !== 0)
+                node.hasChildren || (node.children && node.children.length !== 0)
             );
             const hasIconStart = Boolean(node.iconStart);
             const isClosable = Boolean(node.isClosable !== false);
-            const isOpen =
-                Boolean(openedItems.includes(node.id)) || !isClosable;
+            const isOpen = Boolean(openedItems.includes(node.id)) || !isClosable;
             const isLoading = Boolean(node.isLoading);
             const isSelected = Boolean(selectedItems.includes(node.id));
 
@@ -83,13 +79,7 @@ export const ControlledTreeView = ({
                 }
 
                 return (
-                    <i
-                        className={classnames(
-                            'flexRow',
-                            'alignCenter',
-                            className
-                        )}
-                    >
+                    <i className={classnames('flexRow', 'alignCenter', className)}>
                         {icon && <icon.type {...icon.props} size={size} />}
                     </i>
                 );
@@ -109,11 +99,7 @@ export const ControlledTreeView = ({
             // TreeItem has child
             return (
                 <React.Fragment key={`${deep}-${node.id}`}>
-                    <li
-                        role="treeitem"
-                        aria-expanded={isOpen}
-                        {...node.treeItemProps}
-                    >
+                    <li role="treeitem" aria-expanded={isOpen} {...node.treeItemProps}>
                         <div
                             className={cssTreeViewItem}
                             style={{
@@ -130,11 +116,7 @@ export const ControlledTreeView = ({
                                     )}
                                     onClick={toggleNode}
                                 >
-                                    {isOpen ? (
-                                        <ChevronDown />
-                                    ) : (
-                                        <ChevronRight />
-                                    )}
+                                    {isOpen ? <ChevronDown /> : <ChevronRight />}
                                 </div>
                             )}
                             {!isFlatData && !hasChild && (

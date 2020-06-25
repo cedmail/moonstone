@@ -52,12 +52,7 @@ export const Color = ({ color, name }) => {
     return (
         <div className={classnames(storyStyles.storyItem)}>
             <p>{name}</p>
-            <div
-                className={classnames(
-                    styles.colorShape,
-                    cx([`color-${color}`])
-                )}
-            />
+            <div className={classnames(styles.colorShape, cx([`color-${color}`]))} />
         </div>
     );
 };

@@ -5,12 +5,7 @@ import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import storyStyles from '~/__storybook__/storybook.scss';
 
 import markdownNotes from './ButtonGroup.md';
-import {
-    Button,
-    buttonColors,
-    buttonSizes,
-    buttonVariants
-} from '~/components/Button';
+import { Button, buttonColors, buttonSizes, buttonVariants } from '~/components/Button';
 import { ChevronDown } from '~/icons';
 import { ButtonGroup } from './index';
 

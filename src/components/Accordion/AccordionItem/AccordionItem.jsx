@@ -5,15 +5,7 @@ import styles from './AccordionItem.scss';
 import { Typography } from '~/components/Typography';
 import { AccordionContext } from '~/components/Accordion/Accordion.context';
 
-export const AccordionItem = ({
-    id,
-    label,
-    icon,
-    onClick,
-    children,
-    className,
-    ...props
-}) => {
+export const AccordionItem = ({ id, label, icon, onClick, children, className, ...props }) => {
     const context = useContext(AccordionContext);
     const open = context.currentItem === id;
 
@@ -72,10 +64,7 @@ export const AccordionItem = ({
             {/* Accordion content */}
             {open && (
                 <div
-                    className={classnames(
-                        styles.accordionItem_content,
-                        'flexFluid'
-                    )}
+                    className={classnames(styles.accordionItem_content, 'flexFluid')}
                     role="region"
                 >
                     {children}

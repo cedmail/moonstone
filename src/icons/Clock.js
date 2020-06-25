@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 
 const SvgClock = initialProps => {
     const props = Object.assign({}, initialProps);
-    props.className =
-        initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
+    props.className = initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
     return (
         <svg viewBox="0 0 24 24" fill="none" {...props}>
-            <path
-                d="M11 7h1.5v5.25l4.5 2.67-.75 1.23L11 13V7z"
-                fill="currentColor"
-            />
+            <path d="M11 7h1.5v5.25l4.5 2.67-.75 1.23L11 13V7z" fill="currentColor" />
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"

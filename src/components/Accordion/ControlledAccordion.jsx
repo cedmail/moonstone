@@ -22,12 +22,9 @@ export const ControlledAccordion = ({
     return (
         <AccordionContext.Provider value={provider}>
             <div
-                className={classnames(
-                    className,
-                    'flexFluid',
-                    styles.accordion,
-                    { [styles.reversed]: isReversed }
-                )}
+                className={classnames(className, 'flexFluid', styles.accordion, {
+                    [styles.reversed]: isReversed
+                })}
                 {...props}
             >
                 {children}

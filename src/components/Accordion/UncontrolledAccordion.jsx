@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import { AccordionItem } from './AccordionItem';
 import { ControlledAccordion } from './ControlledAccordion';
 
-export const UncontrolledAccordion = ({
-    defaultOpenedItem,
-    children,
-    ...props
-}) => {
+export const UncontrolledAccordion = ({ defaultOpenedItem, children, ...props }) => {
     const [openedItem, setOpenedItem] = useState(defaultOpenedItem);
 
     const onSetOpenedItem = id => {
@@ -17,11 +13,7 @@ export const UncontrolledAccordion = ({
     };
 
     return (
-        <ControlledAccordion
-            openedItem={openedItem}
-            onSetOpenedItem={onSetOpenedItem}
-            {...props}
-        >
+        <ControlledAccordion openedItem={openedItem} onSetOpenedItem={onSetOpenedItem} {...props}>
             {children}
         </ControlledAccordion>
     );

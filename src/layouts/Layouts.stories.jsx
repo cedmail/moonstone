@@ -25,9 +25,7 @@ storiesOf('Layouts|Demos', module)
 
         const handleSelectItem1 = node => {
             if (selectedItems1.includes(node.id)) {
-                setSelectedItems1(
-                    selectedItems1.filter(item => item !== node.id)
-                );
+                setSelectedItems1(selectedItems1.filter(item => item !== node.id));
             } else {
                 setSelectedItems1([node.id]);
             }
@@ -35,9 +33,7 @@ storiesOf('Layouts|Demos', module)
 
         const handleSelectItem2 = node => {
             if (selectedItems2.includes(node.id)) {
-                setSelectedItems2(
-                    selectedItems2.filter(item => item !== node.id)
-                );
+                setSelectedItems2(selectedItems2.filter(item => item !== node.id));
             } else {
                 setSelectedItems2([node.id]);
             }
@@ -51,16 +47,9 @@ storiesOf('Layouts|Demos', module)
                         <LayoutModule
                             navigation={
                                 <SecondaryNav
-                                    header={
-                                        <SecondaryNavHeader>
-                                            Header
-                                        </SecondaryNavHeader>
-                                    }
+                                    header={<SecondaryNavHeader>Header</SecondaryNavHeader>}
                                 >
-                                    <Accordion
-                                        isReversed
-                                        defaultOpenedItem={accordionIds[1]}
-                                    >
+                                    <Accordion isReversed defaultOpenedItem={accordionIds[1]}>
                                         <AccordionItem
                                             id={accordionIds[0]}
                                             icon={<Love size="big" />}
@@ -90,11 +79,7 @@ storiesOf('Layouts|Demos', module)
                             }
                             content={
                                 <div style={{ padding: '20px' }}>
-                                    {text(
-                                        'Content',
-                                        'My module content',
-                                        'Content'
-                                    )}
+                                    {text('Content', 'My module content', 'Content')}
                                 </div>
                             }
                         />
@@ -108,9 +93,7 @@ storiesOf('Layouts|Demos', module)
         <div style={{ transform: 'scale(1)' }}>
             <LayoutApp
                 navigation={
-                    <PrimaryNav
-                        isExpanded={boolean('Expand', false, 'Level 1')}
-                    >
+                    <PrimaryNav isExpanded={boolean('Expand', false, 'Level 1')}>
                         level 1
                     </PrimaryNav>
                 }
@@ -118,11 +101,7 @@ storiesOf('Layouts|Demos', module)
                     <LayoutModule
                         content={
                             <div style={{ padding: '20px' }}>
-                                {text(
-                                    'Content',
-                                    'My module content',
-                                    'Content'
-                                )}
+                                {text('Content', 'My module content', 'Content')}
                             </div>
                         }
                     />

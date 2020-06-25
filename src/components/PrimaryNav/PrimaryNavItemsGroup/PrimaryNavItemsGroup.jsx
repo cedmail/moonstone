@@ -5,11 +5,7 @@ import styles from './PrimaryNavItemsGroup.scss';
 import { PrimaryNavContext } from '../PrimaryNav.context';
 import { Separator } from '~/components/Separator';
 
-export const PrimaryNavItemsGroup = ({
-    isDisplayedWhenCollapsed,
-    children,
-    ...props
-}) => {
+export const PrimaryNavItemsGroup = ({ isDisplayedWhenCollapsed, children, ...props }) => {
     const primaryNavContext = useContext(PrimaryNavContext);
 
     if (!primaryNavContext.isExpanded && !isDisplayedWhenCollapsed) {

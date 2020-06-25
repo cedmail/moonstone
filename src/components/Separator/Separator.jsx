@@ -6,21 +6,9 @@ import styles from './Separator.scss';
 export const SeparatorSpacings = ['none', 'small', 'medium', 'big'];
 export const SeparatorSizes = ['medium', 'large', 'full'];
 export const SeparatorVariants = ['horizontal', 'vertical'];
-export const SeparatorInvisible = [
-    'firstChild',
-    'lastChild',
-    'onlyChild',
-    'firstOrLastChild'
-];
+export const SeparatorInvisible = ['firstChild', 'lastChild', 'onlyChild', 'firstOrLastChild'];
 
-export const Separator = ({
-    size,
-    spacing,
-    variant,
-    className,
-    invisible,
-    ...props
-}) => {
+export const Separator = ({ size, spacing, variant, className, invisible, ...props }) => {
     return (
         <hr
             {...props}

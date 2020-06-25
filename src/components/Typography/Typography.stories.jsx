@@ -15,9 +15,7 @@ storiesOf('Components|Typography', module)
     })
     .addDecorator(withKnobs)
     .addDecorator(storyFn => (
-        <section className={classnames(storyStyles.storyWrapper)}>
-            {storyFn()}
-        </section>
+        <section className={classnames(storyStyles.storyWrapper)}>{storyFn()}</section>
     ))
     .add('Variants', () => (
         <>

@@ -10,9 +10,7 @@ export const UncontrolledTreeView = ({ defaultOpenedItems, ...others }) => {
     };
 
     const onCloseItem = node => {
-        setOpenedItems(openedItems =>
-            openedItems.filter(item => item !== node.id)
-        );
+        setOpenedItems(openedItems => openedItems.filter(item => item !== node.id));
     };
 
     return (

@@ -16,12 +16,7 @@ export const ButtonGroup = ({
     return (
         <div
             role="group"
-            className={classnames(
-                styles.buttonGroup,
-                className,
-                'flexRow',
-                'alignCenter'
-            )}
+            className={classnames(styles.buttonGroup, className, 'flexRow', 'alignCenter')}
             {...props}
         >
             {React.Children.map(children, button => {

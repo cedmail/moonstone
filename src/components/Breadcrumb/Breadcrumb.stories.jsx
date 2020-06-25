@@ -60,31 +60,11 @@ storiesOf('Components|Breadcrumb', module)
     .add('With icons', () => (
         <section className={classnames(storyStyles.storyWrapper)}>
             <Breadcrumb>
-                <BreadcrumbItem
-                    icon={<Love />}
-                    label="item 1"
-                    onClick={action('onClick')}
-                />
-                <BreadcrumbItem
-                    icon={<Love />}
-                    label="item 2"
-                    onClick={action('onClick')}
-                />
-                <BreadcrumbItem
-                    icon={<Love />}
-                    label="item 3"
-                    onClick={action('onClick')}
-                />
-                <BreadcrumbItem
-                    icon={<Love />}
-                    label="item 4"
-                    onClick={action('onClick')}
-                />
-                <BreadcrumbItem
-                    icon={<Love />}
-                    label="item 5"
-                    onClick={action('onClick')}
-                />
+                <BreadcrumbItem icon={<Love />} label="item 1" onClick={action('onClick')} />
+                <BreadcrumbItem icon={<Love />} label="item 2" onClick={action('onClick')} />
+                <BreadcrumbItem icon={<Love />} label="item 3" onClick={action('onClick')} />
+                <BreadcrumbItem icon={<Love />} label="item 4" onClick={action('onClick')} />
+                <BreadcrumbItem icon={<Love />} label="item 5" onClick={action('onClick')} />
             </Breadcrumb>
         </section>
     ))

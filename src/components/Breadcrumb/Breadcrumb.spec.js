@@ -10,9 +10,7 @@ describe('Breadcrumb', () => {
 
     it('should display additional attributes', () => {
         const wrapper = shallow(<Breadcrumb data-custom="test" />);
-        expect(
-            wrapper.querySelector('[data-custom="test"]').exists()
-        ).toBeTruthy();
+        expect(wrapper.querySelector('[data-custom="test"]').exists()).toBeTruthy();
     });
 
     it('should display items', () => {

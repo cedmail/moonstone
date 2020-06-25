@@ -4,12 +4,9 @@ import { PrimaryNavItem } from './index';
 
 describe('NavItem', () => {
     it('should display a text children', () => {
-        const wrapper = shallow(
-            <PrimaryNavItem label="Content children" onClick={() => {}} />,
-            {
-                blackList: true
-            }
-        );
+        const wrapper = shallow(<PrimaryNavItem label="Content children" onClick={() => {}} />, {
+            blackList: true
+        });
 
         expect(wrapper.html()).toContain('Content children');
     });
@@ -29,11 +26,7 @@ describe('NavItem', () => {
 
     it('should add extra className', () => {
         const wrapper = shallow(
-            <PrimaryNavItem
-                className="yoloooo"
-                label="Content children"
-                onClick={() => {}}
-            />,
+            <PrimaryNavItem className="yoloooo" label="Content children" onClick={() => {}} />,
             {
                 blackList: true
             }
@@ -78,11 +71,7 @@ describe('NavItem', () => {
     it('should not set selected the item when not giving selected property', () => {
         const Icon = () => <svg />;
         const wrapper = shallow(
-            <PrimaryNavItem
-                icon={<Icon />}
-                label="Content children"
-                onClick={() => {}}
-            />,
+            <PrimaryNavItem icon={<Icon />} label="Content children" onClick={() => {}} />,
             {
                 blackList: true
             }

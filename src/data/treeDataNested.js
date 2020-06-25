@@ -6,15 +6,12 @@ export const treeDataNested = [
     {
         id: 'ROOT',
         label: 'Root',
-        iconStart: toIconComponent(
-            'https://image.flaticon.com/icons/svg/1973/1973617.svg'
-        ),
+        iconStart: toIconComponent('https://image.flaticon.com/icons/svg/1973/1973617.svg'),
         isClosable: false,
         children: [
             {
                 id: 'R1',
-                label:
-                    '01 - praesent tristique magna sit amet purus gravida quis',
+                label: '01 - praesent tristique magna sit amet purus gravida quis',
                 iconStart: <Folder />,
                 iconEnd: <NoCloud />,
                 children: [
@@ -27,8 +24,7 @@ export const treeDataNested = [
                         children: [
                             {
                                 id: '03',
-                                label:
-                                    '03 - elit at imperdiet dui accumsan sit amet nulla',
+                                label: '03 - elit at imperdiet dui accumsan sit amet nulla',
                                 iconStart: <Folder />,
                                 iconEnd: <NoCloud />,
                                 children: [
@@ -40,8 +36,7 @@ export const treeDataNested = [
                                         children: [
                                             {
                                                 id: '05',
-                                                label:
-                                                    '05 - lectus urna duis convallis convallis',
+                                                label: '05 - lectus urna duis convallis convallis',
                                                 iconStart: <Folder />,
                                                 iconEnd: <NoCloud />,
                                                 children: [
@@ -56,28 +51,18 @@ export const treeDataNested = [
                                                                 id: '07',
                                                                 label:
                                                                     '07 - habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat',
-                                                                iconStart: (
-                                                                    <Folder />
-                                                                ),
-                                                                iconEnd: (
-                                                                    <NoCloud />
-                                                                ),
+                                                                iconStart: <Folder />,
+                                                                iconEnd: <NoCloud />,
                                                                 children: [
                                                                     {
-                                                                        id:
-                                                                            '08',
+                                                                        id: '08',
                                                                         label:
                                                                             '08 - enim diam vulputate ut pharetra sit amet aliquam id diam',
-                                                                        iconStart: (
-                                                                            <Folder />
-                                                                        ),
-                                                                        iconEnd: (
-                                                                            <NoCloud />
-                                                                        ),
+                                                                        iconStart: <Folder />,
+                                                                        iconEnd: <NoCloud />,
                                                                         children: [
                                                                             {
-                                                                                id:
-                                                                                    '09',
+                                                                                id: '09',
                                                                                 label:
                                                                                     '09 - imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque',
                                                                                 iconStart: (
@@ -88,8 +73,7 @@ export const treeDataNested = [
                                                                                 ),
                                                                                 children: [
                                                                                     {
-                                                                                        id:
-                                                                                            '010',
+                                                                                        id: '010',
                                                                                         label:
                                                                                             '010 - semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh',
                                                                                         iconStart: (

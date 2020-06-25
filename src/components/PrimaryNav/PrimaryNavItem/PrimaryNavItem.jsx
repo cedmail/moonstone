@@ -2,10 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styles from './PrimaryNavItem.scss';
 import classnames from 'clsx';
-import {
-    Typography,
-    variants as typographyVariants
-} from '~/components/Typography';
+import { Typography, variants as typographyVariants } from '~/components/Typography';
 import { PrimaryNavContext } from '../PrimaryNav.context';
 
 // Internal component
@@ -30,10 +27,7 @@ const Item = ({ icon, label, textVariant, subtitle, button }) => (
                         isNowrap
                         component="div"
                         variant="caption"
-                        className={classnames(
-                            styles.primaryNavItem_label,
-                            styles.subtitle
-                        )}
+                        className={classnames(styles.primaryNavItem_label, styles.subtitle)}
                     >
                         {subtitle}
                     </Typography>
@@ -41,9 +35,7 @@ const Item = ({ icon, label, textVariant, subtitle, button }) => (
             </div>
         </div>
         {button && (
-            <div className={classnames(styles.primaryNavItem_buttonContainer)}>
-                {button}
-            </div>
+            <div className={classnames(styles.primaryNavItem_buttonContainer)}>{button}</div>
         )}
     </>
 );
@@ -61,10 +53,7 @@ const ItemTypeResolver = ({ url, icon, label, subtitle, button }) => {
     if (url) {
         return (
             <a
-                className={classnames(
-                    styles.primaryNavItem,
-                    styles.primaryNavItem_linkItem
-                )}
+                className={classnames(styles.primaryNavItem, styles.primaryNavItem_linkItem)}
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"

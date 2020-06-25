@@ -63,11 +63,7 @@ describe('AccordionItem', () => {
     it('should not display children when id in context not correspond', () => {
         const handleOnclick = jest.fn();
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                onClick={handleOnclick}
-            >
+            <AccordionItem id="007" label="my label label" onClick={handleOnclick}>
                 content here
             </AccordionItem>,
             {
@@ -90,11 +86,7 @@ describe('AccordionItem', () => {
     it('should display children when id in context correspond', () => {
         const handleOnClick = jest.fn();
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                onClick={handleOnClick}
-            >
+            <AccordionItem id="007" label="my label label" onClick={handleOnClick}>
                 content here
             </AccordionItem>,
             {
@@ -117,11 +109,7 @@ describe('AccordionItem', () => {
         const handleOnClick = jest.fn();
 
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                onClick={handleOnClick}
-            >
+            <AccordionItem id="007" label="my label label" onClick={handleOnClick}>
                 content here
             </AccordionItem>,
             {
@@ -151,11 +139,7 @@ describe('AccordionItem', () => {
         };
 
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                onClick={handleOnClick}
-            >
+            <AccordionItem id="007" label="my label label" onClick={handleOnClick}>
                 content here
             </AccordionItem>,
             {
@@ -185,11 +169,7 @@ describe('AccordionItem', () => {
         };
 
         const wrapper = shallow(
-            <AccordionItem
-                id="007"
-                label="my label label"
-                onClick={handleOnClick}
-            >
+            <AccordionItem id="007" label="my label label" onClick={handleOnClick}>
                 content here
             </AccordionItem>,
             {

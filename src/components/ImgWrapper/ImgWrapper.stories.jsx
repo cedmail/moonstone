@@ -24,6 +24,4 @@ storiesOf('ImgWrapper', module)
             <section className={storyStyles.storyColumn}>{storyFn()}</section>
         </section>
     ))
-    .add('Playground', () => (
-        <ImgWrapper src={urlValue()} size={sizeValues()} />
-    ));
+    .add('Playground', () => <ImgWrapper src={urlValue()} size={sizeValues()} />);

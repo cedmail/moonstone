@@ -7,12 +7,7 @@ export const Tab = ({ children, className, ...props }) => {
     return (
         <div
             {...props}
-            className={classnames(
-                styles.tab,
-                'flexRow_center',
-                'alignCenter',
-                className
-            )}
+            className={classnames(styles.tab, 'flexRow_center', 'alignCenter', className)}
         >
             {children}
         </div>

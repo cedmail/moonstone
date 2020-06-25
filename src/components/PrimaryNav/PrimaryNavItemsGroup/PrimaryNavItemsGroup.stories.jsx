@@ -23,10 +23,7 @@ storiesOf('Components|PrimaryNavItemsGroup', module)
             }}
         >
             <PrimaryNavItemsGroup>
-                <PrimaryNavItem
-                    icon={<Edit />}
-                    label="NavItem not selected (default)"
-                />
+                <PrimaryNavItem icon={<Edit />} label="NavItem not selected (default)" />
                 <PrimaryNavItem icon={<Edit />} label="NavItem" />
             </PrimaryNavItemsGroup>
         </div>

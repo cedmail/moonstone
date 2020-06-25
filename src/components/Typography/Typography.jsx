@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Typography.scss';
 import classnames from 'clsx';
 
-export const variants = [
-    'title',
-    'heading',
-    'subheading',
-    'body',
-    'caption',
-    'button'
-];
+export const variants = ['title', 'heading', 'subheading', 'body', 'caption', 'button'];
 export const weights = ['default', 'bold', 'semiBold', 'light'];
 
 const filterOutProps = function (props, out) {

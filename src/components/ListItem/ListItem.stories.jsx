@@ -22,11 +22,7 @@ storiesOf('Components|ListItem', module)
         <div style={{ transform: 'scale(1)', height: '100vh' }}>
             <ListItem
                 label={text('Label', 'label')}
-                iconStart={
-                    <IconWrapper
-                        iconName={select('IconStart', iconsName, 'Love')}
-                    />
-                }
+                iconStart={<IconWrapper iconName={select('IconStart', iconsName, 'Love')} />}
             />
         </div>
     ))
@@ -34,16 +30,8 @@ storiesOf('Components|ListItem', module)
         <div style={{ transform: 'scale(1)', height: '100vh' }}>
             <ListItem
                 label={text('Label', 'label')}
-                iconStart={
-                    <IconWrapper
-                        iconName={select('IconStart', iconsName, 'Love')}
-                    />
-                }
-                iconEnd={
-                    <IconWrapper
-                        iconName={select('IconEnd', iconsName, 'Close')}
-                    />
-                }
+                iconStart={<IconWrapper iconName={select('IconStart', iconsName, 'Love')} />}
+                iconEnd={<IconWrapper iconName={select('IconEnd', iconsName, 'Close')} />}
             />
         </div>
     ));

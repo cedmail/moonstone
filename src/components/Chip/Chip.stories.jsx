@@ -26,9 +26,7 @@ storiesOf('Components|Chip', module)
     .addDecorator(withKnobs)
     .addDecorator(storyFn => (
         <section className={classnames(storyStyles.storyWrapper)}>
-            <section className={classnames(storyStyles.storyColumn)}>
-                {storyFn()}
-            </section>
+            <section className={classnames(storyStyles.storyColumn)}>{storyFn()}</section>
         </section>
     ))
     .add('icon + text', () => (
@@ -57,36 +55,20 @@ storiesOf('Components|Chip', module)
         </section>
     ))
     .add('text only', () =>
-        colors.map(color => (
-            <Chip key={color} label={capitalize(color)} color={color} />
-        ))
+        colors.map(color => <Chip key={color} label={capitalize(color)} color={color} />)
     )
     .add('icon only', () =>
-        colors.map(color => (
-            <Chip key={color} icon={<DefaultIcon />} color={color} />
-        ))
+        colors.map(color => <Chip key={color} icon={<DefaultIcon />} color={color} />)
     )
     .add('status', () => (
         <>
             <Chip icon={<FileContentIcon />} label="New" color="success" />
             <Chip icon={<FileContentIcon />} label="Modified" color="default" />
-            <Chip
-                icon={<DeleteIcon />}
-                label="Marked for deletion"
-                color="danger"
-            />
-            <Chip
-                icon={<FileContentIcon />}
-                label="Work in progress"
-                color="default"
-            />
+            <Chip icon={<DeleteIcon />} label="Marked for deletion" color="danger" />
+            <Chip icon={<FileContentIcon />} label="Work in progress" color="default" />
             <Chip icon={<LockIcon />} label="Locked" color="warning" />
             <Chip icon={<CloudIcon />} label="Live" color="accent" />
-            <Chip
-                icon={<NoCloudIcon />}
-                label="Not published"
-                color="warning"
-            />
+            <Chip icon={<NoCloudIcon />} label="Not published" color="warning" />
             <Chip icon={<WarningIcon />} label="Warning" color="warning" />
         </>
     ))

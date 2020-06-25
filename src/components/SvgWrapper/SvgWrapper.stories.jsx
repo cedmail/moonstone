@@ -21,6 +21,4 @@ storiesOf('SvgWrapper', module)
             <section className={storyStyles.storyColumn}>{storyFn()}</section>
         </section>
     ))
-    .add('Playground', () => (
-        <SvgWrapper svg={svgString} size={sizeValues()} />
-    ));
+    .add('Playground', () => <SvgWrapper svg={svgString} size={sizeValues()} />);

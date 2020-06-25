@@ -23,15 +23,8 @@ storiesOf('Components|PrimaryNavItem', module)
                 height: '100vh'
             }}
         >
-            <PrimaryNavItem
-                icon={<Edit />}
-                label="NavItem not selected (default)"
-            />
-            <PrimaryNavItem
-                isSelected
-                icon={<Edit />}
-                label="NavItem Selected"
-            />
+            <PrimaryNavItem icon={<Edit />} label="NavItem not selected (default)" />
+            <PrimaryNavItem isSelected icon={<Edit />} label="NavItem Selected" />
             <PrimaryNavItem
                 isSelected={boolean('selected')}
                 icon={<Workflow />}

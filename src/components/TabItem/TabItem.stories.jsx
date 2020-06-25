@@ -26,22 +26,13 @@ storiesOf('Components|TabItem', module)
     })
     .addDecorator(withKnobs)
     .add('TabItem with icon and label', () => (
-        <div
-            style={
-                isReversed()
-                    ? { backgroundColor: 'var(--color-gray_dark)' }
-                    : null
-            }
-        >
+        <div style={isReversed() ? { backgroundColor: 'var(--color-gray_dark)' } : null}>
             <section className={classnames(storyStyles.storyGrid)}>
                 <div className={classnames(storyStyles.storyGridItem)}>
                     <h3>Variant</h3>
                 </div>
                 {tabItemColors.map(color => (
-                    <div
-                        key={color}
-                        className={classnames(storyStyles.storyGridItem)}
-                    >
+                    <div key={color} className={classnames(storyStyles.storyGridItem)}>
                         <h3>{color}</h3>
                     </div>
                 ))}

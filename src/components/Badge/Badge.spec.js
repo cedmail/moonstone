@@ -4,16 +4,12 @@ import { shallow } from 'component-test-utils-react';
 
 describe('Badge', () => {
     it('should display additional className', () => {
-        const wrapper = shallow(
-            <Badge label="3" type="round" className="extra" />
-        );
+        const wrapper = shallow(<Badge label="3" type="round" className="extra" />);
         expect(wrapper.html()).toContain('extra');
     });
 
     it('should display additional attributes', () => {
-        const wrapper = shallow(
-            <Badge label="3" type="round" data-custom="test" />
-        );
+        const wrapper = shallow(<Badge label="3" type="round" data-custom="test" />);
         expect(wrapper.html()).toContain('data-custom="test"');
     });
 
@@ -33,23 +29,17 @@ describe('Badge', () => {
     });
 
     it('should have accent color', () => {
-        const wrapper = shallow(
-            <Badge label="3" type="round" color="accent" />
-        );
+        const wrapper = shallow(<Badge label="3" type="round" color="accent" />);
         expect(wrapper.html()).toContain('color_accent');
     });
 
     it('should have danger color', () => {
-        const wrapper = shallow(
-            <Badge label="3" type="round" color="danger" />
-        );
+        const wrapper = shallow(<Badge label="3" type="round" color="danger" />);
         expect(wrapper.html()).toContain('color_danger');
     });
 
     it('should have success color', () => {
-        const wrapper = shallow(
-            <Badge label="3" type="round" color="success" />
-        );
+        const wrapper = shallow(<Badge label="3" type="round" color="success" />);
         expect(wrapper.html()).toContain('color_success');
     });
 });

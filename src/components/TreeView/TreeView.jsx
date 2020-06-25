@@ -11,12 +11,7 @@ export const TreeView = ({
     ...others
 }) => {
     if (typeof openedItems === 'undefined') {
-        return (
-            <UncontrolledTreeView
-                defaultOpenedItems={defaultOpenedItems}
-                {...others}
-            />
-        );
+        return <UncontrolledTreeView defaultOpenedItems={defaultOpenedItems} {...others} />;
     }
 
     return (

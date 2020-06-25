@@ -35,8 +35,7 @@ export const SvgWrapper = initialProps => {
     const children = Array.prototype.slice
         .call(doc.documentElement.childNodes)
         .map((child, idx) => toComp(child, idx));
-    props.className =
-        initialProps.className + ' moonstone-icon moonstone-icon_' + size;
+    props.className = initialProps.className + ' moonstone-icon moonstone-icon_' + size;
     return (
         <svg viewBox={viewBox && viewBox} fill={fill && fill} {...props}>
             {children}

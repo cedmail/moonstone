@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 const SvgNoCloud = initialProps => {
     const props = Object.assign({}, initialProps);
-    props.className =
-        initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
+    props.className = initialProps.className + ' moonstone-icon moonstone-icon_' + props.size;
     return (
         <svg viewBox="0 0 24 24" fill="none" {...props}>
             <g clipPath="url(#NoCloud_svg__clip0)">

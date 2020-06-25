@@ -39,12 +39,7 @@ export const TabItem = ({
             ...props
         },
         <>
-            {icon && (
-                <icon.type
-                    {...icon.props}
-                    size={size === 'big' ? 'default' : size}
-                />
-            )}
+            {icon && <icon.type {...icon.props} size={size === 'big' ? 'default' : size} />}
 
             {label && (
                 <Typography

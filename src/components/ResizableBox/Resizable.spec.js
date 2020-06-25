@@ -10,17 +10,13 @@ describe('ResizableBox', () => {
     });
 
     it('should add extra className', () => {
-        const wrapper = shallow(
-            <ResizableBox className="fancy">My content here</ResizableBox>
-        );
+        const wrapper = shallow(<ResizableBox className="fancy">My content here</ResizableBox>);
 
         expect(wrapper.html()).toContain('fancy');
     });
 
     it('should add extra attribute', () => {
-        const wrapper = shallow(
-            <ResizableBox data-custom="test">My content here</ResizableBox>
-        );
+        const wrapper = shallow(<ResizableBox data-custom="test">My content here</ResizableBox>);
 
         expect(wrapper.html()).toContain('data-custom="test"');
     });

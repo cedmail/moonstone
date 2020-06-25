@@ -4,23 +4,9 @@ import styles from './Chip.scss';
 import { Typography } from '~/components/Typography';
 import classnames from 'clsx';
 
-export const colors = [
-    'default',
-    'accent',
-    'success',
-    'warning',
-    'danger',
-    'reassuring'
-];
+export const colors = ['default', 'accent', 'success', 'warning', 'danger', 'reassuring'];
 
-export const Chip = ({
-    label,
-    color,
-    icon,
-    className,
-    isDisabled,
-    ...props
-}) => (
+export const Chip = ({ label, color, icon, className, isDisabled, ...props }) => (
     <div
         className={classnames(
             styles.chip,
@@ -32,12 +18,7 @@ export const Chip = ({
     >
         {icon && <icon.type size="small" />}
         {label && (
-            <Typography
-                isNowrap
-                component="span"
-                variant="caption"
-                weight="semiBold"
-            >
+            <Typography isNowrap component="span" variant="caption" weight="semiBold">
                 {label}
             </Typography>
         )}

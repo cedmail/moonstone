@@ -40,11 +40,7 @@ describe('Separator', () => {
 
     it('should have the class invisible_firstChild', () => {
         const wrapper = shallow(
-            <Separator
-                variant="vertical"
-                size="medium"
-                invisible="firstChild"
-            />
+            <Separator variant="vertical" size="medium" invisible="firstChild" />
         );
         expect(wrapper.html()).toContain('invisible_firstChild');
     });
@@ -65,11 +61,7 @@ describe('Separator', () => {
 
     it('should have the class invisible_firstOrLastChild', () => {
         const wrapper = shallow(
-            <Separator
-                variant="vertical"
-                size="medium"
-                invisible="firstOrLastChild"
-            />
+            <Separator variant="vertical" size="medium" invisible="firstOrLastChild" />
         );
         expect(wrapper.html()).toContain('invisible_firstOrLastChild');
     });

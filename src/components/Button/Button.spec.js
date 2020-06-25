@@ -24,9 +24,7 @@ describe('Button', () => {
 
     it('should have the specified label and an icon', () => {
         const label = 'Button Toto';
-        const button = shallow(
-            <Button label={label} icon={<Love />} onClick={() => {}} />
-        );
+        const button = shallow(<Button label={label} icon={<Love />} onClick={() => {}} />);
         expect(button.html()).toContain(label);
         expect(button.querySelector('SvgLove').exists()).toBeTruthy();
     });
@@ -37,9 +35,7 @@ describe('Button', () => {
         expect(button1.querySelector('.variant_outlined').exists()).toBeFalsy();
         expect(button1.querySelector('.variant_ghost').exists()).toBeFalsy();
 
-        const button2 = shallow(
-            <Button variant="default" onClick={() => {}} />
-        );
+        const button2 = shallow(<Button variant="default" onClick={() => {}} />);
         expect(button2.querySelector('.variant_default').exists()).toBeTruthy();
         expect(button2.querySelector('.variant_outlined').exists()).toBeFalsy();
         expect(button2.querySelector('.variant_ghost').exists()).toBeFalsy();
@@ -47,12 +43,8 @@ describe('Button', () => {
 
     it('should use the specified variant', () => {
         buttonVariants.forEach(variant => {
-            const button = shallow(
-                <Button variant={variant} onClick={() => {}} />
-            );
-            expect(
-                button.querySelector(`.variant_${variant}`).exists()
-            ).toBeTruthy();
+            const button = shallow(<Button variant={variant} onClick={() => {}} />);
+            expect(button.querySelector(`.variant_${variant}`).exists()).toBeTruthy();
         });
     });
 
@@ -85,9 +77,7 @@ describe('Button', () => {
     it('should use the specified color', () => {
         buttonColors.forEach(color => {
             const button = shallow(<Button color={color} onClick={() => {}} />);
-            expect(
-                button.querySelector(`.color_${color}`).exists()
-            ).toBeTruthy();
+            expect(button.querySelector(`.color_${color}`).exists()).toBeTruthy();
         });
     });
 
@@ -111,9 +101,7 @@ describe('Button', () => {
     });
 
     it('should have extra attribute', () => {
-        const button = shallow(
-            <Button data-custom="test" onClick={() => {}} />
-        );
+        const button = shallow(<Button data-custom="test" onClick={() => {}} />);
         expect(button.html().indexOf('data-custom="test"') !== -1).toBeTruthy();
     });
 
